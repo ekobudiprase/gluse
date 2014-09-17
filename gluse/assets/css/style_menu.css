@@ -1,0 +1,131 @@
+@font-face {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: normal;
+}
+.ca-menu {
+    float: left;
+    margin: 10px 20px auto;
+    padding: 0;
+    width: 450px;
+}
+.ca-menu li {
+    float: left;
+    height: 70px;
+    margin-right: 15px;
+    margin-top: 15px;
+    overflow: hidden;
+    position: relative;
+    width: 75px;
+
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #f5f5f5;
+    background-image: -moz-linear-gradient(center top , #ffffff, #e6e6e6);
+    background-repeat: repeat-x;
+    border-color: #e6e6e6 #e6e6e6 #b3b3b3;
+    border-image: none;
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+    color: #333333;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 18px;
+    margin-bottom: 0;
+    padding: 4px 10px;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+    vertical-align: middle;
+}
+.ca-menu li:last-child {
+    margin-right: 0;
+}
+.ca-menu li a {
+    color: #333;
+    display: block;
+    height: 100%;
+    position: relative;
+    text-align: left;
+    width: 100%;
+}
+.ca-icon {
+    color: #c5e4f4;
+    font-family: 'WebSymbolsRegular',cursive;
+    font-size: 90px;
+    height: 50%;
+    left: 0;
+    line-height: 150px;
+    position: absolute;
+    text-align: center;
+    text-shadow: 1px 0 1px rgba(255, 255, 255, 0.7);
+    top: 0;
+    transition: all 200ms linear 0s;
+    width: 100%;
+}
+.ca-content {
+    height: 40%;
+    left: 0;
+    position: absolute;
+    top: 67%;
+    width: 100%;
+    vertical-align:text-middle;
+}
+.ca-main {
+    color: #005382;
+    font-size: 12px;
+    opacity: 0.8;
+    text-align: center;
+    transition: all 200ms linear 0s;
+    line-height: 12px;
+}
+.ca-sub {
+    color: #666;
+    font-size: 10px;
+    line-height: 40px;
+    opacity: 0.8;
+    text-align: center;
+    transition: all 200ms linear 0s;
+    line-height: 12px;
+}
+.ca-menu li:hover {
+    background-color: #e6e6e6;
+    background-position: 0 -15px;
+    color: #333333;
+    text-decoration: none;
+    transition: background-position 0.1s linear 0s;
+}
+.ca-menu li:hover .ca-icon {
+    /*animation: 400ms ease 0s normal none 1 moveFromTop;*/
+    color: transparent;
+    text-shadow: 0 0 20px #c5e4f4;
+}
+.ca-menu li:hover .ca-main {
+    /*animation: 300ms ease 0s normal none 1 moveFromTop;*/
+    color: #000;
+}
+.ca-menu li:hover .ca-sub {
+    /*animation: 500ms ease 0s normal none 1 moveFromBottom;*/
+    color: #000;
+}
+@keyframes moveFromTop {
+0% {
+    transform: translateY(-300%);
+}
+100% {
+    transform: translateY(0%);
+}
+}
+@keyframes moveFromBottom {
+0% {
+    transform: translateY(200%);
+}
+100% {
+    transform: translateY(0%);
+}
+}
