@@ -6,7 +6,8 @@
 	<div class="control-group">
 	  <label for="typeahead" class="control-label">Formasi layer</label>
 	  <div class="controls">
-		<input name="layer_formation" type="text" value="3-3-1" data-items="1" data-provide="typeahead" id="typeahead " class="span2 typeahead layer_formation" >
+		<input name="layer_formation" type="hidden" value="3-3-1" data-items="1" data-provide="typeahead" id="typeahead " class="span2 typeahead layer_formation" >
+		<input name="layer_formation_dis" disabled type="text" value="3-3-1" data-items="1" data-provide="typeahead" id="typeahead " class="span2 typeahead layer_formation" >
 		<p class="help-block">Angka pertama dan terakhir merupakan layer input dan output</p>
 	  </div>
 	</div>
@@ -19,13 +20,12 @@
 	  </div>
 	</div>
 
-	<div class="control-group">
+	<!-- <div class="control-group">
 	  <label for="typeahead" class="control-label">Momentum (Alpha)</label>
 	  <div class="controls">
 		<input name="alpha" type="text" value="0.1" data-items="4" data-provide="typeahead" id="typeahead" class="span1 typeahead">
-		<!-- <p class="help-block">Start typing to activate auto complete!</p> -->
 	  </div>
-	</div>
+	</div> -->
 
 	<div class="control-group">
 	  <label for="typeahead" class="control-label">Epoch</label>
