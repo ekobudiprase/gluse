@@ -13,7 +13,7 @@
 	</div>
 
 	<div class="control-group">
-	  <label for="typeahead" class="control-label">Learning rate (Betha) </label>
+	  <label for="typeahead" class="control-label">Learning rate</label>
 	  <div class="controls">
 		<input name="beta" type="text" value="0.3" data-items="4" data-provide="typeahead" id="typeahead" class="span1 typeahead">
 		<!-- <p class="help-block">Start typing to activate auto complete!</p> -->
