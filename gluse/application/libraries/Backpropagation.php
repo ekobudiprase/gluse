@@ -193,7 +193,7 @@ class Backpropagation{
     }
 
     public function Run($param){
-        echo '<pre>'; print_r($param); 
+        // echo '<pre>'; print_r($param); 
         $treshold =  $this->treshold;
         $numEpoch = $this->epoch;	
         $MSE = 0.0;	
@@ -207,7 +207,8 @@ class Backpropagation{
         $this->numInput = count($dataX[0]);	
 
         $data = $this->scale($dataX, $param['min_lokal'], $param['max_lokal']);
-
+        // echo $param['kode'].' ';
+        // echo '<pre>data : '; print_r($data); 
         for($i=0;$i<$this->numPattern;$i++){
             for($j=0; $j<$this->numInput-1; $j++){
                 $testData[$i][$j] = $data[$i][$j];

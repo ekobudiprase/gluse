@@ -208,7 +208,7 @@ class Proses_prediksi extends CI_Controller {
 
 		$ret = array();
 		$maxmin = $this->Prediksi_model->get_maxmin_jmlpeminat_mkkrekap();
-		echo '<pre>'; print_r($arrData); exit();
+		// echo '<pre>'; print_r($arrData); exit();
 		if (!empty($arrData)) {
 			
 			foreach ($arrData as $key => $value) {
