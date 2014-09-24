@@ -454,7 +454,7 @@ class Algen {
             }
 
             if ( ($i+1) == count($timespace)) {
-                echo "====================================================================";
+                echo "====================================================================<br>";
                 echo 'individu : <pre>'; print_r($individu); 
                 echo 'timespace grup : <pre>'; print_r($timespace_grup_waktu); 
                 echo 'kelas : <pre>'; print_r($kelas); 
@@ -508,12 +508,13 @@ class Algen {
         $waktu_jam_selesai_kls = $this->get_jam_selesai_kelas($timespace[$id_timespace]['waktu_jam_mulai'], $period_waktu);
         $individu[] = array(
             'id_kromosom' => $value['id_individu'],
-            'id_timespace' => $timespace[$id_timespace]['id_timespace']
+            'kelas' => $value['nama_kelas'],
+            'id_timespace' => $timespace[$id_timespace]['id_timespace'],
             // 'id_waktu' => $timespace[$id_timespace]['id_waktu'],
             // 'waktu_hari' => $timespace[$id_timespace]['waktu_hari'],
             // 'id_ruang' => $timespace[$id_timespace]['id_ruang'],
             // 'waktu_jam_mulai' => $timespace[$id_timespace]['waktu_jam_mulai']
-            // 'label_timespace' => $timespace[$id_timespace]['label'].$waktu_jam_selesai_kls,
+            'label_timespace' => $timespace[$id_timespace]['label'].$waktu_jam_selesai_kls
             // 'kap_ruang' => $timespace[$id_timespace]['kap_ruang'],
             // 'waktu_jam_selesai_kls' => $waktu_jam_selesai_kls
         );
@@ -1147,11 +1148,11 @@ class Algen {
             $waktu_jam_selesai_kls = $this->get_jam_selesai_kelas($this->timespace[$value['id_timespace']]['waktu_jam_mulai'], $this->kromosom[$value['id_kromosom']]['period']);
         	
         	$individu_temp[] = array(
-	            'id_kromosom' => $value['id_kromosom'],
-	            'id_timespace' => $timespace[$id_timespace]['id_timespace']
+                'id_kromosom' => $value['id_kromosom'],
+	            'id_timespace' => $timespace[$id_timespace]['id_timespace'],
 	            // 'id_waktu' => $timespace[$id_timespace]['id_waktu'],
 	            // 'id_ruang' => $timespace[$id_timespace]['id_ruang'],
-	            // 'label_timespace' => $timespace[$id_timespace]['label'].$waktu_jam_selesai_kls,
+	            'label_timespace' => $value['kelas'].','.$timespace[$id_timespace]['label'].$waktu_jam_selesai_kls
 	            // 'kap_ruang' => $timespace[$id_timespace]['kap_ruang'],
 	            // 'waktu_hari' => $timespace[$id_timespace]['waktu_hari'],
 	            // 'waktu_jam_mulai' => $timespace[$id_timespace]['waktu_jam_mulai'],
