@@ -159,6 +159,91 @@ class Bantu {
         return $str;
     }
 
+    function debugPreviewJadwal($jadwal){
+    	$this->CI->load->model('penjadwalan_model');
+    	$ruang = $this->CI->penjadwalan_model->get_all_ruang();
+		$waktu = $this->CI->penjadwalan_model->get_all_waktu();
+		// $jadwal = $this->CI->penjadwalan_model->get_all_jadwal_kuliah();
+		// echo '<pre>'; print_r($jadwal); echo '</pre>';
+		// echo '<pre>'; print_r($ind); echo '</pre>'; exit();
+
+    	$grup_hari = array('senin','selasa','rabu','kamis','jumat');
+		$waktu_transform = array();
+		foreach ($grup_hari as $key => $value) {
+			$waktu_transform[$key]['hari'] = $value;
+			$waktu_transform[$key]['data'] = array();
+			$jam_ke = 1;
+			foreach ($waktu as $i => $item) {
+
+				if ($value == $item['waktu_hari'] AND $item['waktu_hari'] == 'jumat' AND $jam_ke == 5) {
+					$jam_ke = $jam_ke + 2;
+				}
+				if ($value == $item['waktu_hari']) {
+					$item['jam_ke'] = $jam_ke++;
+					$waktu_transform[$key]['data'][] = $item;
+				}
+			}
+		}
+
+
+		$table_header = '<thead style="position:relative;"><tr >';
+		$table_header .= '<th style="vertical-align:middle;width:100px;border: 1px solid black;" rowspan="2">RUANG/WAKTU</th>';
+		$table_header2 = '<tr>';
+		$jml_kolom_data_header = count($waktu);
+		foreach ($waktu_transform as $key => $value) {
+			$table_header .= '<th colspan="10" style="border: 1px solid black;">'.$value['hari'].'</th>';
+			foreach ($value['data'] as $i => $item) {
+				$table_header2 .= '<th style="width:220px;border: 1px solid black;">'.$item['jam_ke'].'</th>';
+			}
+		}
+		$table_header2 .= '</tr>';
+		$table_header .= '</tr>';
+		$table_header .= $table_header2;
+		$table_header .= '</thead>';
+
+		$table_body = '<tbody>';
+		foreach ($ruang as $key => $value) {
+			$table_body .= '<tr style="height:80px;border: 1px solid black;">';
+			$table_body .= '<td style="border: 1px solid black;">'.$value['ru_nama'].'</td>';
+			$period = 0;
+			// echo $value['ru_id'].' : ';
+			foreach ($waktu as $i => $time) {
+				$label = '';
+				$colspan = '';
+				$style = 'style="border: 1px solid black;"';
+				if ($period == 0) {
+					foreach ($jadwal as $j => $item) {
+						if ($value['ru_id'] == $item['id_ruang'] AND $time['waktu_id'] == $item['id_waktu']) {
+							$label = $item['nama_kelas'].'<br>'.$item['label_timespace'];
+							$colspan = 'colspan="'.$item['period'].'"';
+							$style = 'style="background-color: #F0F0C5;border: 1px solid black; padding:0px;"';
+							$period = $item['period']-1;
+							// echo $i.', ';
+							
+						}
+					}
+					$table_body .= '<td '.$colspan.' '.$style.' >'.$label.'</td>';
+				}else{
+					$period--;
+				}
+				
+			}
+			
+			$table_body .= '</tr>';
+		}
+		$table_body .= '</tbody>';
+
+		echo '<div style="height:550px; overflow-x: auto;margin-top: 30px;">';
+		echo '<table style="max-width:1000%; width:600%;border: 1px solid black; font: 10px sans-serif; ">';
+		echo $table_header;
+		echo $table_body;
+		echo "</table>";
+		echo "</div>";
+
+		echo '<pre>'; print_r($jadwal); echo '</pre>';
+
+    }
+
 }
 
 /* End of file Someclass.php */
