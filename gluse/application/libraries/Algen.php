@@ -60,9 +60,7 @@ class Algen {
 
     /**
     * @author       Eko Budi Prasetyo
-    * @version      0.0.0
     * @since        June 14, 2014
-    * @usedfor      -
     */
     public function initialize($kelas, $ruang, $waktu, $post, $prodi, $min_prosen_capacity){
         $this->kelas = $kelas;
@@ -94,563 +92,9 @@ class Algen {
         
     }
 
-    // =====================================================================================================================
-    /*
-    pada kelas paralel yg mata kuliah sama, waktu harus sama dan di tempat yang berbeda
-    */
-
-    public function check_neighborpacketclass_not_sametime___($individu_classprodi, $value, $id_timespace, $timespace){
-        $sts = true;
-
-        // trapping jika undefined maka lgsg false, cari id_timespace yg lain
-        if (!isset($timespace[$id_timespace])) {
-            $sts = false;
-            return $sts;
-        }
-
-        $smt_neighbor = $this->get_neighbor_sametype_semester($value['paket_smt']);
-        
-        $value_prodi = explode('|', $value['kelas_prodi']);
-
-        if (!empty($individu_classprodi['uni'])) {
-            foreach ($individu_classprodi['uni'] as $i => $item) {
-                if ($this->kromosom[$item['id_kromosom']]['sifat_makul'] == $value['sifat_makul'] 
-                    AND $value['sifat_makul'] == 'W' 
-                    AND (in_array($this->kromosom[$item['id_kromosom']]['paket_smt'], $smt_neighbor)) 
-                    AND $this->timespace[$item['id_timespace']]['id_waktu'] == $timespace[$id_timespace]['id_waktu']
-                ) {
-                    $sts = false;
-                    break;
-                }            
-            } 
-        }
-
-        if ($value['is_universal'] == '0' && !empty($individu_classprodi['pro'])) {
-            foreach ($this->prodi as $t => $pr) {
-                if (isset($individu_classprodi['pro'][$t]) && !empty($individu_classprodi['pro'][$t]) AND in_array($pr['prodi_id'],$value_prodi)) {
-                    foreach ($individu_classprodi['pro'][$t] as $i => $item) {
-                        if ($this->kromosom[$item['id_kromosom']]['sifat_makul'] == $value['sifat_makul'] 
-                            AND $value['sifat_makul'] == 'W' 
-                            AND (in_array($this->kromosom[$item['id_kromosom']]['paket_smt'], $smt_neighbor)) 
-                            AND $this->timespace[$item['id_timespace']]['id_waktu'] == $timespace[$id_timespace]['id_waktu']
-                        ) {
-                            $sts = false;
-                            break;
-                        }            
-                    }
-                }                
-            }
-        }
-
-        return $sts;
-    }
-
-
-    public function check_timespace_class_samepacket_not_sametime($individu_classprodi, $value, $id_timespace, $timespace){
-        $sts = true;
-
-        // trapping jika undefined maka lgsg false, cari id_timespace yg lain
-        if (!isset($timespace[$id_timespace])) {
-            $sts = false;
-            return $sts;
-        }
-   
-        $value_prodi = explode('|', $value['kelas_prodi']);
-
-        if (!empty($individu_classprodi['uni'])) {
-            foreach ($individu_classprodi['uni'] as $i => $item) {
-                if (
-                    $this->kromosom[$item['id_kromosom']]['paket_smt'] == $value['paket_smt'] 
-                    AND $this->timespace[$item['id_timespace']]['id_waktu'] == $timespace[$id_timespace]['id_waktu']
-                ) {
-                    $sts = false;
-                    break;
-                }            
-            } 
-        }
-
-        if ($value['is_universal'] == '0' && !empty($individu_classprodi['pro'])) {
-            foreach ($this->prodi as $t => $pr) {
-                if (isset($individu_classprodi['pro'][$t]) && !empty($individu_classprodi['pro'][$t]) AND in_array($pr['prodi_id'],$value_prodi)) {
-                    foreach ($individu_classprodi['pro'][$t] as $i => $item) {
-                        
-                        if (
-                            $this->kromosom[$item['id_kromosom']]['paket_smt'] == $value['paket_smt'] 
-                            AND $this->timespace[$item['id_timespace']]['id_waktu'] == $timespace[$id_timespace]['id_waktu']
-                        ) {
-                            $sts = false;
-                            break;
-                        }
-                    }
-                }
-                
-            }
-        }
-
-        return $sts;
-    }
-    
-    public function check_timespace_paralelclass_is_sametime($individu, $value, $id_timespace, $timespace ){
-        $sts = false;
-
-        // trapping jika undefined maka lgsg false, cari id_timespace yg lain
-        if (!isset($timespace[$id_timespace])) {
-            $sts = false;
-            return $sts;
-        }
-
-        foreach ($individu as $i => $item) {
-
-            if ($this->kromosom[$item['id_kromosom']]['id_mkkur'] == $value['id_mkkur'] 
-                AND $this->timespace[$item['id_timespace']]['id_waktu'] == $timespace[$id_timespace]['id_waktu']
-            ) {
-                $sts = true;
-                break;
-            }            
-        }
-
-        return $sts;
-    }
-
-    public function check_capacity_class_ok($id_timespace, $timespace, $value){
-        $sts = true;
-
-        // trapping jika undefined maka lgsg false, cari id_timespace yg lain
-        if (!isset($timespace[$id_timespace])) {
-            $sts = false;
-            return $sts;
-        }
-
-        if ($value['jml_peserta_kls'] > $timespace[$id_timespace]['kap_ruang']) {
-            $sts = false;
-        }
-
-        return $sts;
-    }
-
-    public function check_lecture_class_not_sametime($individu, $value, $id_timespace, $timespace){
-        $sts = true;
-
-        // trapping jika undefined maka lgsg false, cari id_timespace yg lain
-        if (!isset($timespace[$id_timespace])) {
-            $sts = false;
-            return $sts;
-        }
-
-        foreach ($individu as $i => $item) {
-            if (!empty($this->kromosom[$item['id_kromosom']]['dosen'])) {
-                $sama = 0;
-                foreach ($this->kromosom[$item['id_kromosom']]['dosen'] as $j => $item_dsn) {
-                    if (!empty($value['dosen'])) {
-                        foreach ($value['dosen'] as $k => $item_dsn_current_class) {
-                            if ($item_dsn == $item_dsn_current_class
-                            ) {
-                                $sama++;
-                            }
-                        }
-                    }
-                }
-
-                // Jika mata kuliah paralel dosen sama, maka aplikasi error
-                if(count($this->kromosom[$item['id_kromosom']]['dosen']) == $sama AND $this->timespace[$item['id_timespace']]['id_waktu'] == $timespace[$id_timespace]['id_waktu']){
-                    $sts = false;
-                    break;
-                }
-            }
-        }
-        
-        return $sts;
-    }    
-
-    public function check_separatesameclass_not_sameday($individu, $value, $id_timespace, $timespace){
-        $sts = true;
-
-        // trapping jika undefined maka lgsg false, cari id_timespace yg lain
-        if (!isset($timespace[$id_timespace])) {
-            $sts = false;
-            return $sts;
-        }
-
-        foreach ($individu as $i => $item) {
-            if ($this->kromosom[$item['id_kromosom']]['id_kelas'] == $value['id_kelas'] 
-                AND $this->timespace[$item['id_timespace']]['waktu_hari'] == $timespace[$id_timespace]['waktu_hari']) {
-                $sts = false;
-                break;
-            }            
-        }
-
-        return $sts;
-    }
-
-    function get_neighbor_sametype_semester($smt){
-        $arr_smt_ganjil = array(1,3,5,7);
-        $arr_smt_genap = array(2,4,6,8);
-        $arr_neighbor = array();
-
-        if ( in_array($smt, $arr_smt_ganjil)) {
-            foreach ($arr_smt_ganjil as $key => $value) {
-                if ( ($smt == $value) ) {
-                    if ( isset($arr_smt_ganjil[$key-1]) ) {
-                        $arr_neighbor[] = $arr_smt_ganjil[$key-1];
-                    }
-                    if ( isset($arr_smt_ganjil[$key+1]) ) {
-                        $arr_neighbor[] = $arr_smt_ganjil[$key+1];
-                    }
-                    
-                }
-            }
-        }else{
-            foreach ($arr_smt_genap as $key => $value) {
-                if ( ($smt == $value) ) {
-                    if ( isset($arr_smt_genap[$key-1]) ) {
-                        $arr_neighbor[] = $arr_smt_genap[$key-1];
-                    }
-                    if ( isset($arr_smt_genap[$key+1]) ) {
-                        $arr_neighbor[] = $arr_smt_genap[$key+1];
-                    }
-                    
-                }
-            }
-        }
-
-        return $arr_neighbor;
-    }
-
-    // sini
-
-    public function check_time_notover_limit($id_timespace, $timespace, $period_waktu){
-        $sts = true;
-
-        // trapping jika undefined maka lgsg false, cari id_timespace yg lain
-        if (!isset($timespace[$id_timespace])) {
-            $sts = false;
-            return $sts;
-        }
-
-        $hari_kls = ($timespace[$id_timespace]['waktu_hari']);
-        $waktu_jam_mulai_kls = strtotime($timespace[$id_timespace]['waktu_jam_mulai']);
-        $lama_menit_kelas = $period_waktu * 50;
-        $waktu_jam_selesai_kls = date('H:i:s', strtotime('+'.$lama_menit_kelas.' minutes', $waktu_jam_mulai_kls));
-
-        if (
-            strtotime($waktu_jam_selesai_kls) > strtotime('17:20:00')
-            OR ($hari_kls == 'jumat' 
-                AND ($waktu_jam_mulai_kls) < strtotime('11:20:00')
-                AND strtotime($waktu_jam_selesai_kls) > strtotime('11:20:00')
-            )
-        ) {
-            $sts = false;
-        }
-        
-        return $sts;
-    }
-
-    public function check_on_hardrule($individu_classprodi, $individu, $value, $id_timespace, $timespace, $period_waktu){
-        // if (!empty($individu)) {
-            $sts = true;
-            // $sts = $sts && $this->check_timespace_paralelclass_is_sametime($id_timespace, $individu, $timespace, $value);
-            $stsrule_1 = $this->check_time_notover_limit($id_timespace, $timespace, $period_waktu);
-            $stsrule_2 = $this->check_timespace_class_samepacket_not_sametime($individu_classprodi, $value, $id_timespace, $timespace);
-            $stsrule_3 = $this->check_capacity_class_ok($id_timespace, $timespace, $value);
-            $stsrule_4 = $this->check_lecture_class_not_sametime($individu, $value, $id_timespace, $timespace);
-            $stsrule_5 = $this->check_separatesameclass_not_sameday($individu, $value, $id_timespace, $timespace);
-            $stsrule_6 = $this->CI->aturan_jadwal->check_neighborpacketclass_not_sametime($this->kromosom, $this->timespace, $individu_classprodi, $value, $id_timespace, $timespace, $this->prodi);
-
-            // $sts = $stsrule_1 && $stsrule_2 && $stsrule_3 && $stsrule_4 && $stsrule_5 &&  $stsrule_6;
-            $sts = $stsrule_1 && $stsrule_2 && $stsrule_3 && $stsrule_4 && $stsrule_5 && $stsrule_6 ;
-
-            // $param = array($stsrule_1, $stsrule_2, $stsrule_3, $stsrule_4, $stsrule_5, $stsrule_6);
-            // $idx = $this->cek_kebenaran($param);
-            // echo '<pre>'; print_r($idx); 
-
-            return $sts;
-        /*}else{
-            return true;
-        }*/
-        
-    }
-
-    function cek_kebenaran($param){
-        foreach ($param as $key => $value) {
-            if (!$value) {
-                return $key;
-                break;
-            }
-        }
-
-    }
-
-    public function check_on_hardrule_for_paralelclass($individu_classprodi, $individu, $value, $id_timespace, $timespace){
-        if (!empty($individu)) {
-            $sts = true;
-
-            $sts = $sts && $this->check_timespace_paralelclass_is_sametime($individu, $value, $id_timespace, $timespace);
-            $sts = $sts && $this->check_capacity_class_ok($id_timespace, $timespace, $value);
-            $sts = $sts && $this->check_lecture_class_not_sametime($individu, $value, $id_timespace, $timespace);
-            $sts = $sts && $this->check_separatesameclass_not_sameday($individu, $value, $id_timespace, $timespace);
-            $sts = $sts && $this->CI->aturan_jadwal->check_neighborpacketclass_not_sametime($this->kromosom, $this->timespace, $individu_classprodi, $value, $id_timespace, $timespace, $this->prodi);
-
-
-            // $sts = $sts && $this->check_timespace_class_samepacket_not_sametime($id_timespace, $individu, $timespace, $value);
-
-            return $sts;
-        }else{
-            return true;
-        }
-        
-    }
-
-    //===================================================================================================================
-
-    function get_id_timespace_for_sametime($timespace, $id_waktu){
-        $temp = array();
-        foreach ($timespace as $key => $value) {
-            if ($value['id_waktu'] == $id_waktu) {
-                $temp[] = array(
-                    'id_timespace' => $key,
-                    'data' => $value
-                );
-            }
-            
-        }
-
-        // unset($key);
-        // unset($value);
-
-        return $temp;
-        // unset($temp);
-    }
-
-    /*
-    fungsi ini digunakan untuk mencari id_timespace yg nanti dipakai kelas paralel matakuliah yg sama
-    */
-    function get_random_local($individu_classprodi, $individu, $kelas, $timespace, $makul_grup, $waktudistinct_grup, $period_waktu, $id_timespace_cek=null){
-        
-        /*
-        membuat matriks ruang & waktu timespace_grup_waktu khusus untuk makul yang sama,
-        matriks ini waktunya sama, hanya ruang yang beda
-        */
-        $period_waktu = $kelas['period'];
-        if (!empty($makul_grup)) {
-            foreach ($makul_grup as $a => $mk) {
-                if ($mk == $kelas['id_mkkur'].'-'.$period_waktu) {
-                    $timespace_grup_waktu = $this->get_id_timespace_for_sametime($timespace, $waktudistinct_grup[$a]);
-                }
-            }
-        }
-
-        if ($id_timespace_cek != null) {
-            $id_timespace = $id_timespace_cek;
-        }else{
-            $id_timespace_grup_waktu = mt_rand(0,(count($timespace_grup_waktu)-1));
-            $id_timespace = $timespace_grup_waktu[$id_timespace_grup_waktu]['id_timespace'];
-        }
-
-        for ($i=0; $i < count($timespace); $i++) { 
-
-            $rule_ok = $this->check_on_hardrule_for_paralelclass($individu_classprodi, $individu, $kelas, $id_timespace, $timespace);
-            if ($rule_ok) {
-                break;
-            }else{
-                $id_timespace_grup_waktu = mt_rand(0,(count($timespace_grup_waktu)-1));
-                $id_timespace = $timespace_grup_waktu[$id_timespace_grup_waktu]['id_timespace'];
-            }
-
-            if ( ($i+1) == count($timespace)) {
-                echo "====================================================================<br>";
-                echo 'individu : <pre>'; print_r($individu); 
-                echo 'timespace grup : <pre>'; print_r($timespace_grup_waktu); 
-                echo 'kelas : <pre>'; print_r($kelas); 
-            	echo "indeks ruang dan waktu (id_timespace) tidak tersedia (paralel class)";
-            	exit();
-            }
-        }
-
-        return $id_timespace;
-    }
-
-    public function get_feasible_individu($arr_data){
-        extract($arr_data);
-
-        /*
-        menentukan jadwal ruang & waktu untuk kelas diwakili oleh id_timespace
-        cek apakah kelas makul yang sama sudah ada sebelumnya di kelas terjadwal
-        kelas makul yang sama adalah kelas paralel yang makulnya sama
-        jika tidak maka id_timespace bisa diambil dari matriks ruang & waktu 
-        jika iya maka id_timespace diambil dari matriks ruang & waktu yg lebih spesifik, 
-        yakni yg waktunya sama dgn kls terjdwal sebelumnya yg makul sama. Karna ada aturan
-        kelas paralel diadakan dalam waktu yg sama.
-        */
-        $period_waktu = $value['period'];
-        $individu_classprodi = $this->break_individu_prodi($individu);
-        // echo '<pre>'; print_r($makul_grup); 
-        if ( !in_array($value['id_mkkur'].'-'.$period_waktu, $makul_grup) ) {
-
-            for ($i=0; $i < count($timespace); $i++) { 
-            	$id_timespace = mt_rand(0,(count($timespace)-1));
-
-                $rule_ok = $this->check_on_hardrule($individu_classprodi, $individu, $value, $id_timespace, $timespace, $period_waktu);
-                if ($rule_ok) {
-                    break;
-                }
-
-                if ( ($i+1) == count($timespace)) {
-                	echo "id_timespace tidak tersedia (non-paralel class)";
-                	exit();
-                }
-            }
-            
-        }else{
-            $id_timespace = $this->get_random_local($individu_classprodi, $individu, $value, $timespace, $makul_grup, $waktudistinct_grup, $period_waktu);
-            
-        }
-
-        /*
-        menyimpan hasil ruang & waktu untuk kelas, beserta periodenya
-        */        
-        $waktu_jam_selesai_kls = $this->get_jam_selesai_kelas($timespace[$id_timespace]['waktu_jam_mulai'], $period_waktu);
-        $individu[] = array(
-            'id_kromosom' => $value['id_individu'],
-            'nama_kelas' => $value['nama_kelas'],
-            'id_timespace' => $timespace[$id_timespace]['id_timespace'],
-            'id_waktu' => $timespace[$id_timespace]['id_waktu'],
-            'period' => $value['period'],
-            // 'waktu_hari' => $timespace[$id_timespace]['waktu_hari'],
-            'id_ruang' => $timespace[$id_timespace]['id_ruang'],
-            // 'waktu_jam_mulai' => $timespace[$id_timespace]['waktu_jam_mulai']
-            'label_timespace' => $timespace[$id_timespace]['label'].$waktu_jam_selesai_kls
-            // 'kap_ruang' => $timespace[$id_timespace]['kap_ruang'],
-            // 'waktu_jam_selesai_kls' => $waktu_jam_selesai_kls
-        );
-
-        // membuat grup kelas per matakuliah secara dinamis
-        if (!in_array($value['id_mkkur'].'-'.$period_waktu, $makul_grup)) {
-            $makul_grup[] = $value['id_mkkur'].'-'.$period_waktu;
-            $waktudistinct_grup[] = $timespace[$id_timespace]['id_waktu'];
-        }
-        
-        // menghapus index beserta nilainya untuk data ruang & waktu yg dipakai kelas untuk jadwal
-        for ($t=0; $t < $period_waktu; $t++) { 
-            $id_timespace += $t;
-            unset($timespace[$id_timespace]);
-        }
-        
-        $timespace = array_values($timespace); // set ulang index matriks ruang & waktu 
-
-        $ret_data = compact('timespace','individu','value', 'makul_grup', 'waktudistinct_grup');
-        return $ret_data;
-
-    }
-
-    public function get_jam_selesai_kelas($waktu_jam_mulai, $period_waktu){
-    	$waktu_jam_mulai_kls = strtotime($waktu_jam_mulai);
-        $lama_menit_kelas = $period_waktu * 50;
-        $waktu_jam_selesai_kls = date('H:i:s', strtotime('+'.$lama_menit_kelas.' minutes', $waktu_jam_mulai_kls));
-
-        return $waktu_jam_selesai_kls;
-    }
-
-    function break_individu_prodi($individu){
-        // echo '<pre>'; print_r($individu); 
-        $u = null;
-        $p = null;
-        foreach ($individu as $t => $ind) {
-            // echo '<pre>'; print_r($this->kromosom[$ind['id_kromosom']]); 
-            if ($this->kromosom[$ind['id_kromosom']]['is_universal'] == '1') {
-                $u[] = $ind;
-            }else{
-                foreach ($this->prodi as $t => $pr) {
-                    $kelas_prodi = explode('|', $this->kromosom[$ind['id_kromosom']]['kelas_prodi']);
-                    if (!empty($kelas_prodi) AND in_array($pr['prodi_id'],$kelas_prodi)) {
-                        $p[$t][] = $ind;
-                    }
-                }
-                
-            }
-        }
-
-        $return = array(
-            "uni" => $u,
-            "pro" => $p,
-        );
-
-        return $return;
-    }
-    
-    /*
-    Aturan umum : 
-    1. Kelas mata kuliah yang sama harus waktu yang sama.
-    2. Kelas mata kuliah yang satu paket harus beda waktu.
-    3. Kapasitas ruang >= jumlah peserta.
-    4. Dosen tidak mengajar kelas pada waktu yang sama.
-    5. kelas makul sama yg dipecah sks nya diadakan pada hari yang berbeda.
-    6. Kelas makul paket wajib berdekatan jenis smt harus beda waktu.
-    */
-    public function create_individu(){
-        $individu = array(); // untuk menampung sejumlah individu yang mewakili jadwal
-        $makul_grup = array(); // untuk mengelompokan kelas berdasar matakuliahnya.
-        $waktudistinct_grup = array(); // untuk menampung waktu_id hasil pengelompokan kelas berdasar makulnya.
-        $timespace = $this->timespace; // matriks data ruang, hari, dan waktu
-
-        foreach ($this->kromosom as $key => $value) {
-            $arr_data = compact('timespace','individu','value', 'makul_grup', 'waktudistinct_grup');
-            
-            $ret_data = $this->get_feasible_individu($arr_data);
-            if ($key == 350) {
-                // echo '<pre>'; print_r($individu); 
-                $ind_prodi_classified = $this->break_individu_prodi($individu, $value);
-                echo '<pre>'; print_r($value); 
-                echo '<pre>'; print_r($ind_prodi_classified); 
-                exit();
-            }
-            extract($ret_data);
-        }
-
-        // unset($makul_grup);
-        // unset($waktudistinct_grup);
-        // unset($timespace);
-        // unset($ret_data);
-
-        // echo '<pre>'; print_r($individu); echo '</pre>';
-        // $this->CI->bantu->debugPreviewJadwal($individu); exit();
-        // exit();
-        return $individu;
-    }
-
-    public function make_class($arr_data){
-        extract($arr_data);       
-
-        /*
-        menyimpan hasil ruang & waktu untuk kelas, beserta periodenya
-        */
-        $class[] = array(
-            'id_individu' => $id_individu,
-            'id_kelas' => $value['id'],
-            'id_mkkur' => $value['mkkur_id'],
-            'period' => $period_waktu,
-            'nama_kelas' => $value['nama_kelas'],
-            'jml_peserta_kls' => $value['jml_peserta_kls'],
-            'format_jadwal' => $value['format_jadwal'],
-            'paket_smt' => $value['paket_smt'],
-            'sifat_makul' => $value['sifat_makul'],
-            'dosen' => $value['dosen'],
-            'ruang_blok_prodi' => $value['ruang_blok_prodi'],
-            'kelas_prodi' => $value['kelas_prodi'],
-            'alternatif_waktu_ajar' => $value['alternatif_waktu_ajar'],
-            'is_universal' => $value['is_universal']
-        );
-
-        $id_individu++;
-
-        $ret_data = compact('class','period_waktu','value', 'id_individu');
-        return $ret_data;
-    }
-
     /**
     * @author       Eko Budi Prasetyo
-    * @version      0.0.0
     * @since        May 30, 2014
-    * @usedfor      -
     */
     public function generate_population(){
         $this->kromosom = $this->create_information_class(); // buat individu
@@ -696,6 +140,311 @@ class Algen {
         }
 
         return $class;
+    }
+    
+    /*
+    Aturan umum : 
+    1. Kelas mata kuliah yang sama harus waktu yang sama.
+    2. Kelas mata kuliah yang satu paket harus beda waktu.
+    3. Kapasitas ruang >= jumlah peserta.
+    4. Dosen tidak mengajar kelas pada waktu yang sama.
+    5. kelas makul sama yg dipecah sks nya diadakan pada hari yang berbeda.
+    6. Kelas makul paket wajib berdekatan jenis smt harus beda waktu.
+    */
+    public function create_individu(){
+        $individu = array(); // untuk menampung sejumlah individu yang mewakili jadwal
+        $makul_grup = array(); // untuk mengelompokan kelas berdasar matakuliahnya.
+        $waktudistinct_grup = array(); // untuk menampung waktu_id hasil pengelompokan kelas berdasar makulnya.
+        $timespace = $this->timespace; // matriks data ruang, hari, dan waktu
+
+        foreach ($this->kromosom as $key => $value) {
+            $arr_data = compact('timespace','individu','value', 'makul_grup', 'waktudistinct_grup');
+            
+            $ret_data = $this->get_feasible_individu($arr_data);
+            if ($key == 350) {
+                // echo '<pre>'; print_r($individu); 
+                $ind_prodi_classified = $this->break_individu_prodi($individu, $value);
+                echo '<pre>'; print_r($value); 
+                echo '<pre>'; print_r($ind_prodi_classified); 
+                exit();
+            }
+            extract($ret_data);
+        }
+
+        // unset($makul_grup);
+        // unset($waktudistinct_grup);
+        // unset($timespace);
+        // unset($ret_data);
+
+        // echo '<pre>'; print_r($individu); echo '</pre>';
+        $this->CI->bantu->debugPreviewJadwal($individu); exit();
+        // exit();
+        return $individu;
+    }
+
+    public function get_feasible_individu($arr_data){
+        extract($arr_data);
+
+        /*
+        menentukan jadwal ruang & waktu untuk kelas diwakili oleh id_timespace
+        cek apakah kelas makul yang sama sudah ada sebelumnya di kelas terjadwal
+        kelas makul yang sama adalah kelas paralel yang makulnya sama
+        jika tidak maka id_timespace bisa diambil dari matriks ruang & waktu 
+        jika iya maka id_timespace diambil dari matriks ruang & waktu yg lebih spesifik, 
+        yakni yg waktunya sama dgn kls terjdwal sebelumnya yg makul sama. Karna ada aturan
+        kelas paralel diadakan dalam waktu yg sama.
+        */
+        $period_waktu = $value['period'];
+        $individu_classprodi = $this->break_individu_prodi($individu); // uni atau bukan
+        // echo '<pre>'; print_r($makul_grup); 
+        if ( !in_array($value['id_mkkur'].'-'.$period_waktu, $makul_grup) ) {
+
+            for ($i=0; $i < count($timespace); $i++) { 
+                $id_timespace = mt_rand(0,(count($timespace)-1));
+
+                $rule_ok = $this->check_on_hardrule($individu_classprodi, $individu, $value, $id_timespace, $timespace, $period_waktu);
+                if ($rule_ok) {
+                    break;
+                }
+
+                if ( ($i+1) == count($timespace)) {
+                    echo "id_timespace tidak tersedia (non-paralel class)";
+                    exit();
+                }
+            }
+            
+        }else{
+            $id_timespace = $this->get_random_local($individu_classprodi, $individu, $value, $timespace, $makul_grup, $waktudistinct_grup, $period_waktu);
+            
+        }
+
+        /*
+        menyimpan hasil ruang & waktu untuk kelas, beserta periodenya
+        */        
+        $waktu_jam_selesai_kls = $this->get_jam_selesai_kelas($timespace[$id_timespace]['waktu_jam_mulai'], $period_waktu);
+        $individu[] = array(
+            'id_kromosom' => $value['id_individu'],
+            'nama_kelas' => $value['nama_kelas'],
+            'id_timespace' => $timespace[$id_timespace]['id_timespace'],
+            'id_waktu' => $timespace[$id_timespace]['id_waktu'],
+            'period' => $value['period'],
+            // 'waktu_hari' => $timespace[$id_timespace]['waktu_hari'],
+            'id_ruang' => $timespace[$id_timespace]['id_ruang'],
+            // 'waktu_jam_mulai' => $timespace[$id_timespace]['waktu_jam_mulai']
+            'label_timespace' => $timespace[$id_timespace]['label'].$waktu_jam_selesai_kls
+            // 'kap_ruang' => $timespace[$id_timespace]['kap_ruang'],
+            // 'waktu_jam_selesai_kls' => $waktu_jam_selesai_kls
+        );
+
+        // membuat grup kelas per matakuliah secara dinamis
+        if (!in_array($value['id_mkkur'].'-'.$period_waktu, $makul_grup)) {
+            $makul_grup[] = $value['id_mkkur'].'-'.$period_waktu;
+            $waktudistinct_grup[] = $timespace[$id_timespace]['id_waktu'];
+        }
+        
+        // menghapus index beserta nilainya untuk data ruang & waktu yg dipakai kelas untuk jadwal
+        for ($t=0; $t < $period_waktu; $t++) { 
+            $id_timespace += $t;
+            unset($timespace[$id_timespace]);
+        }
+        
+        $timespace = array_values($timespace); // set ulang index matriks ruang & waktu 
+
+        $ret_data = compact('timespace','individu','value', 'makul_grup', 'waktudistinct_grup');
+        return $ret_data;
+
+    }
+
+    /*
+    fungsi ini digunakan untuk mencari id_timespace yg nanti dipakai kelas paralel matakuliah yg sama
+    */
+    function get_random_local($individu_classprodi, $individu, $kelas, $timespace, $makul_grup, $waktudistinct_grup, $period_waktu, $id_timespace_cek=null){
+        
+        /*
+        membuat matriks ruang & waktu timespace_grup_waktu khusus untuk makul yang sama,
+        matriks ini waktunya sama, hanya ruang yang beda
+        */
+        $period_waktu = $kelas['period'];
+        if (!empty($makul_grup)) {
+            foreach ($makul_grup as $a => $mk) {
+                if ($mk == $kelas['id_mkkur'].'-'.$period_waktu) {
+                    $timespace_grup_waktu = $this->get_id_timespace_for_sametime($timespace, $waktudistinct_grup[$a]);
+                }
+            }
+        }
+
+        if ($id_timespace_cek != null) {
+            $id_timespace = $id_timespace_cek;
+        }else{
+            $id_timespace_grup_waktu = mt_rand(0,(count($timespace_grup_waktu)-1));
+            $id_timespace = $timespace_grup_waktu[$id_timespace_grup_waktu]['id_timespace'];
+        }
+
+        for ($i=0; $i < count($timespace); $i++) { 
+
+            $rule_ok = $this->check_on_hardrule_for_paralelclass($individu_classprodi, $individu, $kelas, $id_timespace, $timespace);
+            if ($rule_ok) {
+                break;
+            }else{
+                $id_timespace_grup_waktu = mt_rand(0,(count($timespace_grup_waktu)-1));
+                $id_timespace = $timespace_grup_waktu[$id_timespace_grup_waktu]['id_timespace'];
+            }
+
+            if ( ($i+1) == count($timespace)) {
+                echo "====================================================================<br>";
+                echo 'individu : <pre>'; print_r($individu); 
+                echo 'timespace grup : <pre>'; print_r($timespace_grup_waktu); 
+                echo 'kelas : <pre>'; print_r($kelas); 
+                echo "indeks ruang dan waktu (id_timespace) tidak tersedia (paralel class)";
+                exit();
+            }
+        }
+
+        return $id_timespace;
+    }    
+
+    function get_id_timespace_for_sametime($timespace, $id_waktu){
+        $temp = array();
+        foreach ($timespace as $key => $value) {
+            if ($value['id_waktu'] == $id_waktu) {
+                $temp[] = array(
+                    'id_timespace' => $key,
+                    'data' => $value
+                );
+            }
+            
+        }
+        
+        return $temp;
+        // unset($temp);
+    }
+
+
+    // =====================================================================================================================
+    /*
+    pada kelas paralel yg mata kuliah sama, waktu harus sama dan di tempat yang berbeda
+    */
+
+    public function check_on_hardrule($individu_classprodi, $individu, $value, $id_timespace, $timespace, $period_waktu){
+        // if (!empty($individu)) {
+            $sts = true;
+            // $sts = $sts && $this->check_timespace_paralelclass_is_sametime($id_timespace, $individu, $timespace, $value);
+            $stsrule_1 = $this->CI->aturan_jadwal->check_time_notover_limit($id_timespace, $timespace, $period_waktu);
+            $stsrule_2 = $this->CI->aturan_jadwal->check_timespace_class_samepacket_not_sametime($this->kromosom, $this->timespace, $individu_classprodi, $value, $id_timespace, $timespace, $this->prodi);
+            $stsrule_3 = $this->CI->aturan_jadwal->check_capacity_class_ok($id_timespace, $timespace, $value);
+            $stsrule_4 = $this->CI->aturan_jadwal->check_lecture_class_not_sametime($this->kromosom, $this->timespace, $individu, $value, $id_timespace, $timespace);
+            $stsrule_5 = $this->CI->aturan_jadwal->check_separatesameclass_not_sameday($this->kromosom, $this->timespace, $individu, $value, $id_timespace, $timespace);
+            $stsrule_6 = $this->CI->aturan_jadwal->check_neighborpacketclass_not_sametime($this->kromosom, $this->timespace, $individu_classprodi, $value, $id_timespace, $timespace, $this->prodi);
+
+            // $sts = $stsrule_1 && $stsrule_2 && $stsrule_3 && $stsrule_4 && $stsrule_5 &&  $stsrule_6;
+            $sts = $stsrule_1 && $stsrule_2 && $stsrule_3 && $stsrule_4 && $stsrule_5 && $stsrule_6 ;
+
+            // $param = array($stsrule_1, $stsrule_2, $stsrule_3, $stsrule_4, $stsrule_5, $stsrule_6);
+            // $idx = $this->cek_kebenaran($param);
+            // echo '<pre>'; print_r($idx); 
+
+            return $sts;
+        /*}else{
+            return true;
+        }*/
+        
+    }
+
+    function cek_kebenaran($param){
+        foreach ($param as $key => $value) {
+            if (!$value) {
+                return $key;
+                break;
+            }
+        }
+
+    }
+
+    public function check_on_hardrule_for_paralelclass($individu_classprodi, $individu, $value, $id_timespace, $timespace){
+        if (!empty($individu)) {
+            $sts = true;
+
+            $sts = $sts && $this->CI->aturan_jadwal->check_timespace_paralelclass_is_sametime($this->kromosom, $this->timespace, $individu, $value, $id_timespace, $timespace);
+            $sts = $sts && $this->CI->aturan_jadwal->check_capacity_class_ok($id_timespace, $timespace, $value);
+            $sts = $sts && $this->CI->aturan_jadwal->check_lecture_class_not_sametime($this->kromosom, $this->timespace, $individu, $value, $id_timespace, $timespace);
+            $sts = $sts && $this->CI->aturan_jadwal->check_separatesameclass_not_sameday($this->kromosom, $this->timespace, $individu, $value, $id_timespace, $timespace);
+            $sts = $sts && $this->CI->aturan_jadwal->check_neighborpacketclass_not_sametime($this->kromosom, $this->timespace, $individu_classprodi, $value, $id_timespace, $timespace, $this->prodi);
+
+
+            // $sts = $sts && $this->check_timespace_class_samepacket_not_sametime($id_timespace, $individu, $timespace, $value);
+
+            return $sts;
+        }else{
+            return true;
+        }
+        
+    }
+
+    //===================================================================================================================
+
+
+    public function get_jam_selesai_kelas($waktu_jam_mulai, $period_waktu){
+    	$waktu_jam_mulai_kls = strtotime($waktu_jam_mulai);
+        $lama_menit_kelas = $period_waktu * 50;
+        $waktu_jam_selesai_kls = date('H:i:s', strtotime('+'.$lama_menit_kelas.' minutes', $waktu_jam_mulai_kls));
+
+        return $waktu_jam_selesai_kls;
+    }
+
+    function break_individu_prodi($individu){
+        // echo '<pre>'; print_r($individu); 
+        $u = null;
+        $p = null;
+        foreach ($individu as $t => $ind) {
+            // echo '<pre>'; print_r($this->kromosom[$ind['id_kromosom']]); 
+            if ($this->kromosom[$ind['id_kromosom']]['is_universal'] == '1') {
+                $u[] = $ind;
+            }else{
+                foreach ($this->prodi as $t => $pr) {
+                    $kelas_prodi = explode('|', $this->kromosom[$ind['id_kromosom']]['kelas_prodi']);
+                    if (!empty($kelas_prodi) AND in_array($pr['prodi_id'],$kelas_prodi)) {
+                        $p[$t][] = $ind;
+                    }
+                }
+                
+            }
+        }
+
+        $return = array(
+            "uni" => $u,
+            "pro" => $p,
+        );
+
+        return $return;
+    }
+
+    public function make_class($arr_data){
+        extract($arr_data);       
+
+        /*
+        menyimpan hasil ruang & waktu untuk kelas, beserta periodenya
+        */
+        $class[] = array(
+            'id_individu' => $id_individu,
+            'id_kelas' => $value['id'],
+            'id_mkkur' => $value['mkkur_id'],
+            'period' => $period_waktu,
+            'nama_kelas' => $value['nama_kelas'],
+            'jml_peserta_kls' => $value['jml_peserta_kls'],
+            'format_jadwal' => $value['format_jadwal'],
+            'paket_smt' => $value['paket_smt'],
+            'sifat_makul' => $value['sifat_makul'],
+            'dosen' => $value['dosen'],
+            'ruang_blok_prodi' => $value['ruang_blok_prodi'],
+            'kelas_prodi' => $value['kelas_prodi'],
+            'alternatif_waktu_ajar' => $value['alternatif_waktu_ajar'],
+            'is_universal' => $value['is_universal']
+        );
+
+        $id_individu++;
+
+        $ret_data = compact('class','period_waktu','value', 'id_individu');
+        return $ret_data;
     }
 
     function cek_langgar_jam($individu){
@@ -780,7 +529,7 @@ class Algen {
 			$separate_makul = $this->separate_kelas_makul_wajib_pil($indi_pr);
 			$jumlah = 0;
 	        foreach ($separate_makul['makul_pil'] as $i => $pil) {
-	            $smt_neighbor = $this->get_neighbor_sametype_semester($this->kromosom[$pil['id_kromosom']]['paket_smt']);
+	            $smt_neighbor = $this->CI->aturan_jadwal->get_neighbor_sametype_semester($this->kromosom[$pil['id_kromosom']]['paket_smt']);
 
 	            $bentrok[$i] = 0;
 	            $bentrok_ket[$i] = '';
@@ -1153,12 +902,12 @@ class Algen {
             $waktu_jam_selesai_kls = $this->get_jam_selesai_kelas($this->timespace[$value['id_timespace']]['waktu_jam_mulai'], $this->kromosom[$value['id_kromosom']]['period']);
         	$individu_temp[] = array(
                 'id_kromosom' => $value['id_kromosom'],
-                'nama_kelas' => $value['nama_kelas'],
+                // 'nama_kelas' => $value['nama_kelas'],
 	            'id_timespace' => $timespace[$id_timespace]['id_timespace'],
-            	'period' => $value['period'],
+            	// 'period' => $value['period'],
 	            'id_waktu' => $timespace[$id_timespace]['id_waktu'],
 	            'id_ruang' => $timespace[$id_timespace]['id_ruang'],
-	            'label_timespace' => $value['nama_kelas'].','.$timespace[$id_timespace]['label'].$waktu_jam_selesai_kls
+	            // 'label_timespace' => $value['nama_kelas'].','.$timespace[$id_timespace]['label'].$waktu_jam_selesai_kls
 	            // 'kap_ruang' => $timespace[$id_timespace]['kap_ruang'],
 	            // 'waktu_hari' => $timespace[$id_timespace]['waktu_hari'],
 	            // 'waktu_jam_mulai' => $timespace[$id_timespace]['waktu_jam_mulai'],

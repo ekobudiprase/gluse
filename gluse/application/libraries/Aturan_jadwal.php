@@ -10,24 +10,6 @@
 
 class Aturan_jadwal {
     var $CI;
-    var $populasi = array();
-    var $pc = null;
-    var $pm = null;
-    var $kelas = null;
-    var $ruang = null;
-    var $waktu = null;
-    var $timespace = null;
-    var $post = null;
-    var $prodi = null;
-    var $min_prosen_capacity = null;
-    var $populasi_breeding = array();
-    var $populasi_breeding_selected = array();
-    var $total_fitness = 0;
-    var $individu_breed = array();
-    var $individu_update_calon = array();
-    var $populasi_baru = array();
-    var $kromosom = array();
-    var $err_msg = '';
 
     /**
     * @author   Eko Budi Prasetyo
@@ -131,4 +113,172 @@ class Aturan_jadwal {
 
         return $arr_neighbor;
     }
+
+
+
+    public function check_separatesameclass_not_sameday($kromosom, $timespace_utama, $individu, $value, $id_timespace, $timespace){
+        $sts = true;
+
+        // trapping jika undefined maka lgsg false, cari id_timespace yg lain
+        if (!isset($timespace[$id_timespace])) {
+            $sts = false;
+            return $sts;
+        }
+
+        foreach ($individu as $i => $item) {
+            if ($kromosom[$item['id_kromosom']]['id_kelas'] == $value['id_kelas'] 
+                AND $timespace_utama[$item['id_timespace']]['waktu_hari'] == $timespace[$id_timespace]['waktu_hari']) {
+                $sts = false;
+                break;
+            }            
+        }
+
+        return $sts;
+    }
+
+    public function check_lecture_class_not_sametime($kromosom, $timespace_utama, $individu, $value, $id_timespace, $timespace){
+        $sts = true;
+
+        // trapping jika undefined maka lgsg false, cari id_timespace yg lain
+        if (!isset($timespace[$id_timespace])) {
+            $sts = false;
+            return $sts;
+        }
+
+        foreach ($individu as $i => $item) {
+            if (!empty($kromosom[$item['id_kromosom']]['dosen'])) {
+                $sama = 0;
+                foreach ($kromosom[$item['id_kromosom']]['dosen'] as $j => $item_dsn) {
+                    if (!empty($value['dosen'])) {
+                        foreach ($value['dosen'] as $k => $item_dsn_current_class) {
+                            if ($item_dsn == $item_dsn_current_class
+                            ) {
+                                $sama++;
+                            }
+                        }
+                    }
+                }
+
+                // Jika mata kuliah paralel dosen sama, maka aplikasi error
+                if(count($kromosom[$item['id_kromosom']]['dosen']) == $sama AND $timespace_utama[$item['id_timespace']]['id_waktu'] == $timespace[$id_timespace]['id_waktu']){
+                    $sts = false;
+                    break;
+                }
+            }
+        }
+        
+        return $sts;
+    }   
+
+    public function check_capacity_class_ok($id_timespace, $timespace, $value){
+        $sts = true;
+
+        // trapping jika undefined maka lgsg false, cari id_timespace yg lain
+        if (!isset($timespace[$id_timespace])) {
+            $sts = false;
+            return $sts;
+        }
+
+        if ($value['jml_peserta_kls'] > $timespace[$id_timespace]['kap_ruang']) {
+            $sts = false;
+        }
+
+        return $sts;
+    }
+    
+    public function check_timespace_paralelclass_is_sametime($kromosom, $timespace_utama, $individu, $value, $id_timespace, $timespace ){
+        $sts = false;
+
+        // trapping jika undefined maka lgsg false, cari id_timespace yg lain
+        if (!isset($timespace[$id_timespace])) {
+            $sts = false;
+            return $sts;
+        }
+
+        foreach ($individu as $i => $item) {
+
+            if ($kromosom[$item['id_kromosom']]['id_mkkur'] == $value['id_mkkur'] 
+                AND $timespace_utama[$item['id_timespace']]['id_waktu'] == $timespace[$id_timespace]['id_waktu']
+            ) {
+                $sts = true;
+                break;
+            }            
+        }
+
+        return $sts;
+    }
+
+
+    public function check_timespace_class_samepacket_not_sametime($kromosom, $timespace_utama, $individu_classprodi, $value, $id_timespace, $timespace, $prodi){
+        $sts = true;
+
+        // trapping jika undefined maka lgsg false, cari id_timespace yg lain
+        if (!isset($timespace[$id_timespace])) {
+            $sts = false;
+            return $sts;
+        }
+   
+        $value_prodi = explode('|', $value['kelas_prodi']);
+
+        if (!empty($individu_classprodi['uni'])) {
+            foreach ($individu_classprodi['uni'] as $i => $item) {
+                if (
+                    $kromosom[$item['id_kromosom']]['paket_smt'] == $value['paket_smt'] 
+                    AND $timespace_utama[$item['id_timespace']]['id_waktu'] == $timespace[$id_timespace]['id_waktu']
+                ) {
+                    $sts = false;
+                    break;
+                }            
+            } 
+        }
+
+        if ($value['is_universal'] == '0' && !empty($individu_classprodi['pro'])) {
+            foreach ($prodi as $t => $pr) {
+                if (isset($individu_classprodi['pro'][$t]) && !empty($individu_classprodi['pro'][$t]) AND in_array($pr['prodi_id'],$value_prodi)) {
+                    foreach ($individu_classprodi['pro'][$t] as $i => $item) {
+                        
+                        if (
+                            $kromosom[$item['id_kromosom']]['paket_smt'] == $value['paket_smt'] 
+                            AND $timespace_utama[$item['id_timespace']]['id_waktu'] == $timespace[$id_timespace]['id_waktu']
+                        ) {
+                            $sts = false;
+                            break;
+                        }
+                    }
+                }
+                
+            }
+        }
+
+        return $sts;
+    }
+
+    
+    public function check_time_notover_limit($id_timespace, $timespace, $period_waktu){
+        $sts = true;
+
+        // trapping jika undefined maka lgsg false, cari id_timespace yg lain
+        if (!isset($timespace[$id_timespace])) {
+            $sts = false;
+            return $sts;
+        }
+
+        $hari_kls = ($timespace[$id_timespace]['waktu_hari']);
+        $waktu_jam_mulai_kls = strtotime($timespace[$id_timespace]['waktu_jam_mulai']);
+        $lama_menit_kelas = $period_waktu * 50;
+        $waktu_jam_selesai_kls = date('H:i:s', strtotime('+'.$lama_menit_kelas.' minutes', $waktu_jam_mulai_kls));
+
+        if (
+            strtotime($waktu_jam_selesai_kls) > strtotime('17:20:00')
+            OR ($hari_kls == 'jumat' 
+                AND ($waktu_jam_mulai_kls) < strtotime('11:20:00')
+                AND strtotime($waktu_jam_selesai_kls) > strtotime('11:20:00')
+            )
+        ) {
+            $sts = false;
+        }
+        
+        return $sts;
+    }
+
 }
