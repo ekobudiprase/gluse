@@ -177,7 +177,7 @@ class Algen {
         // unset($ret_data);
 
         // echo '<pre>'; print_r($individu); echo '</pre>';
-        $this->CI->bantu->debugPreviewJadwal($individu); exit();
+        // $this->CI->bantu->debugPreviewJadwal($individu); exit();
         // exit();
         return $individu;
     }
@@ -215,7 +215,10 @@ class Algen {
             
         }else{
             $id_timespace = $this->get_random_local($individu_classprodi, $individu, $value, $timespace, $makul_grup, $waktudistinct_grup, $period_waktu);
-            
+            // echo '<pre>'; print_r($individu); echo '</pre>';
+            // echo '<pre>'; print_r($id_timespace); echo '</pre>';
+            // echo '<pre>'; print_r($value); echo '</pre>';
+            // exit();
         }
 
         /*
@@ -231,9 +234,9 @@ class Algen {
             // 'waktu_hari' => $timespace[$id_timespace]['waktu_hari'],
             'id_ruang' => $timespace[$id_timespace]['id_ruang'],
             // 'waktu_jam_mulai' => $timespace[$id_timespace]['waktu_jam_mulai']
-            'label_timespace' => $timespace[$id_timespace]['label'].$waktu_jam_selesai_kls
+            'label_timespace' => $timespace[$id_timespace]['label'].$waktu_jam_selesai_kls,
             // 'kap_ruang' => $timespace[$id_timespace]['kap_ruang'],
-            // 'waktu_jam_selesai_kls' => $waktu_jam_selesai_kls
+            'waktu_jam_selesai_kls' => $waktu_jam_selesai_kls
         );
 
         // membuat grup kelas per matakuliah secara dinamis
@@ -243,8 +246,9 @@ class Algen {
         }
         
         // menghapus index beserta nilainya untuk data ruang & waktu yg dipakai kelas untuk jadwal
-        for ($t=0; $t < $period_waktu; $t++) { 
+        for ($t=0; $t < $period_waktu; $t++) {
             $id_timespace += $t;
+            $timespace[$id_timespace]['status'] = 1;
             unset($timespace[$id_timespace]);
         }
         
@@ -1169,6 +1173,7 @@ class Algen {
         	$this->populasi_breeding_selected[$idx]['arr_gen'][$key]['period'] = $this->kromosom[$value['id_kromosom']]['period'];
 
         	$waktu_jam_selesai_kls = $this->get_jam_selesai_kelas($this->timespace[$value['id_timespace']]['waktu_jam_mulai'], $this->kromosom[$value['id_kromosom']]['period'] );
+        	$this->populasi_breeding_selected[$idx]['arr_gen'][$key]['jam_selesai'] = $waktu_jam_selesai_kls;
         	$this->populasi_breeding_selected[$idx]['arr_gen'][$key]['label_timespace'] = $this->timespace[$value['id_timespace']]['label'].$waktu_jam_selesai_kls;
         }
 

@@ -398,6 +398,7 @@ class Proses_penjadwalan extends CI_Controller {
 					'id_waktu' => $item['id_waktu'],
 					'id_ruang' => $item['id_ruang'],
 					'period' => $item['period'],
+					'jam_selesai' => $item['jam_selesai'],
 					'label' => $item['label_timespace']
 				);
 				$sts = $sts && $this->Penjadwalan_model->ins_jadwalkuliah($param);

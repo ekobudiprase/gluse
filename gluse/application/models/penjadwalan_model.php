@@ -629,11 +629,11 @@ class Penjadwalan_model extends CI_Model {
 
         $sql = "
             INSERT INTO jadwal_kuliah
-            (jk_kls_id, jk_wkt_id, jk_ru_id, jk_period, jk_label)
-            VALUES (?, ?, ?,? ,?);
+            (jk_kls_id, jk_wkt_id, jk_ru_id, jk_period, jk_jam_selesai, jk_label)
+            VALUES (?, ?, ?, ?, ?, ?);
         ";
         
-        return $this->db->query($sql, array($id_kelas, $id_waktu, $id_ruang, $period, $label)); 
+        return $this->db->query($sql, array($id_kelas, $id_waktu, $id_ruang, $period, $jam_selesai, $label)); 
     }
 
     function get_jadwal_to_export(){
