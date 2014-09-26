@@ -240,7 +240,7 @@ class Bantu {
 		echo "</table>";
 		echo "</div>";
 
-		echo '<pre>'; print_r($jadwal); echo '</pre>';
+		// echo '<pre>'; print_r($jadwal); echo '</pre>';
 
     }
 

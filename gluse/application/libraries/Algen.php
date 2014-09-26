@@ -108,6 +108,7 @@ class Algen {
             $this->populasi[] = $this->create_individu(); // buat individu
             // break;
         }
+        // exit();
 
     }
 
@@ -177,7 +178,7 @@ class Algen {
         // unset($timespace);
         // unset($ret_data);
 
-        // $this->CI->bantu->debugPreviewJadwal($individu); exit();
+        // $this->CI->bantu->debugPreviewJadwal($individu); 
         // exit();
         return $individu;
     }
@@ -290,6 +291,7 @@ class Algen {
         $iteration++;
         // echo $iteration.', ';
         if ($iteration == 3333) {
+        	return $this->create_individu();
             echo "Iterasi ke-3333"; exit();
         }
         if ($timespace_grup_waktu != null) { // timespace lokal
@@ -740,7 +742,7 @@ class Algen {
     public function count_fitness(){
         
         $this->transform_populasi();
-
+        $this->total_fitness = 0;
         foreach ($this->populasi as $i => $individu) {
             $populasi[$i]['fitness_rule_1'] = $this->count_fitness_based_rule_kelasmakul_pilihan_wajib_not_sametime($individu);
             $populasi[$i]['fitness_rule_2'] = $this->count_fitness_based_rule_kelasmakul_on_ruangblokprodi($individu);
@@ -1067,7 +1069,7 @@ class Algen {
 
         $n_gen = count($populasi_breeding_crossover_selected[0]['arr_gen']);
         $n_ind = count($populasi_breeding_crossover_selected);
-        // echo '<pre>'; print_r($n_ind); 
+        
         $point_random = array(mt_rand(2,$n_gen-1), mt_rand(2,$n_gen-1) );
         for ($i=0; $i < $n_ind-1 ; $i++) { 
             $this->build_offspring_population_crossover_twopoint($populasi_breeding_crossover_selected[$i], $populasi_breeding_crossover_selected[$i+1], $point_random);
