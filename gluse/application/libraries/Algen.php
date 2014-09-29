@@ -1,6 +1,8 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-ini_set('MAX_EXECUTION_TIME', -1);
+// ini_set('MAX_EXECUTION_TIME', -1);
+ini_set('xdebug.max_nesting_level', 1000);
+ini_set('MAX_EXECUTION_TIME', 0);
 
 /**
  * @package     Gluse
@@ -294,6 +296,10 @@ class Algen {
         	return $this->create_individu();
             echo "Iterasi ke-3333"; exit();
         }
+        if (ob_get_level()==100) {
+            echo ob_get_level();
+        }
+        
         if ($timespace_grup_waktu != null) { // timespace lokal
             $id_timespace_grup_waktu = mt_rand(0,(count($timespace_grup_waktu)-1));
             $id_timespace = $timespace_grup_waktu[$id_timespace_grup_waktu]['id_timespace'];
@@ -810,6 +816,7 @@ class Algen {
         $this->total_fitness = 0; // set total fitness 0 karna sudah digunakan 
         $this->populasi_breeding_selected = $populasi_breeding_selected;
 
+        // echo '<pre>'; print_r($this->populasi_breeding_selected);  exit();
         // unset($populasi_breeding_selected);
         // unset($pick_individu);
         // unset($populasi_breeding);
@@ -906,7 +913,7 @@ class Algen {
                     }else{
                         $id_timespace = mt_rand(0,(count($timespace)-1));
                         // $id_timespace = $this->getRandomTimespace($individu_classprodi, $individu_temp, $this->kromosom[$value['id_kromosom']], $timespace, $this->kromosom[$value['id_kromosom']]['period'], 0);
-                
+                        
                     }
                 }
 
