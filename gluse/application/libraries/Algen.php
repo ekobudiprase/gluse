@@ -1,8 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-// ini_set('MAX_EXECUTION_TIME', -1);
-ini_set('xdebug.max_nesting_level', 1000);
-ini_set('MAX_EXECUTION_TIME', 0);
+ini_set('max_execution_time', 0);
 
 /**
  * @package     Gluse
@@ -165,13 +163,7 @@ class Algen {
             $arr_data = compact('timespace','individu','value', 'makul_grup', 'waktudistinct_grup');
             
             $ret_data = $this->get_feasible_individu($arr_data);
-            if ($key == 350) {
-                // echo '<pre>'; print_r($individu); 
-                $ind_prodi_classified = $this->break_individu_prodi($individu, $value);
-                echo '<pre>'; print_r($value); 
-                echo '<pre>'; print_r($ind_prodi_classified); 
-                exit();
-            }
+
             extract($ret_data);
         }
 
@@ -199,7 +191,7 @@ class Algen {
         */
         $period_waktu = $value['period'];
         $individu_classprodi = $this->break_individu_prodi($individu); // uni atau bukan
-        // echo '<pre>'; print_r($makul_grup); 
+
         if ( !in_array($value['id_mkkur'].'-'.$period_waktu, $makul_grup) ) {
             $id_timespace = $this->getRandomTimespace($individu_classprodi, $individu, $value, $timespace, $period_waktu, 0);
             // echo "<br>";
@@ -296,10 +288,6 @@ class Algen {
         	return $this->create_individu();
             echo "Iterasi ke-3333"; exit();
         }
-        if (ob_get_level()==100) {
-            echo ob_get_level();
-        }
-        
         if ($timespace_grup_waktu != null) { // timespace lokal
             $id_timespace_grup_waktu = mt_rand(0,(count($timespace_grup_waktu)-1));
             $id_timespace = $timespace_grup_waktu[$id_timespace_grup_waktu]['id_timespace'];
@@ -816,7 +804,6 @@ class Algen {
         $this->total_fitness = 0; // set total fitness 0 karna sudah digunakan 
         $this->populasi_breeding_selected = $populasi_breeding_selected;
 
-        // echo '<pre>'; print_r($this->populasi_breeding_selected);  exit();
         // unset($populasi_breeding_selected);
         // unset($pick_individu);
         // unset($populasi_breeding);
@@ -913,7 +900,7 @@ class Algen {
                     }else{
                         $id_timespace = mt_rand(0,(count($timespace)-1));
                         // $id_timespace = $this->getRandomTimespace($individu_classprodi, $individu_temp, $this->kromosom[$value['id_kromosom']], $timespace, $this->kromosom[$value['id_kromosom']]['period'], 0);
-                        
+                
                     }
                 }
 
@@ -979,7 +966,7 @@ class Algen {
 
         $individu = $this->repair_duplikasi_kelas_timespace($individu);
 
-        $individu = $this->repair_kelas_on_hardrule($individu);
+        // $individu = $this->repair_kelas_on_hardrule($individu);
         
         if (false) {
             echo '<pre>'; print_r($str);
@@ -1039,9 +1026,9 @@ class Algen {
             'offspring' => $off_2
         );
 
-        foreach ($offspring as $key => $value) {
+        /*foreach ($offspring as $key => $value) {
             $offspring[$key]['offspring'] = $this->repairing_individu($value['offspring']);
-        }
+        }*/
         foreach ($offspring as $key => $value) {
             $offspring[$key]['fitness_rule_1'] = $this->count_fitness_based_rule_kelasmakul_pilihan_wajib_not_sametime($value['offspring']);
             $offspring[$key]['fitness_rule_2'] = $this->count_fitness_based_rule_kelasmakul_on_ruangblokprodi($value['offspring']);
@@ -1110,7 +1097,17 @@ class Algen {
         );
 
         $individu = $this->repairing_individu($individu);
+        $individu = $this->cek_kelas_on_hardrule($individu);
         return $individu;
+    }
+
+    public function cek_kelas_on_hardrule($individu){
+        $individu_temp = array();
+        $timespace = $this->timespace;
+        $makul_grup = array();
+        $waktudistinct_grup = array();
+        $individu_classprodi = $this->break_individu_prodi($individu);
+        echo '<pre>'; print_r($individu); echo '</pre>'; exit();
     }
 
     public function mutation(){
