@@ -33,7 +33,7 @@ class Prodi_model extends CI_Model {
                 SELECT SUM(mpv.mkkprod_porsi_kelas)
                 FROM mkkur_prodi mpv
                 WHERE mpv.mkkprod_mkkur_id = mp.`mkkprod_mkkur_id`
-                AND mpv.`mkkprod_related_id` = 0
+                AND mpv.`mkkprod_related_id` IS NULL
                 GROUP BY mkkprod_mkkur_id
                 ) AS t,
                 mkkprod_porsi_kelas * (mkk.`mkkur_pred_jml_peminat` DIV
@@ -41,7 +41,7 @@ class Prodi_model extends CI_Model {
                     SELECT SUM(mpv.mkkprod_porsi_kelas)
                     FROM mkkur_prodi mpv
                     WHERE mpv.mkkprod_mkkur_id = mp.`mkkprod_mkkur_id`
-                    AND mpv.`mkkprod_related_id` = 0
+                    AND mpv.`mkkprod_related_id` IS NULL
                     GROUP BY mkkprod_mkkur_id
                 )) AS jml_porsi,    
                 mkk.`mkkur_pred_jml_peminat` MOD
@@ -49,14 +49,14 @@ class Prodi_model extends CI_Model {
                     SELECT SUM(mpv.mkkprod_porsi_kelas)
                     FROM mkkur_prodi mpv
                     WHERE mpv.mkkprod_mkkur_id = mp.`mkkprod_mkkur_id`
-                    AND mpv.`mkkprod_related_id` = 0
+                    AND mpv.`mkkprod_related_id` IS NULL
                     GROUP BY mkkprod_mkkur_id
                 ) AS sisa
             FROM program_studi ps
             LEFT JOIN mkkur_prodi mp ON ps.prodi_id = mp.mkkprod_prodi_id
             LEFT JOIN mata_kuliah_kurikulum mkk ON mp.`mkkprod_mkkur_id` = mkk.`mkkur_id`
             WHERE mp.mkkprod_mkkur_id = "'.$mkid.'"
-            AND mp.`mkkprod_related_id` = 0
+            AND mp.`mkkprod_related_id` IS NULL
         ';
 
         $ret = $this->db->query($query);
@@ -330,7 +330,7 @@ class Prodi_model extends CI_Model {
             FROM mkkur_prodi mp
             LEFT JOIN program_studi ps ON mp.`mkkprod_prodi_id` = ps.`prodi_id`
             WHERE mp.mkkprod_mkkur_id = "'.$id.'"
-            AND mp.`mkkprod_related_id` = 0
+            AND mp.`mkkprod_related_id` IS NULL
         ';
 
         $ret = $this->db->query($query);
@@ -338,6 +338,7 @@ class Prodi_model extends CI_Model {
 
 
         // $ret = $this->get_base_mkprodid_by_mkid($id);
+        $arr_ret = array();
         foreach ($ret as $key => $value) {
             $arr_ret[] = $this->get_data_prodi_child($value);
         }
@@ -392,13 +393,13 @@ class Prodi_model extends CI_Model {
             FROM mkkur_prodi mp
             LEFT JOIN program_studi ps ON mp.`mkkprod_prodi_id` = ps.`prodi_id`
             WHERE mp.mkkprod_mkkur_id = "'.$id.'"
-            AND mp.`mkkprod_related_id` = 0
+            AND mp.`mkkprod_related_id` IS NULL
         ';
 
         $ret = $this->db->query($query);
         $ret = $ret->result_array();
 
-
+        $arr_ret = array();
         foreach ($ret as $key => $value) {
             $arr_ret[] = $this->get_data_prodi_last_child($value);
         }
@@ -406,9 +407,12 @@ class Prodi_model extends CI_Model {
         $ret_cb[] = array(
             "id" => '', "label" => "--pilih--"
         );
+        if (!empty($arr_ret)) {
         foreach ($arr_ret as $key => $value) {
-            $ret_cb[] = $value;
+                $ret_cb[] = $value;
+            } 
         }
+        
 
         return $ret_cb;
     }

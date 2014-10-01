@@ -62,6 +62,47 @@ class Sc extends CI_Controller {
 		exit();
 	}
 
+	function input_mkkur_prodi(){
+		$mk = $this->sc_model->get_all_mk();
+		$prodi = $this->sc_model->get_all_prodi();
+
+		$sts = true;
+		$this->db->trans_start();
+		foreach ($mk as $key => $value) {
+			$mk_prodi_kode = substr($value['mkkur_kode'],0,3);
+			$mk[$key]['prodi'] = '';
+			if ($mk_prodi_kode == 'UNU') {
+				$mk[$key]['prodi'] = 'Universal';
+			}else{
+
+				foreach ($prodi as $i => $item) {
+					if ( $mk_prodi_kode == $item['prodi_prefix_mk']) {
+						$mk[$key]['prodi'] = $item['prodi_nama'];
+						$param = array(
+							$value['mkkur_id'],
+							$item['prodi_id']
+						);
+						$sts = $sts && $this->sc_model->ins_mkkur_prodi($param);
+					}
+				}
+			}
+		}
+		$this->db->trans_complete();
+
+
+
+		if ($this->db->trans_status() === true){
+			echo "sukses";
+		}else{
+		    echo "gagal";
+		}
+
+		
+		// echo '<pre>'; print_r($mk); 
+		// echo '<pre>'; print_r($prodi); 
+		exit();
+	}
+
 	function test(){
         $kelas = array(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16);
         $slot = array(

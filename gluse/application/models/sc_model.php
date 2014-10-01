@@ -48,6 +48,32 @@ class Sc_model extends CI_Model {
         return $ret;
     }
 
+    public function get_all_mk(){
+        $query = '
+            SELECT 
+                *
+            FROM mata_kuliah_kurikulum m
+        ';
+
+        $ret = $this->db->query($query);
+        $ret = $ret->result_array();
+
+        return $ret;
+    }
+
+    public function get_all_prodi(){
+        $query = '
+            SELECT 
+                *
+            FROM program_studi p
+        ';
+
+        $ret = $this->db->query($query);
+        $ret = $ret->result_array();
+
+        return $ret;
+    }
+
     function del_dsnkelas(){
         $query = '
             DELETE FROM dosen_kelas
@@ -68,6 +94,17 @@ class Sc_model extends CI_Model {
         ";
         
         return $this->db->query($sql, array($dsn_id, $kls_id)); 
+    }
+
+    function ins_mkkur_prodi($param){
+
+        $sql = "
+            INSERT INTO mkkur_prodi
+            (`mkkprod_mkkur_id`, `mkkprod_prodi_id`)
+            VALUES (?,?);
+        ";
+        
+        return $this->db->query($sql, $param); 
     }
 
     public function get_concat_data_prodi($param){        

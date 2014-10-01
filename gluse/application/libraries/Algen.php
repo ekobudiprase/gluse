@@ -1,6 +1,7 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 ini_set('max_execution_time', 0);
+set_error_handler("var_dump");
 
 /**
  * @package     Gluse
@@ -353,9 +354,12 @@ class Algen {
             // $sts = $stsrule_1 && $stsrule_2 && $stsrule_3 && $stsrule_4 && $stsrule_5 &&  $stsrule_6;
             $sts = $stsrule_1 && $stsrule_2 && $stsrule_3 && $stsrule_4 && $stsrule_5 && $stsrule_6 ;
 
-            // $param = array($stsrule_1, $stsrule_2, $stsrule_3, $stsrule_4, $stsrule_5, $stsrule_6);
-            // $idx = $this->cek_kebenaran($param);
-            // echo '<pre>'; print_r($idx); 
+            if (!$sts) {
+                // $param = array($stsrule_1, $stsrule_2, $stsrule_3, $stsrule_4, $stsrule_5, $stsrule_6);
+                // $idx = $this->cek_kebenaran($param);
+                // echo '<pre>'; print_r($idx);
+            }
+             
 
             return $sts;
         /*}else{
@@ -1107,7 +1111,83 @@ class Algen {
         $makul_grup = array();
         $waktudistinct_grup = array();
         $individu_classprodi = $this->break_individu_prodi($individu);
-        echo '<pre>'; print_r($individu); echo '</pre>'; exit();
+        foreach ($individu as $key => $value) {
+            $id_timespace = $value['id_timespace'];
+
+            if ( !in_array($this->kromosom[$value['id_kromosom']]['id_mkkur'].'-'.$this->kromosom[$value['id_kromosom']]['period'],$makul_grup) ) {
+                $break_rule = true;
+                
+                while ($break_rule) {            
+                    $rule_ok = $this->check_on_hardrule($individu_classprodi, $individu_temp, $this->kromosom[$value['id_kromosom']], $id_timespace, $timespace, $this->kromosom[$value['id_kromosom']]['period']);
+                    if ($rule_ok) {
+                        $break_rule = false;
+                    }else{
+                        $sts = true;
+            
+                        $stsrule_1 = $this->CI->aturan_jadwal->check_time_notover_limit($id_timespace, $timespace, $this->kromosom[$value['id_kromosom']]['period']);
+                        $stsrule_2 = $this->CI->aturan_jadwal->check_timespace_class_samepacket_not_sametime($this->kromosom, $this->timespace, $individu_classprodi, $this->kromosom[$value['id_kromosom']], $id_timespace, $timespace, $this->prodi);
+                        $stsrule_3 = $this->CI->aturan_jadwal->check_capacity_class_ok($id_timespace, $timespace, $this->kromosom[$value['id_kromosom']]);
+                        $stsrule_4 = $this->CI->aturan_jadwal->check_lecture_class_not_sametime($this->kromosom, $this->timespace, $individu_temp, $this->kromosom[$value['id_kromosom']], $id_timespace, $timespace);
+                        $stsrule_5 = $this->CI->aturan_jadwal->check_separatesameclass_not_sameday($this->kromosom, $this->timespace, $individu_temp, $this->kromosom[$value['id_kromosom']], $id_timespace, $timespace);
+                        $stsrule_6 = $this->CI->aturan_jadwal->check_neighborpacketclass_not_sametime($this->kromosom, $this->timespace, $individu_classprodi, $this->kromosom[$value['id_kromosom']], $id_timespace, $timespace, $this->prodi);
+
+                        $sts = $stsrule_1 && $stsrule_2 && $stsrule_3 && $stsrule_4 && $stsrule_5 && $stsrule_6 ;
+
+            if (!$sts) {
+                $param = array($stsrule_1, $stsrule_2, $stsrule_3, $stsrule_4, $stsrule_5, $stsrule_6);
+                $idx = $this->cek_kebenaran($param);
+                echo '<pre>'; print_r($idx);
+            }
+                        echo 'Test';
+
+                        echo '<pre>'; print_r($individu_temp); 
+                        echo '<pre>'; print_r($value);
+                        exit();
+                    }
+                }
+
+            }else{
+                // break;
+                echo 'par<pre>'; print_r($individu_temp); 
+                echo '<pre>'; print_r($value); 
+
+                exit();
+                $id_timespace = $this->get_random_local($individu_classprodi, $individu_temp, $this->kromosom[$value['id_kromosom']], $timespace, $makul_grup, $waktudistinct_grup, $this->kromosom[$value['id_kromosom']]['period']);
+                
+
+            }
+            
+            $waktu_jam_selesai_kls = $this->get_jam_selesai_kelas($this->timespace[$value['id_timespace']]['waktu_jam_mulai'], $this->kromosom[$value['id_kromosom']]['period']);
+            $individu_temp[] = array(
+                'id_kromosom' => $value['id_kromosom'],
+                // 'nama_kelas' => $value['nama_kelas'],
+                'id_timespace' => $timespace[$id_timespace]['id_timespace'],
+                // 'period' => $value['period'],
+                'id_waktu' => $timespace[$id_timespace]['id_waktu'],
+                'id_ruang' => $timespace[$id_timespace]['id_ruang'],
+                // 'label_timespace' => $value['nama_kelas'].','.$timespace[$id_timespace]['label'].$waktu_jam_selesai_kls
+                // 'kap_ruang' => $timespace[$id_timespace]['kap_ruang'],
+                // 'waktu_hari' => $timespace[$id_timespace]['waktu_hari'],
+                // 'waktu_jam_mulai' => $timespace[$id_timespace]['waktu_jam_mulai'],
+                // 'waktu_jam_selesai_kls' => $waktu_jam_selesai_kls
+            );
+
+            // membuat grup kelas per matakuliah secara dinamis
+            if (!in_array($this->kromosom[$value['id_kromosom']]['id_mkkur'].'-'.$this->kromosom[$value['id_kromosom']]['period'], $makul_grup)) {
+                $makul_grup[] = $this->kromosom[$value['id_kromosom']]['id_mkkur'].'-'.$this->kromosom[$value['id_kromosom']]['period'];
+                $waktudistinct_grup[] = $timespace[$id_timespace]['id_waktu'];
+            }
+
+            // menghapus index beserta nilainya untuk data ruang & waktu yg dipakai kelas untuk jadwal
+            for ($t=0; $t < $this->kromosom[$value['id_kromosom']]['period']; $t++) { 
+                $id_timespace += $t;
+                $timespace[$id_timespace]['status'] = 1;
+                // unset($timespace[$id_timespace]);
+            }
+            
+            // $timespace = array_values($timespace); // set ulang index matriks ruang & waktu
+
+        } 
     }
 
     public function mutation(){
