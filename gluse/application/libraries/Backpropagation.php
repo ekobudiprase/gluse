@@ -198,7 +198,7 @@ class Backpropagation{
         $numEpoch = $this->epoch;	
         $MSE = 0.0;	
 
-        $debug = true;
+        $debug = false;
 
         $dataX = $param['dataTrain'];
         $testDataX = $param['dataTest'];
@@ -207,6 +207,9 @@ class Backpropagation{
         $this->numInput = count($dataX[0]);	
 
         $data = $this->scale($dataX, $param['min_lokal'], $param['max_lokal']);
+        $_SESSION['data_prediksi_scaled'][] = $data;
+        // echo '<pre>'; print_r($data); echo '</pre>';
+
         // echo $param['kode'].' ';
         // echo '<pre>data : '; print_r($data); 
         for($i=0;$i<$this->numPattern;$i++){
@@ -259,8 +262,8 @@ class Backpropagation{
         
         
 
-        echo 'test:<pre>'; print_r($testData); 
-        echo 'uji:<pre>'; print_r($ujiData); 
+        // echo 'test:<pre>'; print_r($testData); 
+        // echo 'uji:<pre>'; print_r($ujiData); 
 
         $this->feedForward($ujiData);
         $hasil = (double)$this->Out(0);

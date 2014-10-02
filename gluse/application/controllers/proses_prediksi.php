@@ -223,7 +223,8 @@ class Proses_prediksi extends CI_Controller {
 				// }
 			}
 		}
-		// echo '<pre>'; print_r($ret); 
+		$_SESSION['hasil_prediksi'] = $ret;
+		// echo '<pre>'; print_r($_SESSION); 
 		// exit();
 
 

@@ -344,6 +344,7 @@ class Prediksi_model extends CI_Model {
         $query = '
             SELECT
                 mkkr.`mkkurrkp_id` AS id,
+                mkk.mkkur_id AS mk_id,
                 mkk.`mkkur_kode` AS kode,
                 mkk.`mkkur_nama` AS nama,
                 mkk.`mkkur_paket_semester` AS paket,
@@ -368,7 +369,7 @@ class Prediksi_model extends CI_Model {
 
         $prodi = array();
         foreach ($ret as $key => $value) {
-            $ret[$key]['nama_prodi'] = $this->get_mkprodid_by_mkid($value['id']);
+            $ret[$key]['nama_prodi'] = $this->get_mkprodid_by_mkid($value['mk_id']);
         }
         
 
