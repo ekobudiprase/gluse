@@ -35,7 +35,7 @@ class Penjadwalan_model extends CI_Model {
                 SELECT SUM(mpv.mkkprod_porsi_kelas)
                 FROM mkkur_prodi mpv
                 WHERE mpv.mkkprod_mkkur_id = mp.`mkkprod_mkkur_id`
-                AND mpv.`mkkprod_related_id` = 0
+                AND mpv.`mkkprod_related_id` IS NULL
                 GROUP BY mkkprod_mkkur_id
                 ) AS t,
                 mkkprod_porsi_kelas * (mkk.`mkkur_pred_jml_peminat` DIV
@@ -43,7 +43,7 @@ class Penjadwalan_model extends CI_Model {
                     SELECT SUM(mpv.mkkprod_porsi_kelas)
                     FROM mkkur_prodi mpv
                     WHERE mpv.mkkprod_mkkur_id = mp.`mkkprod_mkkur_id`
-                    AND mpv.`mkkprod_related_id` = 0
+                    AND mpv.`mkkprod_related_id` IS NULL
                     GROUP BY mkkprod_mkkur_id
                 )) AS jml_porsi,    
                 mkk.`mkkur_pred_jml_peminat` MOD
@@ -51,14 +51,15 @@ class Penjadwalan_model extends CI_Model {
                     SELECT SUM(mpv.mkkprod_porsi_kelas)
                     FROM mkkur_prodi mpv
                     WHERE mpv.mkkprod_mkkur_id = mp.`mkkprod_mkkur_id`
-                    AND mpv.`mkkprod_related_id` = 0
+                    AND mpv.`mkkprod_related_id` IS NULL
                     GROUP BY mkkprod_mkkur_id
                 ) AS sisa
             FROM program_studi ps
             LEFT JOIN mkkur_prodi mp ON ps.prodi_id = mp.mkkprod_prodi_id
             LEFT JOIN mata_kuliah_kurikulum mkk ON mp.`mkkprod_mkkur_id` = mkk.`mkkur_id`
             WHERE mp.mkkprod_mkkur_id = "'.$mkid.'"
-            AND mp.`mkkprod_related_id` = 0
+            AND mp.`mkkprod_related_id` IS NULL           
+            AND mp.`mkkprod_porsi_kelas` <> 0
         ';
 
         $ret = $this->db->query($query);
@@ -287,11 +288,11 @@ class Penjadwalan_model extends CI_Model {
 
         $sql = "
             INSERT INTO `kelas`
-            (`kls_mkkur_id`,`kls_nama`,`kls_kode_paralel`,kls_jml_peserta_prediksi)
-            VALUES (?,?,?,?);
+            (`kls_mkkur_id`,`kls_nama`,`kls_kode_paralel`,kls_jml_peserta_prediksi, kls_is_kemipaan)
+            VALUES (?,?,?,?,?);
         ";
         
-        return $this->db->query($sql, array($id_makul, $nama_kelas, $kelas, $jumlah_per_kelas)); 
+        return $this->db->query($sql, array($id_makul, $nama_kelas, $kelas, $jumlah_per_kelas, $is_kemipaan)); 
     }
 
     function cek_dosen_kelas_lengkap(){
@@ -518,10 +519,15 @@ class Penjadwalan_model extends CI_Model {
                     LEFT JOIN dosen d ON dk.`dsnkls_dsn_id` = d.`dsn_id`
                     WHERE dk.`dsnkls_kls_id` = k.`kls_id`
                 )
-                ) AS alternatif_waktu_ajar
+                ) AS alternatif_waktu_ajar,
+                (
+                SELECT COUNT(*) AS cnt 
+                FROM kelas k2 
+                WHERE k2.kls_mkkur_id = mkk.`mkkur_id`
+                ) AS order_col
             FROM kelas k
             LEFT JOIN mata_kuliah_kurikulum mkk ON k.`kls_mkkur_id` = mkk.`mkkur_id`
-            ORDER BY mkkur_sifat DESC, mkkur_is_universal DESC 
+            ORDER BY order_col DESC, mkkur_sifat DESC, mkkur_is_universal DESC 
         ';
 
         $ret = $this->db->query($query);

@@ -1,7 +1,7 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 ini_set('max_execution_time', 0);
-set_error_handler("var_dump");
+// set_error_handler("var_dump");
 
 /**
  * @package     Gluse
@@ -109,7 +109,7 @@ class Algen {
             $this->populasi[] = $this->create_individu(); // buat individu
             // break;
         }
-        // exit();
+        exit();
 
     }
 
@@ -173,7 +173,7 @@ class Algen {
         // unset($timespace);
         // unset($ret_data);
 
-        // $this->CI->bantu->debugPreviewJadwal($individu); 
+        $this->CI->bantu->debugPreviewJadwal($individu); 
         // exit();
         return $individu;
     }
@@ -198,6 +198,11 @@ class Algen {
             // echo "<br>";
         }else{
             $id_timespace = $this->get_random_local($individu_classprodi, $individu, $value, $timespace, $makul_grup, $waktudistinct_grup, $period_waktu);
+        }
+
+        if ($value['id_individu'] == 140) {
+            echo '<pre>'; print_r($individu); 
+            exit();
         }
         // echo "<br>";
 

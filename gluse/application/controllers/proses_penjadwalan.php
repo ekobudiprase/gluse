@@ -46,7 +46,6 @@ class Proses_penjadwalan extends CI_Controller {
     function build_kelas_per_makul($param){
     	$this->load->model('Penjadwalan_model');
 		$mkprodi = $this->Penjadwalan_model->get_base_mkprodid_by_mkid($param['idmk']);
-		// echo '<pre>'; print_r($mkprodi);
 
     	$kelas = array();
     	if ($param['pred_jml_peminat'] < $param['batas_jml_kelas_min']) {
@@ -57,7 +56,8 @@ class Proses_penjadwalan extends CI_Controller {
 					'jumlah_per_kelas' => $param['pred_jml_peminat'],
 					'kode_makul' => $param['kode'],
 					'nama_makul' => $param['nama'],
-					'id_makul' => $param['idmk']
+					'id_makul' => $param['idmk'],
+					'is_kemipaan' => $param['is_bersama']
 				);
 			}else{
 				$kelas[] = null;
@@ -73,29 +73,37 @@ class Proses_penjadwalan extends CI_Controller {
 					'jumlah_per_kelas' => $param['pred_jml_peminat'],
 					'kode_makul' => $param['kode'],
 					'nama_makul' => $param['nama'],
-					'id_makul' => $param['idmk']
+					'id_makul' => $param['idmk'],
+					'is_kemipaan' => $param['is_bersama']
 				);
 			}else{
-				$prodi_makul = $mkprodi[0]['prodi_kode'];
-				foreach ($mkprodi as $key => $value) {
-					if ($key>0) {		
-						$param_prd = array(
-			                "prodi_id" => $value['mkkprod_id'],
-			                "prodi_kode" => $value['prodi_kode'],
-			                "prodi_nama" => $value['prodi_nama']
-			            );
-			            $prodi[$key] = $this->Penjadwalan_model->get_concat_data_prodi($param_prd);	
-			            $prodi_makul .= '-'.$prodi[$key]['prodi_kode'];	
-		            }	            
-		        }
+				if ($param['is_bersama']==1) {
+					$nama_kelas = 'KEMIPAAN';
+				}else{
+					$prodi_makul = $mkprodi[0]['prodi_kode'];
+					foreach ($mkprodi as $key => $value) {
+						if ($key>0) {		
+							$param_prd = array(
+				                "prodi_id" => $value['mkkprod_id'],
+				                "prodi_kode" => $value['prodi_kode'],
+				                "prodi_nama" => $value['prodi_nama']
+				            );
+				            $prodi[$key] = $this->Penjadwalan_model->get_concat_data_prodi($param_prd);	
+				            $prodi_makul .= '-'.$prodi[$key]['prodi_kode'];	
+			            }	            
+			        }	
+			        $nama_kelas = $prodi_makul.'-'.$param['kode'];
+				}
+				
 
 		        $kelas[] = array(
 					'kelas' => null,
-					'nama_kelas' => $prodi_makul.'-'.$param['kode'],
+					'nama_kelas' => $nama_kelas,
 					'jumlah_per_kelas' => $param['pred_jml_peminat'],
 					'kode_makul' => $param['kode'],
 					'nama_makul' => $param['nama'],
-					'id_makul' => $param['idmk']
+					'id_makul' => $param['idmk'],
+					'is_kemipaan' => $param['is_bersama']
 				);
 			}
 			
@@ -111,7 +119,8 @@ class Proses_penjadwalan extends CI_Controller {
 	            	"kode_makul" => $param['kode'],
 	            	"nama_makul" => $param['nama'],
 	            	"id_makul" => $param['idmk'],
-	            	"uni" => true
+	            	"uni" => true,
+	            	"bersama" => $param['is_bersama']
 	            );
 
 	            $kelas = $this->klasifikasi($param_klsf);
@@ -137,7 +146,8 @@ class Proses_penjadwalan extends CI_Controller {
 			            	"kode_makul" => $param['kode'],
 			            	"nama_makul" => $param['nama'],
 			            	"id_makul" => $param['idmk'],
-			            	"uni" => false
+			            	"uni" => false,
+	            			"bersama" => $param['is_bersama']
 			            );
 
 			            $kelas_temp = $this->klasifikasi($param_klsf);
@@ -155,7 +165,8 @@ class Proses_penjadwalan extends CI_Controller {
 		            	"kode_makul" => $param['kode'],
 		            	"nama_makul" => $param['nama'],
 		            	"id_makul" => $param['idmk'],
-		            	"uni" => false
+		            	"uni" => false,
+	            		"bersama" => $param['is_bersama']
 		            );
 
 		            $kelas = $this->klasifikasi($param_klsf);
@@ -190,14 +201,22 @@ class Proses_penjadwalan extends CI_Controller {
 				}
 				$nama_kelas = $param['kode_makul'].'-'.$kelas_nama;
 			}else{
-				if ($kelas_bagi>1) {
-					$kelas_nama = chr($i+65);
-				}
-				if ($param['prodi_makul'] == '') {
-					$nama_kelas = $param['kode_makul'].'-'.($kelas_nama!=''?$kelas_nama:'');
+				if ($param['bersama'] == 1) {
+					if ($kelas_bagi>1) {
+						$kelas_nama = $i+1;
+					}
+					$nama_kelas = 'KEMIPAAN-'.$kelas_nama;
 				}else{
-					$nama_kelas = $param['prodi_makul'].'-'.($kelas_nama!=''?$kelas_nama.'-'.$param['kode_makul']:$param['kode_makul']);
+					if ($kelas_bagi>1) {
+						$kelas_nama = chr($i+65);
+					}
+					if ($param['prodi_makul'] == '') {
+						$nama_kelas = $param['kode_makul'].'-'.($kelas_nama!=''?$kelas_nama:'');
+					}else{
+						$nama_kelas = $param['prodi_makul'].'-'.($kelas_nama!=''?$kelas_nama.'-'.$param['kode_makul']:$param['kode_makul']);
+					}
 				}
+				
 			}
 			$kelas[] = array(
 				'kelas' => $kelas_nama,
@@ -205,7 +224,8 @@ class Proses_penjadwalan extends CI_Controller {
 				'jumlah_per_kelas' => $jumlah_per_kelas,
 				'kode_makul' => $param['kode_makul'],
 				'nama_makul' => $param['nama_makul'],
-				'id_makul' => $param['id_makul']
+				'id_makul' => $param['id_makul'],
+				'is_kemipaan' => $param['bersama']
 			);
 
 		}
@@ -232,10 +252,10 @@ class Proses_penjadwalan extends CI_Controller {
 		$semester_aktif = $this->bantu->getConfig('semester_aktif');
 		
 		$data_makul = $this->Penjadwalan_model->get_data_makul($semester_aktif);
-
 		if (!empty($data_makul)) {
 			foreach ($data_makul as $key => $value) {
 				$maks_kelas = ($value['maks_kelas']!=null)?$value['maks_kelas']:$_POST['batas_jml_kelas'];
+				$is_bersama = substr($value['kode'], 2, 1)=='B'?1:0;
 				$param = array(
 					'idmk' => $value['id'],
 					'kode' => $value['kode'],
@@ -244,7 +264,8 @@ class Proses_penjadwalan extends CI_Controller {
 					'batas_jml_kelas_min' => $_POST['batas_jml_kelas_min'],
 					'batas_jml_kelas' => $maks_kelas,
 					'is_universal' => $value['is_universal'],
-					'sifat' => $value['sifat']
+					'sifat' => $value['sifat'],
+					'is_bersama' => $is_bersama
 				);
 				// if ($value['id']=='12') {
 				// 	$arr_kelas[] = $this->build_kelas_per_makul($param);
@@ -253,6 +274,7 @@ class Proses_penjadwalan extends CI_Controller {
 				$arr_kelas[] = $this->build_kelas_per_makul($param);
 			}
 
+			// exit();
 			// echo 'daftar kelas : <pre>'; print_r($arr_kelas); 
 		}
 
