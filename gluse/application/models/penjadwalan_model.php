@@ -288,11 +288,11 @@ class Penjadwalan_model extends CI_Model {
 
         $sql = "
             INSERT INTO `kelas`
-            (`kls_mkkur_id`,`kls_nama`,`kls_kode_paralel`,kls_jml_peserta_prediksi, kls_is_kemipaan)
+            (`kls_mkkur_id`,`kls_nama`,`kls_kode_paralel`,kls_jml_peserta_prediksi, kls_jadwal_merata)
             VALUES (?,?,?,?,?);
         ";
         
-        return $this->db->query($sql, array($id_makul, $nama_kelas, $kelas, $jumlah_per_kelas, $is_kemipaan)); 
+        return $this->db->query($sql, array($id_makul, $nama_kelas, $kelas, $jumlah_per_kelas, $kls_jadwal_merata)); 
     }
 
     function cek_dosen_kelas_lengkap(){

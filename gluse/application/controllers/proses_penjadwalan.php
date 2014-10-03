@@ -57,7 +57,7 @@ class Proses_penjadwalan extends CI_Controller {
 					'kode_makul' => $param['kode'],
 					'nama_makul' => $param['nama'],
 					'id_makul' => $param['idmk'],
-					'is_kemipaan' => $param['is_bersama']
+					'kls_jadwal_merata' => $param['is_bersama']
 				);
 			}else{
 				$kelas[] = null;
@@ -74,7 +74,7 @@ class Proses_penjadwalan extends CI_Controller {
 					'kode_makul' => $param['kode'],
 					'nama_makul' => $param['nama'],
 					'id_makul' => $param['idmk'],
-					'is_kemipaan' => $param['is_bersama']
+					'kls_jadwal_merata' => 1
 				);
 			}else{
 				if ($param['is_bersama']==1) {
@@ -103,7 +103,7 @@ class Proses_penjadwalan extends CI_Controller {
 					'kode_makul' => $param['kode'],
 					'nama_makul' => $param['nama'],
 					'id_makul' => $param['idmk'],
-					'is_kemipaan' => $param['is_bersama']
+					'kls_jadwal_merata' => $param['is_bersama']
 				);
 			}
 			
@@ -200,6 +200,7 @@ class Proses_penjadwalan extends CI_Controller {
 					$kelas_nama = $i+1;
 				}
 				$nama_kelas = $param['kode_makul'].'-'.$kelas_nama;
+				$kls_jadwal_merata = 1;
 			}else{
 				if ($param['bersama'] == 1) {
 					if ($kelas_bagi>1) {
@@ -216,6 +217,7 @@ class Proses_penjadwalan extends CI_Controller {
 						$nama_kelas = $param['prodi_makul'].'-'.($kelas_nama!=''?$kelas_nama.'-'.$param['kode_makul']:$param['kode_makul']);
 					}
 				}
+				$kls_jadwal_merata = $param['bersama'];
 				
 			}
 			$kelas[] = array(
@@ -225,7 +227,7 @@ class Proses_penjadwalan extends CI_Controller {
 				'kode_makul' => $param['kode_makul'],
 				'nama_makul' => $param['nama_makul'],
 				'id_makul' => $param['id_makul'],
-				'is_kemipaan' => $param['bersama']
+				'kls_jadwal_merata' => $kls_jadwal_merata
 			);
 
 		}
