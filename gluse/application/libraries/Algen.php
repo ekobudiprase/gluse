@@ -180,7 +180,7 @@ class Algen {
 
     public function get_feasible_individu($arr_data){
         extract($arr_data);
-
+        
         /*
         menentukan jadwal ruang & waktu untuk kelas diwakili oleh id_timespace
         cek apakah kelas makul yang sama sudah ada sebelumnya di kelas terjadwal
@@ -442,8 +442,7 @@ class Algen {
     }
 
     public function make_class($arr_data){
-        extract($arr_data);       
-
+        extract($arr_data);
         /*
         menyimpan hasil ruang & waktu untuk kelas, beserta periodenya
         */
@@ -461,7 +460,8 @@ class Algen {
             'ruang_blok_prodi' => $value['ruang_blok_prodi'],
             'kelas_prodi' => $value['kelas_prodi'],
             'alternatif_waktu_ajar' => $value['alternatif_waktu_ajar'],
-            'is_universal' => $value['is_universal']
+            'is_universal' => $value['is_universal'],
+            'kls_jadwal_merata' => $value['kls_jadwal_merata']
         );
 
         $id_individu++;

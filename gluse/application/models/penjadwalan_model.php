@@ -524,7 +524,8 @@ class Penjadwalan_model extends CI_Model {
                 SELECT COUNT(*) AS cnt 
                 FROM kelas k2 
                 WHERE k2.kls_mkkur_id = mkk.`mkkur_id`
-                ) AS order_col
+                ) AS order_col,
+				kls_jadwal_merata
             FROM kelas k
             LEFT JOIN mata_kuliah_kurikulum mkk ON k.`kls_mkkur_id` = mkk.`mkkur_id`
             ORDER BY order_col DESC, mkkur_sifat DESC, mkkur_is_universal DESC 

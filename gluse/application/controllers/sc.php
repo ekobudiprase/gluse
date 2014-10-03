@@ -64,7 +64,8 @@ class Sc extends CI_Controller {
 
 	function getRandomDosenUnik($jumlah_dosen){
 		$id = mt_rand(1,($jumlah_dosen));
-		$status = $this->sc_model->cek_id_dosen_unik($id);
+		// $status = $this->sc_model->cek_id_dosen_unik($id);
+		$status = true;
 		if (!$status) {
 			return $this->getRandomDosenUnik($jumlah_dosen);
 		}else{
