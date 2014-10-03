@@ -62,6 +62,50 @@ class Sc extends CI_Controller {
 		exit();
 	}
 
+	function getRandomDosenUnik($jumlah_dosen){
+		$id = mt_rand(1,($jumlah_dosen));
+		$status = $this->sc_model->cek_id_dosen_unik($id);
+		if (!$status) {
+			return $this->getRandomDosenUnik($jumlah_dosen);
+		}else{
+			return $id;
+		}
+
+	}
+
+	function input_dosenkelas_sisa(){
+		$dosen = $this->sc_model->get_all_dosen();
+		$kelas = $this->sc_model->get_all_kelas();
+
+		$jumlah_dosen = count($dosen);
+		foreach ($kelas as $key => $value) {
+			if ($value['dosen_id'] == null) {
+				$dsn_id = $this->getRandomDosenUnik($jumlah_dosen);
+				$set[] = array(
+                    "kls_id" => $value['kls_id'],
+                    "dsn_id" => $dsn_id
+            	);
+			}
+		}
+
+		$sts = true;
+		$this->db->trans_start();
+		if (!empty($set)) {			
+			foreach ($set as $a => $item) {
+				$sts = $sts && $this->sc_model->ins_dosenkelas($item);
+			}
+			$this->db->trans_complete();
+		}
+
+		if ($this->db->trans_status() === true){
+			echo "sukses";
+		}else{
+		    echo "gagal";
+		}	
+
+		exit();
+	}
+
 	function input_mkkur_prodi(){
 		$mk = $this->sc_model->get_all_mk();
 		$prodi = $this->sc_model->get_all_prodi();

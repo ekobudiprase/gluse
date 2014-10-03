@@ -13,7 +13,7 @@
 	<div class="control-group">
 	  <label for="typeahead" class="control-label">Batas maksimal kelas</label>
 	  <div class="controls">
-		<input name="batas_jml_kelas" type="text" value="50" data-items="3" data-provide="typeahead" id="typeahead " class="span2 typeahead batas_jml_kelas" >
+		<input name="batas_jml_kelas" type="text" value="90" data-items="3" data-provide="typeahead" id="typeahead " class="span2 typeahead batas_jml_kelas" >
 		<!-- <p class="help-block">Angka pertama dan terakhir merupakan layer input dan output</p> -->
 		<span class="help-inline">* Digunakan ketika mata kuliah tidak ada settingan kelas maksimal</span>
 	  </div>

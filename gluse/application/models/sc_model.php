@@ -38,14 +38,34 @@ class Sc_model extends CI_Model {
     public function get_all_kelas(){
         $query = '
             SELECT 
-                kls_id
-            FROM kelas d
+            kls_id,
+            dk.`dsnkls_dsn_id` AS dosen_id
+            FROM kelas k
+            LEFT JOIN dosen_kelas dk ON k.`kls_id` = dk.`dsnkls_kls_id`
         ';
 
         $ret = $this->db->query($query);
         $ret = $ret->result_array();
 
         return $ret;
+    }
+
+    public function cek_id_dosen_unik($id){
+        $query = "
+            SELECT
+            COUNT(dk.`dsnkls_id`) AS jumlah
+            FROM dosen_kelas dk
+            WHERE dk.`dsnkls_dsn_id` = $id
+        ";
+
+        $ret = $this->db->query($query);
+        $ret = $ret->result_array();
+
+        if ($ret[0]['jumlah']>0) {
+            return false;
+        }else{
+            return true;
+        }
     }
 
     public function get_all_mk(){
