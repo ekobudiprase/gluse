@@ -109,7 +109,7 @@ class Algen {
             $this->populasi[] = $this->create_individu(); // buat individu
             // break;
         }
-        exit();
+        // exit();
 
     }
 
@@ -175,7 +175,7 @@ class Algen {
         // unset($timespace);
         // unset($ret_data);
 
-        $this->CI->bantu->debugPreviewJadwal($individu); 
+        // $this->CI->bantu->debugPreviewJadwal($individu); 
         // exit();
         return $individu;
     }
@@ -328,7 +328,8 @@ class Algen {
         $iteration++;
         // echo $iteration.', ';
         if ($iteration == 3333) {
-        	return $this->create_individu();
+        	// return $this->create_individu();
+        	echo '<pre>'; print_r($value); echo '</pre>';
             echo "Iterasi ke-3333"; exit();
         }
         
