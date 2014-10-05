@@ -226,11 +226,11 @@ class Algen {
         }
 
         // echo '<pre>'; print_r($makul_grup); 
-        // if ($value['id_individu'] == 300) { 
+        if ($value['id_individu'] == 180) { 
 
-        //     echo '<pre>'; print_r($individu); 
-        //     exit();
-        // }
+            echo '<pre>'; print_r($individu); 
+            exit();
+        }
 
         /*
         menyimpan hasil ruang & waktu untuk kelas, beserta periodenya
