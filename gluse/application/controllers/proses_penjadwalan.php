@@ -57,7 +57,8 @@ class Proses_penjadwalan extends CI_Controller {
 					'kode_makul' => $param['kode'],
 					'nama_makul' => $param['nama'],
 					'id_makul' => $param['idmk'],
-					'kls_jadwal_merata' => $param['is_bersama']
+					'kls_jadwal_merata' => $param['is_bersama'],
+					'kls_id_grup_jadwal' => null
 				);
 			}else{
 				$kelas[] = null;
@@ -74,7 +75,8 @@ class Proses_penjadwalan extends CI_Controller {
 					'kode_makul' => $param['kode'],
 					'nama_makul' => $param['nama'],
 					'id_makul' => $param['idmk'],
-					'kls_jadwal_merata' => 1
+					'kls_jadwal_merata' => 1,
+					'kls_id_grup_jadwal' => null
 				);
 			}else{
 				if ($param['is_bersama']==1) {
@@ -103,7 +105,8 @@ class Proses_penjadwalan extends CI_Controller {
 					'kode_makul' => $param['kode'],
 					'nama_makul' => $param['nama'],
 					'id_makul' => $param['idmk'],
-					'kls_jadwal_merata' => $param['is_bersama']
+					'kls_jadwal_merata' => $param['is_bersama'],
+					'kls_id_grup_jadwal' => null
 				);
 			}
 			
@@ -177,6 +180,24 @@ class Proses_penjadwalan extends CI_Controller {
 		return $kelas;    	
     }
 
+    function buildGroupJadwalKemipaan($jumlah_kelas){
+    	$jml_per_hari = ceil($jumlah_kelas/5);
+    	$penuh_hari = floor($jumlah_kelas/$jml_per_hari);
+    	$sisa = $jumlah_kelas%$jml_per_hari;
+    	$id = 1;
+    	for ($i=0; $i < $penuh_hari; $i++) { 
+    		for ($j=0; $j < $jml_per_hari; $j++) { 
+    			$t[] = $id;
+    		}
+    		$id++;
+    	}
+    	if ($sisa>0) {
+    		$t[] = $id;
+    	}
+
+    	return $t;
+    }
+
     /**
      * @package		Gluse
      * @subpackage	penjadwalan
@@ -185,7 +206,11 @@ class Proses_penjadwalan extends CI_Controller {
      * @since		june 12, 2014
      */
     function klasifikasi($param){
-    	$kelas_bagi = ceil($param['jml_porsi']/$param['batas_jml_kelas']) ;
+    	$kelas_bagi = ceil($param['jml_porsi']/$param['batas_jml_kelas']);
+    	$arr_id_group_jadwal_kemipaan = array();
+    	if ($param['bersama']==1 OR $param['uni']) {
+    		$arr_id_group_jadwal_kemipaan = $this->buildGroupJadwalKemipaan($kelas_bagi);
+    	}
 		$mod = $param['jml_porsi'] % $kelas_bagi;
 		for ($i=0; $i < $kelas_bagi; $i++) { 
 			$jumlah_per_kelas = floor($param['jml_porsi'] / $kelas_bagi);
@@ -193,7 +218,7 @@ class Proses_penjadwalan extends CI_Controller {
 			if ($mod > 0 and $i==0) {
 				$jumlah_per_kelas = ( floor($param['jml_porsi'] / $kelas_bagi)) + $mod;
 			}
-
+			$id_group_jadwal_kemipaan = null;
 			$kelas_nama = '';
 			if ($param['uni']) {
 				if ($kelas_bagi>1) {
@@ -201,12 +226,14 @@ class Proses_penjadwalan extends CI_Controller {
 				}
 				$nama_kelas = $param['kode_makul'].'-'.$kelas_nama;
 				$kls_jadwal_merata = 1;
+				$id_group_jadwal_kemipaan = $arr_id_group_jadwal_kemipaan[$i];
 			}else{
 				if ($param['bersama'] == 1) {
 					if ($kelas_bagi>1) {
 						$kelas_nama = $i+1;
 					}
 					$nama_kelas = 'KEMIPAAN-'.$kelas_nama;
+					$id_group_jadwal_kemipaan = $arr_id_group_jadwal_kemipaan[$i];
 				}else{
 					if ($kelas_bagi>1) {
 						$kelas_nama = chr($i+65);
@@ -227,7 +254,8 @@ class Proses_penjadwalan extends CI_Controller {
 				'kode_makul' => $param['kode_makul'],
 				'nama_makul' => $param['nama_makul'],
 				'id_makul' => $param['id_makul'],
-				'kls_jadwal_merata' => $kls_jadwal_merata
+				'kls_jadwal_merata' => $kls_jadwal_merata,
+				'kls_id_grup_jadwal' => $id_group_jadwal_kemipaan
 			);
 
 		}
@@ -276,8 +304,8 @@ class Proses_penjadwalan extends CI_Controller {
 				$arr_kelas[] = $this->build_kelas_per_makul($param);
 			}
 
-			// exit();
 			// echo 'daftar kelas : <pre>'; print_r($arr_kelas); 
+			// exit();
 		}
 
 		if (!empty($arr_kelas)) {

@@ -288,11 +288,11 @@ class Penjadwalan_model extends CI_Model {
 
         $sql = "
             INSERT INTO `kelas`
-            (`kls_mkkur_id`,`kls_nama`,`kls_kode_paralel`,kls_jml_peserta_prediksi, kls_jadwal_merata)
-            VALUES (?,?,?,?,?);
+            (`kls_mkkur_id`,`kls_nama`,`kls_kode_paralel`,kls_jml_peserta_prediksi, kls_jadwal_merata, kls_id_grup_jadwal)
+            VALUES (?,?,?,?,?,?);
         ";
         
-        return $this->db->query($sql, array($id_makul, $nama_kelas, $kelas, $jumlah_per_kelas, $kls_jadwal_merata)); 
+        return $this->db->query($sql, array($id_makul, $nama_kelas, $kelas, $jumlah_per_kelas, $kls_jadwal_merata, $kls_id_grup_jadwal)); 
     }
 
     function cek_dosen_kelas_lengkap(){
@@ -525,7 +525,8 @@ class Penjadwalan_model extends CI_Model {
                 FROM kelas k2 
                 WHERE k2.kls_mkkur_id = mkk.`mkkur_id`
                 ) AS order_col,
-				kls_jadwal_merata
+				kls_jadwal_merata,
+                kls_id_grup_jadwal
             FROM kelas k
             LEFT JOIN mata_kuliah_kurikulum mkk ON k.`kls_mkkur_id` = mkk.`mkkur_id`
             ORDER BY order_col DESC, mkkur_sifat DESC, mkkur_is_universal DESC 

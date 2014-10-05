@@ -62,12 +62,14 @@ class Sc extends CI_Controller {
 		exit();
 	}
 
-	function getRandomDosenUnik($jumlah_dosen){
+	function getRandomDosenUnik($value, $jumlah_dosen){
 		$id = mt_rand(1,($jumlah_dosen));
 		// $status = $this->sc_model->cek_id_dosen_unik($id);
+		$arr_dosen = $this->sc_model->getDosenIdByMkkurIdSame($value['kls_mkkur_id']);
+
 		$status = true;
-		if (!$status) {
-			return $this->getRandomDosenUnik($jumlah_dosen);
+		if (in_array($id, $arr_dosen)) {
+			return $this->getRandomDosenUnik($value, $jumlah_dosen);
 		}else{
 			return $id;
 		}
@@ -81,7 +83,7 @@ class Sc extends CI_Controller {
 		$jumlah_dosen = count($dosen);
 		foreach ($kelas as $key => $value) {
 			if ($value['dosen_id'] == null) {
-				$dsn_id = $this->getRandomDosenUnik($jumlah_dosen);
+				$dsn_id = $this->getRandomDosenUnik($value, $jumlah_dosen);
 				$set[] = array(
                     "kls_id" => $value['kls_id'],
                     "dsn_id" => $dsn_id

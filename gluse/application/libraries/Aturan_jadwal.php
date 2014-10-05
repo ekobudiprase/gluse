@@ -215,8 +215,8 @@ class Aturan_jadwal {
         if (!isset($timespace[$id_timespace])) {
             $sts = false;
             return $sts;
-        }
-
+        }        
+        
         foreach ($individu as $i => $item) {
             if (!empty($kromosom[$item['id_kromosom']]['dosen'])) {
                 $sama = 0;

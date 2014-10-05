@@ -158,10 +158,12 @@ class Algen {
         $makul_grup = array(); // untuk mengelompokan kelas berdasar matakuliahnya.
         $waktudistinct_grup = array(); // untuk menampung waktu_id hasil pengelompokan kelas berdasar makulnya.
         $timespace = $this->timespace; // matriks data ruang, hari, dan waktu
+        $grup_kemipaan = array();
+        $waktudistinct_grup_kemipaan = array();
         // echo '<pre>'; print_r($timespace); echo '</pre>'; exit();
 
         foreach ($this->kromosom as $key => $value) {
-            $arr_data = compact('timespace','individu','value', 'makul_grup', 'waktudistinct_grup');
+            $arr_data = compact('timespace','individu','value', 'makul_grup', 'waktudistinct_grup', 'grup_kemipaan','waktudistinct_grup_kemipaan');
             
             $ret_data = $this->get_feasible_individu($arr_data);
 
@@ -193,18 +195,42 @@ class Algen {
         $period_waktu = $value['period'];
         $individu_classprodi = $this->break_individu_prodi($individu); // uni atau bukan
 
-        if ( !in_array($value['id_mkkur'].'-'.$period_waktu, $makul_grup) ) {
-            $id_timespace = $this->getRandomTimespace($individu_classprodi, $individu, $value, $timespace, $period_waktu, 0);
-            // echo "<br>";
+        $kode_kemipaan = $value['id_mkkur'].'-'.$period_waktu.'-'.$value['kls_jadwal_merata'].'-'.$value['kls_id_grup_jadwal'];
+        $status_kemipaan = !in_array($kode_kemipaan, $grup_kemipaan) && ($value['kls_jadwal_merata'] == '1');
+        
+        if ($value['kls_jadwal_merata'] == '1') {
+            if ( $status_kemipaan) {
+                $id_timespace = $this->getRandomTimespace($individu_classprodi, $individu, $value, $timespace, $period_waktu, 0);
+
+                $waktudistinct_grup_kemipaan[] = $timespace[$id_timespace]['id_waktu'];
+                $grup_kemipaan[] = $kode_kemipaan;
+            }else{
+                $id_timespace = $this->get_random_local($individu_classprodi, $individu, $value, $timespace, $grup_kemipaan, $waktudistinct_grup_kemipaan, $period_waktu);
+
+            }
+            
         }else{
-            $id_timespace = $this->get_random_local($individu_classprodi, $individu, $value, $timespace, $makul_grup, $waktudistinct_grup, $period_waktu);
+            
+            if ( !in_array($value['id_mkkur'].'-'.$period_waktu, $makul_grup) ) {
+
+                $id_timespace = $this->getRandomTimespace($individu_classprodi, $individu, $value, $timespace, $period_waktu, 0);
+
+                $waktudistinct_grup[] = $timespace[$id_timespace]['id_waktu'];
+                $makul_grup[] = $value['id_mkkur'].'-'.$period_waktu;
+            }else{
+
+                $id_timespace = $this->get_random_local($individu_classprodi, $individu, $value, $timespace, $makul_grup, $waktudistinct_grup, $period_waktu);
+
+            }
+            
         }
 
-        if ($value['id_individu'] == 140) {
-            echo '<pre>'; print_r($individu); 
-            exit();
-        }
-        // echo "<br>";
+        // echo '<pre>'; print_r($makul_grup); 
+        // if ($value['id_individu'] == 300) { 
+
+        //     echo '<pre>'; print_r($individu); 
+        //     exit();
+        // }
 
         /*
         menyimpan hasil ruang & waktu untuk kelas, beserta periodenya
@@ -225,10 +251,11 @@ class Algen {
         );
 
         // membuat grup kelas per matakuliah secara dinamis
-        if (!in_array($value['id_mkkur'].'-'.$period_waktu, $makul_grup)) {
-            $makul_grup[] = $value['id_mkkur'].'-'.$period_waktu;
+        /*if (!in_array($value['id_mkkur'].'-'.$period_waktu, $makul_grup)) {
+            
             $waktudistinct_grup[] = $timespace[$id_timespace]['id_waktu'];
-        }
+        }*/
+        
         
         // menghapus index beserta nilainya untuk data ruang & waktu yg dipakai kelas untuk jadwal
         for ($t=0; $t < $period_waktu; $t++) {
@@ -239,7 +266,7 @@ class Algen {
         
         // $timespace = array_values($timespace); // set ulang index matriks ruang & waktu 
 
-        $ret_data = compact('timespace','individu','value', 'makul_grup', 'waktudistinct_grup');
+        $ret_data = compact('timespace','individu','value', 'makul_grup', 'waktudistinct_grup', 'grup_kemipaan', 'waktudistinct_grup_kemipaan');
         return $ret_data;
 
     }
@@ -255,12 +282,22 @@ class Algen {
         */
         $period_waktu = $kelas['period'];
         if (!empty($makul_grup)) {
-            foreach ($makul_grup as $a => $mk) {
-                if ($mk == $kelas['id_mkkur'].'-'.$period_waktu) {
-                    $timespace_grup_waktu = $this->get_id_timespace_for_sametime($timespace, $waktudistinct_grup[$a]);
+            if ($kelas['kls_jadwal_merata']==1) {
+                $kode_kemipaan = $kelas['id_mkkur'].'-'.$period_waktu.'-'.$kelas['kls_jadwal_merata'].'-'.$kelas['kls_id_grup_jadwal'];
+                foreach ($makul_grup as $a => $mk) {
+                    if ($mk == $kode_kemipaan) {
+                        $timespace_grup_waktu = $this->get_id_timespace_for_sametime($timespace, $waktudistinct_grup[$a]);
+                    }
+                }
+            }else{
+                foreach ($makul_grup as $a => $mk) {
+                    if ($mk == $kelas['id_mkkur'].'-'.$period_waktu) {
+                        $timespace_grup_waktu = $this->get_id_timespace_for_sametime($timespace, $waktudistinct_grup[$a]);
+                    }
                 }
             }
-        }
+            
+        }        
 
         if ($id_timespace_cek != null) {
             $id_timespace = $id_timespace_cek;
@@ -294,9 +331,11 @@ class Algen {
         	return $this->create_individu();
             echo "Iterasi ke-3333"; exit();
         }
+        
         if ($timespace_grup_waktu != null) { // timespace lokal
             $id_timespace_grup_waktu = mt_rand(0,(count($timespace_grup_waktu)-1));
             $id_timespace = $timespace_grup_waktu[$id_timespace_grup_waktu]['id_timespace'];
+            
         }else{ // timespace global
             $id_timespace = mt_rand(0,(count($timespace)-1));
         }
@@ -311,20 +350,28 @@ class Algen {
             }
             $sts = $sts && $ts_ok;
         }
+        // if ($value['id_individu'] == 158) { 
+        //     echo '<pre>timespace_grup_waktu: '; print_r($timespace_grup_waktu); 
+        // }
+
 
         /*kondisi apakah cari timespace lokal atau global*/
         if ($timespace_grup_waktu != null) {
             if (!$sts) {
                 return $this->getRandomTimespace($individu_classprodi, $individu, $value, $timespace, $period_waktu, $iteration, $timespace_grup_waktu);
             }else{
+
                 $rule_ok = $this->check_on_hardrule_for_paralelclass($individu_classprodi, $individu, $value, $id_timespace, $timespace);
+                
                 if ($rule_ok) {
                     return $id_timespace;
                 }else{
                     return $this->getRandomTimespace($individu_classprodi, $individu, $value, $timespace, $period_waktu, $iteration, $timespace_grup_waktu);
                 }
+
             } 
         }else{
+
             if (!$sts) {
                 return $this->getRandomTimespace($individu_classprodi, $individu, $value, $timespace, $period_waktu, $iteration);
             }else{
@@ -347,6 +394,8 @@ class Algen {
 
     public function check_on_hardrule($individu_classprodi, $individu, $value, $id_timespace, $timespace, $period_waktu){
         // if (!empty($individu)) {
+
+        
             $sts = true;
             // $sts = $sts && $this->check_timespace_paralelclass_is_sametime($id_timespace, $individu, $timespace, $value);
             $stsrule_1 = $this->CI->aturan_jadwal->check_time_notover_limit($id_timespace, $timespace, $period_waktu);
@@ -359,11 +408,28 @@ class Algen {
             // $sts = $stsrule_1 && $stsrule_2 && $stsrule_3 && $stsrule_4 && $stsrule_5 &&  $stsrule_6;
             $sts = $stsrule_1 && $stsrule_2 && $stsrule_3 && $stsrule_4 && $stsrule_5 && $stsrule_6 ;
 
-            if (!$sts) {
-                // $param = array($stsrule_1, $stsrule_2, $stsrule_3, $stsrule_4, $stsrule_5, $stsrule_6);
-                // $idx = $this->cek_kebenaran($param);
-                // echo '<pre>'; print_r($idx);
-            }
+            
+            // if ($value['id_individu'] == 141) { 
+            //     if (!$sts) {
+            //         if (!$stsrule_1) {
+            //             echo "stsrule_1";
+            //         }
+            //         if (!$stsrule_2) {
+            //             echo "stsrule_2";
+            //         }
+            //         if (!$stsrule_3) {
+            //             echo "stsrule_3";
+            //         }
+            //         if (!$stsrule_4) {
+            //             echo "stsrule_4";
+            //         }
+            //         if (!$stsrule_5) {
+            //             echo "stsrule_5";
+            //         }
+            //     }
+            //     echo '<pre>'; print_r($value); 
+            //     exit();
+            // }
              
 
             return $sts;
@@ -376,8 +442,9 @@ class Algen {
     function cek_kebenaran($param){
         foreach ($param as $key => $value) {
             if (!$value) {
-                return $key;
-                break;
+                echo 'rule_idx_'.$key;
+                // return $key;
+                // break;
             }
         }
 
@@ -386,14 +453,37 @@ class Algen {
     public function check_on_hardrule_for_paralelclass($individu_classprodi, $individu, $value, $id_timespace, $timespace){
         if (!empty($individu)) {
             $sts = true;
-
-            $sts = $sts && $this->CI->aturan_jadwal->check_timespace_paralelclass_is_sametime($this->kromosom, $this->timespace, $individu, $value, $id_timespace, $timespace);
-            $sts = $sts && $this->CI->aturan_jadwal->check_capacity_class_ok($id_timespace, $timespace, $value);
-            $sts = $sts && $this->CI->aturan_jadwal->check_lecture_class_not_sametime($this->kromosom, $this->timespace, $individu, $value, $id_timespace, $timespace);
-            $sts = $sts && $this->CI->aturan_jadwal->check_separatesameclass_not_sameday($this->kromosom, $this->timespace, $individu, $value, $id_timespace, $timespace);
-            $sts = $sts && $this->CI->aturan_jadwal->check_neighborpacketclass_not_sametime($this->kromosom, $this->timespace, $individu_classprodi, $value, $id_timespace, $timespace, $this->prodi);
-
-
+            
+            $stsrule_1 = $this->CI->aturan_jadwal->check_timespace_paralelclass_is_sametime($this->kromosom, $this->timespace, $individu, $value, $id_timespace, $timespace);
+            
+            $stsrule_2 = $this->CI->aturan_jadwal->check_capacity_class_ok($id_timespace, $timespace, $value);
+            
+            $stsrule_3 = $this->CI->aturan_jadwal->check_lecture_class_not_sametime($this->kromosom, $this->timespace, $individu, $value, $id_timespace, $timespace);
+            
+            $stsrule_4 = $this->CI->aturan_jadwal->check_separatesameclass_not_sameday($this->kromosom, $this->timespace, $individu, $value, $id_timespace, $timespace);
+            $stsrule_5 = $this->CI->aturan_jadwal->check_neighborpacketclass_not_sametime($this->kromosom, $this->timespace, $individu_classprodi, $value, $id_timespace, $timespace, $this->prodi);
+            
+            $sts = $stsrule_1 && $stsrule_2 && $stsrule_3 && $stsrule_4 && $stsrule_5 ;
+            /*if ($value['id_individu'] == 158) {
+                if (!$stsrule_1) {
+                    echo "stsrule_1";
+                }
+                if (!$stsrule_2) {
+                    echo "stsrule_2";
+                }
+                if (!$stsrule_3) {
+                    echo "stsrule_3";
+                }
+                if (!$stsrule_4) {
+                    echo "stsrule_4";
+                }
+                if (!$stsrule_5) {
+                    echo "stsrule_5";
+                }
+                echo '<pre>'; print_r($value); 
+                exit('out');
+            }*/
+            
             // $sts = $sts && $this->check_timespace_class_samepacket_not_sametime($id_timespace, $individu, $timespace, $value);
 
             return $sts;
@@ -461,7 +551,8 @@ class Algen {
             'kelas_prodi' => $value['kelas_prodi'],
             'alternatif_waktu_ajar' => $value['alternatif_waktu_ajar'],
             'is_universal' => $value['is_universal'],
-            'kls_jadwal_merata' => $value['kls_jadwal_merata']
+            'kls_jadwal_merata' => $value['kls_jadwal_merata'],
+            'kls_id_grup_jadwal' => $value['kls_id_grup_jadwal']
         );
 
         $id_individu++;

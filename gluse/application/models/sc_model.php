@@ -39,7 +39,10 @@ class Sc_model extends CI_Model {
         $query = '
             SELECT 
             kls_id,
-            dk.`dsnkls_dsn_id` AS dosen_id
+            dk.`dsnkls_dsn_id` AS dosen_id,
+            kls_mkkur_id,
+            kls_jadwal_merata,
+            kls_id_grup_jadwal
             FROM kelas k
             LEFT JOIN dosen_kelas dk ON k.`kls_id` = dk.`dsnkls_kls_id`
         ';
@@ -48,6 +51,28 @@ class Sc_model extends CI_Model {
         $ret = $ret->result_array();
 
         return $ret;
+    }
+
+    public function getDosenIdByMkkurIdSame($mk_id){
+        $query = "
+            SELECT 
+                dk.`dsnkls_dsn_id`
+            FROM dosen_kelas dk
+            LEFT JOIN kelas k ON dk.`dsnkls_kls_id` = k.`kls_id`
+            WHERE k.`kls_mkkur_id` = $mk_id
+        ";
+
+        $ret = $this->db->query($query);
+        $ret = $ret->result_array();
+        $arr_dosen = array();
+        if (!empty($ret)) {
+            foreach ($ret as $key => $value) {
+                $arr_dosen[] = $value['dsnkls_dsn_id'];
+            } 
+        }
+        
+
+        return $arr_dosen;
     }
 
     public function cek_id_dosen_unik($id){
