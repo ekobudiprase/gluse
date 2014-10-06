@@ -529,7 +529,7 @@ class Penjadwalan_model extends CI_Model {
                 kls_id_grup_jadwal
             FROM kelas k
             LEFT JOIN mata_kuliah_kurikulum mkk ON k.`kls_mkkur_id` = mkk.`mkkur_id`
-            ORDER BY order_col DESC, mkkur_sifat DESC, mkkur_is_universal DESC 
+            ORDER BY kls_jml_peserta_prediksi DESC, order_col DESC
         ';
 
         $ret = $this->db->query($query);
