@@ -86,7 +86,8 @@ class Algen {
                     // 'label' => $value['ru_nama'].', '.$item['waktu_hari'].' '.$item['waktu_jam_mulai'].'-'.$item['waktu_jam_selesai'],
                     'label' => $value['ru_nama'].', '.$item['waktu_hari'].' '.$item['waktu_jam_mulai'].'-',
                     'kap_ruang' => $value['ru_kapasitas'],
-                    'status' => ''
+                    'status' => '',
+                    'status_nested' => ''
                 );
             }
         }
@@ -224,13 +225,14 @@ class Algen {
             }
             
         }
-
+        // echo "<br>";
         // echo '<pre>'; print_r($makul_grup); 
-        if ($value['id_individu'] == 180) { 
+        // if ($value['id_individu'] == 16) { 
 
-            echo '<pre>'; print_r($individu); 
-            exit();
-        }
+            // echo '<pre>'; print_r($individu); 
+            // exit();
+        // }
+
 
         /*
         menyimpan hasil ruang & waktu untuk kelas, beserta periodenya
@@ -298,11 +300,12 @@ class Algen {
             }
             
         }        
-
+        
         if ($id_timespace_cek != null) {
             $id_timespace = $id_timespace_cek;
         }else{
             $id_timespace = $this->getRandomTimespace($individu_classprodi, $individu, $kelas, $timespace, $period_waktu, 0, $timespace_grup_waktu);
+        	
         }
 
         return $id_timespace;
@@ -324,13 +327,45 @@ class Algen {
         // unset($temp);
     }
 
+    function cekPeluang($timespace, $timespace_grup_waktu=null){
+    	$jml=0;
+        if ($timespace_grup_waktu != null) {
+	        foreach ($timespace_grup_waktu as $i => $item) {
+	        	if ($item['data']['status_nested']==1) {
+	        		$jml = $jml +1;
+	        	}
+	        }
+	        if ($jml == count($timespace_grup_waktu)) {
+	        	echo "peluang 0%"; 
+	        	echo '<pre>'; print_r($value); echo '</pre>';
+	        	exit();
+	        }
+        }else{
+	        foreach ($timespace as $i => $item) {
+	        	if ($item['status_nested']==1) {
+	        		$jml = $jml +1;
+	        	}
+	        }
+	        if ($jml == count($timespace)) {
+	        	echo "peluang 0%"; 
+	        	echo '<pre>'; print_r($value); echo '</pre>';
+	        	exit();
+	        }
+        }
+    }
+
     function getRandomTimespace($individu_classprodi, $individu, $value, $timespace, $period_waktu, $iteration, $timespace_grup_waktu=null ){
         $iteration++;
-        // echo $iteration.', ';
-        if ($iteration == 3333) {
+        // echo 'iterasi ke-'.$iteration.' : ';  
+
+        $this->cekPeluang($timespace, $timespace_grup_waktu);
+
+        if ($iteration == 33333) {
         	// return $this->create_individu();
         	echo '<pre>'; print_r($value); echo '</pre>';
-            echo "Iterasi ke-3333"; exit();
+            echo "Iterasi ke-33333"; exit();
+        }else{
+        	 // echo ''.$iteration.', ';  
         }
         
         if ($timespace_grup_waktu != null) { // timespace lokal
@@ -346,15 +381,22 @@ class Algen {
         for ($t=0; $t < $period_waktu; $t++) {
             $ts_ok = true;
             $id_ts = $id_timespace + $t; 
-            if (!isset($timespace[$id_ts]) OR $timespace[$id_ts]['status'] == 1) {
+            if (!isset($timespace[$id_ts]) OR $timespace[$id_ts]['status'] == 1 OR $timespace[$id_ts]['status_nested']==1) {
                 $ts_ok = false;
+            }else{
+            	$timespace[$id_ts]['status_nested'] = 1;
             }
             $sts = $sts && $ts_ok;
         }
         // if ($value['id_individu'] == 158) { 
         //     echo '<pre>timespace_grup_waktu: '; print_r($timespace_grup_waktu); 
         // }
-
+        // if ($value['id_individu'] == 16) { 
+            // echo '<pre>timespace_grup_waktu: '; print_r($timespace);
+            // exit(); 
+        // }
+        // echo $id_timespace.', ';
+        // echo '<pre>'; print_r($timespace[$id_timespace]); echo '</pre>';
 
         /*kondisi apakah cari timespace lokal atau global*/
         if ($timespace_grup_waktu != null) {
