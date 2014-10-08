@@ -116,6 +116,11 @@ class Algen {
             $this->populasi[] = $this->create_individu(); // buat individu
             // break;
         }
+
+        // echo '<pre>jumlah kromosom: '; print_r(count($this->kromosom)); echo ', </pre>';
+        // foreach ($this->populasi as $key => $value) {
+        // 	echo '<pre>'; print_r(count($value)); echo '</pre>';
+        // }
         exit();
 
     }
@@ -174,7 +179,7 @@ class Algen {
             $arr_data = compact('timespace','individu','value', 'makul_grup', 'waktudistinct_grup', 'grup_kemipaan','waktudistinct_grup_kemipaan', 'status_reset_individu');
             
             $ret_data = $this->get_feasible_individu($arr_data);
-            if ($status_reset_individu == 'nochance') {
+            if ($status_reset_individu) {
             	return $this->create_individu();
             }
             // if ($value['id_individu'] == 235) { 
@@ -239,7 +244,7 @@ class Algen {
             
         }
         if ($id_timespace == 'nochance') {
-        	$status_reset_individu = false;
+        	$status_reset_individu = true;
         }else{
         	/*
 	        menyimpan hasil ruang & waktu untuk kelas, beserta periodenya
@@ -661,10 +666,10 @@ class Algen {
     public function separate_kelas_makul_wajib_pil($individu){
 
         foreach ($individu as $key => $value) {
-            if ($this->kromosom[$value['id_kromosom']]['sifat_makul'] == 'W') {
+            if (strtolower($this->kromosom[$value['id_kromosom']]['sifat_makul']) == 'w') {
                 $makul_wajib[] = $value;
             }
-            if ($this->kromosom[$value['id_kromosom']]['sifat_makul'] == 'P') {
+            if (strtolower($this->kromosom[$value['id_kromosom']]['sifat_makul']) == 'p') {
                 $makul_pil[] = $value;
             }
         }
@@ -1253,7 +1258,7 @@ class Algen {
         );
 
         $individu = $this->repairing_individu($individu);
-        $individu = $this->cek_kelas_on_hardrule($individu);
+        // $individu = $this->cek_kelas_on_hardrule($individu);
         return $individu;
     }
 
@@ -1353,6 +1358,7 @@ class Algen {
                 $this->individu_update_calon[] = $this->individu_breed[$key][$i];
             }
         }
+        echo '<pre>'; print_r($this->individu_update_calon); echo '</pre>'; exit();
 
         // unset($key);
         // unset($value);
