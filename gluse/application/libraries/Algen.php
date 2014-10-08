@@ -374,7 +374,7 @@ class Algen {
         $iteration++;
         // echo 'iterasi ke-'.$iteration.' : ';  
 
-        $this->cekPeluang($timespace, $timespace_grup_waktu);
+        // $this->cekPeluang($timespace, $timespace_grup_waktu);
 
         if ($iteration == 33333) {
         	return 'nochance';

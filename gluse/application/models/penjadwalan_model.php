@@ -621,6 +621,21 @@ class Penjadwalan_model extends CI_Model {
 
         return $val;
     }
+    
+    function getJamMaksSabtu(){
+
+        $query = '
+            SELECT 
+            MAX(w.`waktu_jam_selesai`) AS maks_jam
+            FROM waktu w
+            WHERE w.`waktu_hari` = "sabtu"
+        ';
+
+        $ret = $this->db->query($query);
+        $val = $ret->result_array();
+
+        return $val[0]['maks_jam'];
+    }
 
     function del_jadwalkuliah(){
         $query = '

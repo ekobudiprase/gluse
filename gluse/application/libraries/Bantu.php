@@ -167,7 +167,8 @@ class Bantu {
 		// echo '<pre>'; print_r($jadwal); echo '</pre>';
 		// echo '<pre>'; print_r($ind); echo '</pre>'; exit();
 
-    	$grup_hari = array('senin','selasa','rabu','kamis','jumat');
+        $grup_hari = array('senin','selasa','rabu','kamis','jumat');
+    	// $grup_hari = array('senin','selasa','rabu','kamis','jumat','sabtu');
 		$waktu_transform = array();
 		foreach ($grup_hari as $key => $value) {
 			$waktu_transform[$key]['hari'] = $value;

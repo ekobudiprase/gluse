@@ -33,6 +33,8 @@ class Aturan_jadwal {
     
     public function check_time_notover_limit($id_timespace, $timespace, $period_waktu){
         $sts = true;
+        // $this->CI->load->model('Penjadwalan_model');
+        // $maks_jam_sabtu = $this->CI->Penjadwalan_model->getJamMaksSabtu();
 
         // trapping jika undefined maka lgsg false, cari id_timespace yg lain
         if (!isset($timespace[$id_timespace])) {
@@ -51,6 +53,10 @@ class Aturan_jadwal {
                 AND ($waktu_jam_mulai_kls) < strtotime('11:20:00')
                 AND strtotime($waktu_jam_selesai_kls) > strtotime('11:20:00')
             )
+            /*OR ($hari_kls == 'sabtu' 
+                AND ($waktu_jam_mulai_kls) < strtotime($maks_jam_sabtu)
+                AND strtotime($waktu_jam_selesai_kls) > strtotime($maks_jam_sabtu)
+            )*/
         ) {
             $sts = false;
         }
