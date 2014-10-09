@@ -1,0 +1,4854 @@
+Array
+(
+    [0] => Array
+        (
+            [id_kromosom] => 0
+            [nama_kelas] => GEOFIS-MFG3920
+            [id_timespace] => 180
+            [id_waktu] => 38
+            [period] => 3
+            [waktu_hari] => kamis
+            [id_ruang] => 4
+            [waktu_jam_mulai] => 13:30:00
+            [label_timespace] => S2.03, kamis 13:30:00-16:00:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 16:00:00
+        )
+
+    [1] => Array
+        (
+            [id_kromosom] => 1
+            [nama_kelas] => GEOFIS-MFG2942
+            [id_timespace] => 89
+            [id_waktu] => 43
+            [period] => 2
+            [waktu_hari] => jumat
+            [id_ruang] => 2
+            [waktu_jam_mulai] => 08:30:00
+            [label_timespace] => S2.02, jumat 08:30:00-10:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 10:10:00
+        )
+
+    [2] => Array
+        (
+            [id_kromosom] => 2
+            [nama_kelas] => MAT-STAT-ILKOM-A-MMM
+            [id_timespace] => 486
+            [id_waktu] => 7
+            [period] => 3
+            [waktu_hari] => senin
+            [id_ruang] => 11
+            [waktu_jam_mulai] => 13:30:00
+            [label_timespace] => M2.09, senin 13:30:00-16:00:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 16:00:00
+        )
+
+    [3] => Array
+        (
+            [id_kromosom] => 3
+            [nama_kelas] => MAT-STAT-ILKOM-B-MMM
+            [id_timespace] => 198
+            [id_waktu] => 7
+            [period] => 3
+            [waktu_hari] => senin
+            [id_ruang] => 5
+            [waktu_jam_mulai] => 13:30:00
+            [label_timespace] => K1, senin 13:30:00-16:00:00
+            [kap_ruang] => 90
+            [waktu_jam_selesai_kls] => 16:00:00
+        )
+
+    [4] => Array
+        (
+            [id_kromosom] => 4
+            [nama_kelas] => MAT-STAT-ILKOM-C-MMM
+            [id_timespace] => 1206
+            [id_waktu] => 7
+            [period] => 3
+            [waktu_hari] => senin
+            [id_ruang] => 26
+            [waktu_jam_mulai] => 13:30:00
+            [label_timespace] => Lab.Das., senin 13:30:00-16:00:00
+            [kap_ruang] => 90
+            [waktu_jam_selesai_kls] => 16:00:00
+        )
+
+    [5] => Array
+        (
+            [id_kromosom] => 5
+            [nama_kelas] => GEOFIS-MFG3950
+            [id_timespace] => 642
+            [id_waktu] => 20
+            [period] => 2
+            [waktu_hari] => selasa
+            [id_ruang] => 14
+            [waktu_jam_mulai] => 15:30:00
+            [label_timespace] => M2.12, selasa 15:30:00-17:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 17:10:00
+        )
+
+    [6] => Array
+        (
+            [id_kromosom] => 6
+            [nama_kelas] => ILKOM-MIK3201
+            [id_timespace] => 792
+            [id_waktu] => 26
+            [period] => 2
+            [waktu_hari] => rabu
+            [id_ruang] => 17
+            [waktu_jam_mulai] => 11:30:00
+            [label_timespace] => U2.01, rabu 11:30:00-13:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 13:10:00
+        )
+
+    [7] => Array
+        (
+            [id_kromosom] => 7
+            [nama_kelas] => ELINS-MIE2811
+            [id_timespace] => 74
+            [id_waktu] => 28
+            [period] => 3
+            [waktu_hari] => rabu
+            [id_ruang] => 2
+            [waktu_jam_mulai] => 13:30:00
+            [label_timespace] => S2.02, rabu 13:30:00-16:00:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 16:00:00
+        )
+
+    [8] => Array
+        (
+            [id_kromosom] => 8
+            [nama_kelas] => KEMIPAAN-1
+            [id_timespace] => 145
+            [id_waktu] => 2
+            [period] => 2
+            [waktu_hari] => senin
+            [id_ruang] => 4
+            [waktu_jam_mulai] => 08:30:00
+            [label_timespace] => S2.03, senin 08:30:00-10:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 10:10:00
+        )
+
+    [9] => Array
+        (
+            [id_kromosom] => 9
+            [nama_kelas] => GEOFIS-MFG3917
+            [id_timespace] => 687
+            [id_waktu] => 17
+            [period] => 2
+            [waktu_hari] => selasa
+            [id_ruang] => 15
+            [waktu_jam_mulai] => 12:30:00
+            [label_timespace] => U2.02, selasa 12:30:00-14:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 14:10:00
+        )
+
+    [10] => Array
+        (
+            [id_kromosom] => 10
+            [nama_kelas] => KIM-A-MKK1101
+            [id_timespace] => 945
+            [id_waktu] => 35
+            [period] => 3
+            [waktu_hari] => kamis
+            [id_ruang] => 20
+            [waktu_jam_mulai] => 10:30:00
+            [label_timespace] => U2.03, kamis 10:30:00-13:00:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 13:00:00
+        )
+
+    [11] => Array
+        (
+            [id_kromosom] => 11
+            [nama_kelas] => KIM-B-MKK1101
+            [id_timespace] => 1233
+            [id_waktu] => 35
+            [period] => 3
+            [waktu_hari] => kamis
+            [id_ruang] => 26
+            [waktu_jam_mulai] => 10:30:00
+            [label_timespace] => Lab.Das., kamis 10:30:00-13:00:00
+            [kap_ruang] => 90
+            [waktu_jam_selesai_kls] => 13:00:00
+        )
+
+    [12] => Array
+        (
+            [id_kromosom] => 12
+            [nama_kelas] => KIM-C-MKK1101
+            [id_timespace] => 513
+            [id_waktu] => 35
+            [period] => 3
+            [waktu_hari] => kamis
+            [id_ruang] => 11
+            [waktu_jam_mulai] => 10:30:00
+            [label_timespace] => M2.09, kamis 10:30:00-13:00:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 13:00:00
+        )
+
+    [13] => Array
+        (
+            [id_kromosom] => 13
+            [nama_kelas] => KEMIPAAN-2
+            [id_timespace] => 1201
+            [id_waktu] => 2
+            [period] => 2
+            [waktu_hari] => senin
+            [id_ruang] => 26
+            [waktu_jam_mulai] => 08:30:00
+            [label_timespace] => Lab.Das., senin 08:30:00-10:10:00
+            [kap_ruang] => 90
+            [waktu_jam_selesai_kls] => 10:10:00
+        )
+
+    [14] => Array
+        (
+            [id_kromosom] => 14
+            [nama_kelas] => KEMIPAAN-3
+            [id_timespace] => 150
+            [id_waktu] => 7
+            [period] => 2
+            [waktu_hari] => senin
+            [id_ruang] => 4
+            [waktu_jam_mulai] => 13:30:00
+            [label_timespace] => S2.03, senin 13:30:00-15:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 15:10:00
+        )
+
+    [15] => Array
+        (
+            [id_kromosom] => 15
+            [nama_kelas] => KEMIPAAN-4
+            [id_timespace] => 630
+            [id_waktu] => 7
+            [period] => 2
+            [waktu_hari] => senin
+            [id_ruang] => 14
+            [waktu_jam_mulai] => 13:30:00
+            [label_timespace] => M2.12, senin 13:30:00-15:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 15:10:00
+        )
+
+    [16] => Array
+        (
+            [id_kromosom] => 16
+            [nama_kelas] => KEMIPAAN-5
+            [id_timespace] => 1258
+            [id_waktu] => 12
+            [period] => 2
+            [waktu_hari] => selasa
+            [id_ruang] => 27
+            [waktu_jam_mulai] => 07:30:00
+            [label_timespace] => S2.507, selasa 07:30:00-09:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 09:10:00
+        )
+
+    [17] => Array
+        (
+            [id_kromosom] => 17
+            [nama_kelas] => KEMIPAAN-6
+            [id_timespace] => 730
+            [id_waktu] => 12
+            [period] => 2
+            [waktu_hari] => selasa
+            [id_ruang] => 16
+            [waktu_jam_mulai] => 07:30:00
+            [label_timespace] => T2.01, selasa 07:30:00-09:10:00
+            [kap_ruang] => 90
+            [waktu_jam_selesai_kls] => 09:10:00
+        )
+
+    [18] => Array
+        (
+            [id_kromosom] => 18
+            [nama_kelas] => KEMIPAAN-7
+            [id_timespace] => 680
+            [id_waktu] => 9
+            [period] => 2
+            [waktu_hari] => senin
+            [id_ruang] => 15
+            [waktu_jam_mulai] => 15:30:00
+            [label_timespace] => U2.02, senin 15:30:00-17:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 17:10:00
+        )
+
+    [19] => Array
+        (
+            [id_kromosom] => 19
+            [nama_kelas] => KEMIPAAN-8
+            [id_timespace] => 632
+            [id_waktu] => 9
+            [period] => 2
+            [waktu_hari] => senin
+            [id_ruang] => 14
+            [waktu_jam_mulai] => 15:30:00
+            [label_timespace] => M2.12, senin 15:30:00-17:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 17:10:00
+        )
+
+    [20] => Array
+        (
+            [id_kromosom] => 20
+            [nama_kelas] => KIM-A-MKK1501
+            [id_timespace] => 276
+            [id_waktu] => 38
+            [period] => 2
+            [waktu_hari] => kamis
+            [id_ruang] => 6
+            [waktu_jam_mulai] => 13:30:00
+            [label_timespace] => S2.505, kamis 13:30:00-15:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 15:10:00
+        )
+
+    [21] => Array
+        (
+            [id_kromosom] => 21
+            [nama_kelas] => FIS-MFF1001
+            [id_timespace] => 736
+            [id_waktu] => 18
+            [period] => 2
+            [waktu_hari] => selasa
+            [id_ruang] => 16
+            [waktu_jam_mulai] => 13:30:00
+            [label_timespace] => T2.01, selasa 13:30:00-15:10:00
+            [kap_ruang] => 90
+            [waktu_jam_selesai_kls] => 15:10:00
+        )
+
+    [22] => Array
+        (
+            [id_kromosom] => 22
+            [nama_kelas] => KIM-MKK3833
+            [id_timespace] => 68
+            [id_waktu] => 22
+            [period] => 2
+            [waktu_hari] => rabu
+            [id_ruang] => 2
+            [waktu_jam_mulai] => 07:30:00
+            [label_timespace] => S2.02, rabu 07:30:00-09:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 09:10:00
+        )
+
+    [23] => Array
+        (
+            [id_kromosom] => 23
+            [nama_kelas] => ELINS-MIE3815
+            [id_timespace] => 1000
+            [id_waktu] => 42
+            [period] => 3
+            [waktu_hari] => jumat
+            [id_ruang] => 21
+            [waktu_jam_mulai] => 07:30:00
+            [label_timespace] => U2.04, jumat 07:30:00-10:00:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 10:00:00
+        )
+
+    [24] => Array
+        (
+            [id_kromosom] => 24
+            [nama_kelas] => FIS-MFF2031
+            [id_timespace] => 63
+            [id_waktu] => 17
+            [period] => 2
+            [waktu_hari] => selasa
+            [id_ruang] => 2
+            [waktu_jam_mulai] => 12:30:00
+            [label_timespace] => S2.02, selasa 12:30:00-14:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 14:10:00
+        )
+
+    [25] => Array
+        (
+            [id_kromosom] => 25
+            [nama_kelas] => GEOFIS-MFG2940
+            [id_timespace] => 493
+            [id_waktu] => 15
+            [period] => 2
+            [waktu_hari] => selasa
+            [id_ruang] => 11
+            [waktu_jam_mulai] => 10:30:00
+            [label_timespace] => M2.09, selasa 10:30:00-12:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 12:10:00
+        )
+
+    [26] => Array
+        (
+            [id_kromosom] => 26
+            [nama_kelas] => KIM-A-MKK2601
+            [id_timespace] => 1292
+            [id_waktu] => 48
+            [period] => 2
+            [waktu_hari] => jumat
+            [id_ruang] => 27
+            [waktu_jam_mulai] => 13:30:00
+            [label_timespace] => S2.507, jumat 13:30:00-15:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 15:10:00
+        )
+
+    [27] => Array
+        (
+            [id_kromosom] => 27
+            [nama_kelas] => KIM-B-MKK2601
+            [id_timespace] => 188
+            [id_waktu] => 48
+            [period] => 2
+            [waktu_hari] => jumat
+            [id_ruang] => 4
+            [waktu_jam_mulai] => 13:30:00
+            [label_timespace] => S2.03, jumat 13:30:00-15:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 15:10:00
+        )
+
+    [28] => Array
+        (
+            [id_kromosom] => 28
+            [nama_kelas] => KIM-C-MKK2601
+            [id_timespace] => 92
+            [id_waktu] => 48
+            [period] => 2
+            [waktu_hari] => jumat
+            [id_ruang] => 2
+            [waktu_jam_mulai] => 13:30:00
+            [label_timespace] => S2.02, jumat 13:30:00-15:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 15:10:00
+        )
+
+    [29] => Array
+        (
+            [id_kromosom] => 29
+            [nama_kelas] => KIM-B-MKK1501
+            [id_timespace] => 228
+            [id_waktu] => 38
+            [period] => 2
+            [waktu_hari] => kamis
+            [id_ruang] => 5
+            [waktu_jam_mulai] => 13:30:00
+            [label_timespace] => K1, kamis 13:30:00-15:10:00
+            [kap_ruang] => 90
+            [waktu_jam_selesai_kls] => 15:10:00
+        )
+
+    [30] => Array
+        (
+            [id_kromosom] => 30
+            [nama_kelas] => KIM-C-MKK1501
+            [id_timespace] => 324
+            [id_waktu] => 38
+            [period] => 2
+            [waktu_hari] => kamis
+            [id_ruang] => 7
+            [waktu_jam_mulai] => 13:30:00
+            [label_timespace] => S2.506, kamis 13:30:00-15:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 15:10:00
+        )
+
+    [31] => Array
+        (
+            [id_kromosom] => 31
+            [nama_kelas] => GEOFIS-MFG3919
+            [id_timespace] => 771
+            [id_waktu] => 4
+            [period] => 3
+            [waktu_hari] => senin
+            [id_ruang] => 17
+            [waktu_jam_mulai] => 10:30:00
+            [label_timespace] => U2.01, senin 10:30:00-13:00:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 13:00:00
+        )
+
+    [32] => Array
+        (
+            [id_kromosom] => 32
+            [nama_kelas] => KIM-A-MKK2701
+            [id_timespace] => 507
+            [id_waktu] => 29
+            [period] => 2
+            [waktu_hari] => rabu
+            [id_ruang] => 11
+            [waktu_jam_mulai] => 14:30:00
+            [label_timespace] => M2.09, rabu 14:30:00-16:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 16:10:00
+        )
+
+    [33] => Array
+        (
+            [id_kromosom] => 33
+            [nama_kelas] => KIM-B-MKK2701
+            [id_timespace] => 1227
+            [id_waktu] => 29
+            [period] => 2
+            [waktu_hari] => rabu
+            [id_ruang] => 26
+            [waktu_jam_mulai] => 14:30:00
+            [label_timespace] => Lab.Das., rabu 14:30:00-16:10:00
+            [kap_ruang] => 90
+            [waktu_jam_selesai_kls] => 16:10:00
+        )
+
+    [34] => Array
+        (
+            [id_kromosom] => 34
+            [nama_kelas] => STAT-MMS3417
+            [id_timespace] => 220
+            [id_waktu] => 30
+            [period] => 2
+            [waktu_hari] => rabu
+            [id_ruang] => 5
+            [waktu_jam_mulai] => 15:30:00
+            [label_timespace] => K1, rabu 15:30:00-17:10:00
+            [kap_ruang] => 90
+            [waktu_jam_selesai_kls] => 17:10:00
+        )
+
+    [35] => Array
+        (
+            [id_kromosom] => 35
+            [nama_kelas] => ELINS-MIE3817
+            [id_timespace] => 304
+            [id_waktu] => 18
+            [period] => 3
+            [waktu_hari] => selasa
+            [id_ruang] => 7
+            [waktu_jam_mulai] => 13:30:00
+            [label_timespace] => S2.506, selasa 13:30:00-16:00:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 16:00:00
+        )
+
+    [36] => Array
+        (
+            [id_kromosom] => 36
+            [nama_kelas] => STAT-A-MMS2410
+            [id_timespace] => 627
+            [id_waktu] => 4
+            [period] => 3
+            [waktu_hari] => senin
+            [id_ruang] => 14
+            [waktu_jam_mulai] => 10:30:00
+            [label_timespace] => M2.12, senin 10:30:00-13:00:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 13:00:00
+        )
+
+    [37] => Array
+        (
+            [id_kromosom] => 37
+            [nama_kelas] => STAT-B-MMS2410
+            [id_timespace] => 51
+            [id_waktu] => 4
+            [period] => 3
+            [waktu_hari] => senin
+            [id_ruang] => 2
+            [waktu_jam_mulai] => 10:30:00
+            [label_timespace] => S2.02, senin 10:30:00-13:00:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 13:00:00
+        )
+
+    [38] => Array
+        (
+            [id_kromosom] => 38
+            [nama_kelas] => KIM-A-MKK2301
+            [id_timespace] => 174
+            [id_waktu] => 32
+            [period] => 3
+            [waktu_hari] => kamis
+            [id_ruang] => 4
+            [waktu_jam_mulai] => 07:30:00
+            [label_timespace] => S2.03, kamis 07:30:00-10:00:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 10:00:00
+        )
+
+    [39] => Array
+        (
+            [id_kromosom] => 39
+            [nama_kelas] => KIM-B-MKK2301
+            [id_timespace] => 78
+            [id_waktu] => 32
+            [period] => 3
+            [waktu_hari] => kamis
+            [id_ruang] => 2
+            [waktu_jam_mulai] => 07:30:00
+            [label_timespace] => S2.02, kamis 07:30:00-10:00:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 10:00:00
+        )
+
+    [40] => Array
+        (
+            [id_kromosom] => 40
+            [nama_kelas] => KIM-A-MKK3815
+            [id_timespace] => 987
+            [id_waktu] => 29
+            [period] => 2
+            [waktu_hari] => rabu
+            [id_ruang] => 21
+            [waktu_jam_mulai] => 14:30:00
+            [label_timespace] => U2.04, rabu 14:30:00-16:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 16:10:00
+        )
+
+    [41] => Array
+        (
+            [id_kromosom] => 41
+            [nama_kelas] => MAT-MMM2105
+            [id_timespace] => 86
+            [id_waktu] => 40
+            [period] => 2
+            [waktu_hari] => kamis
+            [id_ruang] => 2
+            [waktu_jam_mulai] => 15:30:00
+            [label_timespace] => S2.02, kamis 15:30:00-17:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 17:10:00
+        )
+
+    [42] => Array
+        (
+            [id_kromosom] => 42
+            [nama_kelas] => KIM-A-MKK2501
+            [id_timespace] => 782
+            [id_waktu] => 16
+            [period] => 3
+            [waktu_hari] => selasa
+            [id_ruang] => 17
+            [waktu_jam_mulai] => 11:30:00
+            [label_timespace] => U2.01, selasa 11:30:00-14:00:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 14:00:00
+        )
+
+    [43] => Array
+        (
+            [id_kromosom] => 43
+            [nama_kelas] => MAT-A-MMM1207
+            [id_timespace] => 796
+            [id_waktu] => 30
+            [period] => 2
+            [waktu_hari] => rabu
+            [id_ruang] => 17
+            [waktu_jam_mulai] => 15:30:00
+            [label_timespace] => U2.01, rabu 15:30:00-17:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 17:10:00
+        )
+
+    [44] => Array
+        (
+            [id_kromosom] => 44
+            [nama_kelas] => KIM-B-MKK3815
+            [id_timespace] => 747
+            [id_waktu] => 29
+            [period] => 2
+            [waktu_hari] => rabu
+            [id_ruang] => 16
+            [waktu_jam_mulai] => 14:30:00
+            [label_timespace] => T2.01, rabu 14:30:00-16:10:00
+            [kap_ruang] => 90
+            [waktu_jam_selesai_kls] => 16:10:00
+        )
+
+    [45] => Array
+        (
+            [id_kromosom] => 45
+            [nama_kelas] => BIU1002-A
+            [id_timespace] => 185
+            [id_waktu] => 43
+            [period] => 2
+            [waktu_hari] => jumat
+            [id_ruang] => 4
+            [waktu_jam_mulai] => 08:30:00
+            [label_timespace] => S2.03, jumat 08:30:00-10:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 10:10:00
+        )
+
+    [46] => Array
+        (
+            [id_kromosom] => 46
+            [nama_kelas] => BIU1002-B
+            [id_timespace] => 281
+            [id_waktu] => 43
+            [period] => 2
+            [waktu_hari] => jumat
+            [id_ruang] => 6
+            [waktu_jam_mulai] => 08:30:00
+            [label_timespace] => S2.505, jumat 08:30:00-10:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 10:10:00
+        )
+
+    [47] => Array
+        (
+            [id_kromosom] => 47
+            [nama_kelas] => BIU1002-C
+            [id_timespace] => 41
+            [id_waktu] => 43
+            [period] => 2
+            [waktu_hari] => jumat
+            [id_ruang] => 1
+            [waktu_jam_mulai] => 08:30:00
+            [label_timespace] => S2.01, jumat 08:30:00-10:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 10:10:00
+        )
+
+    [48] => Array
+        (
+            [id_kromosom] => 48
+            [nama_kelas] => MAT-A-MMM1106
+            [id_timespace] => 271
+            [id_waktu] => 33
+            [period] => 3
+            [waktu_hari] => kamis
+            [id_ruang] => 6
+            [waktu_jam_mulai] => 08:30:00
+            [label_timespace] => S2.505, kamis 08:30:00-11:00:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 11:00:00
+        )
+
+    [49] => Array
+        (
+            [id_kromosom] => 49
+            [nama_kelas] => MAT-B-MMM1106
+            [id_timespace] => 223
+            [id_waktu] => 33
+            [period] => 3
+            [waktu_hari] => kamis
+            [id_ruang] => 5
+            [waktu_jam_mulai] => 08:30:00
+            [label_timespace] => K1, kamis 08:30:00-11:00:00
+            [kap_ruang] => 90
+            [waktu_jam_selesai_kls] => 11:00:00
+        )
+
+    [50] => Array
+        (
+            [id_kromosom] => 50
+            [nama_kelas] => MAT-C-MMM1106
+            [id_timespace] => 655
+            [id_waktu] => 33
+            [period] => 3
+            [waktu_hari] => kamis
+            [id_ruang] => 14
+            [waktu_jam_mulai] => 08:30:00
+            [label_timespace] => M2.12, kamis 08:30:00-11:00:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 11:00:00
+        )
+
+    [51] => Array
+        (
+            [id_kromosom] => 51
+            [nama_kelas] => KIM-A-MKK1401
+            [id_timespace] => 960
+            [id_waktu] => 1
+            [period] => 2
+            [waktu_hari] => senin
+            [id_ruang] => 21
+            [waktu_jam_mulai] => 07:30:00
+            [label_timespace] => U2.04, senin 07:30:00-09:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 09:10:00
+        )
+
+    [52] => Array
+        (
+            [id_kromosom] => 52
+            [nama_kelas] => KIM-B-MKK1401
+            [id_timespace] => 288
+            [id_waktu] => 1
+            [period] => 2
+            [waktu_hari] => senin
+            [id_ruang] => 7
+            [waktu_jam_mulai] => 07:30:00
+            [label_timespace] => S2.506, senin 07:30:00-09:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 09:10:00
+        )
+
+    [53] => Array
+        (
+            [id_kromosom] => 53
+            [nama_kelas] => KIM-C-MKK1401
+            [id_timespace] => 912
+            [id_waktu] => 1
+            [period] => 2
+            [waktu_hari] => senin
+            [id_ruang] => 20
+            [waktu_jam_mulai] => 07:30:00
+            [label_timespace] => U2.03, senin 07:30:00-09:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 09:10:00
+        )
+
+    [54] => Array
+        (
+            [id_kromosom] => 54
+            [nama_kelas] => MAT-B-MMM1207
+            [id_timespace] => 28
+            [id_waktu] => 30
+            [period] => 2
+            [waktu_hari] => rabu
+            [id_ruang] => 1
+            [waktu_jam_mulai] => 15:30:00
+            [label_timespace] => S2.01, rabu 15:30:00-17:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 17:10:00
+        )
+
+    [55] => Array
+        (
+            [id_kromosom] => 55
+            [nama_kelas] => KIM-A-MKK3401
+            [id_timespace] => 802
+            [id_waktu] => 36
+            [period] => 2
+            [waktu_hari] => kamis
+            [id_ruang] => 17
+            [waktu_jam_mulai] => 11:30:00
+            [label_timespace] => U2.01, kamis 11:30:00-13:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 13:10:00
+        )
+
+    [56] => Array
+        (
+            [id_kromosom] => 56
+            [nama_kelas] => KIM-B-MKK3401
+            [id_timespace] => 1282
+            [id_waktu] => 36
+            [period] => 2
+            [waktu_hari] => kamis
+            [id_ruang] => 27
+            [waktu_jam_mulai] => 11:30:00
+            [label_timespace] => S2.507, kamis 11:30:00-13:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 13:10:00
+        )
+
+    [57] => Array
+        (
+            [id_kromosom] => 57
+            [nama_kelas] => GEOFIS-MFG3945
+            [id_timespace] => 810
+            [id_waktu] => 44
+            [period] => 2
+            [waktu_hari] => jumat
+            [id_ruang] => 17
+            [waktu_jam_mulai] => 09:30:00
+            [label_timespace] => U2.01, jumat 09:30:00-11:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 11:10:00
+        )
+
+    [58] => Array
+        (
+            [id_kromosom] => 58
+            [nama_kelas] => KEMIPAAN-1
+            [id_timespace] => 278
+            [id_waktu] => 40
+            [period] => 2
+            [waktu_hari] => kamis
+            [id_ruang] => 6
+            [waktu_jam_mulai] => 15:30:00
+            [label_timespace] => S2.505, kamis 15:30:00-17:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 17:10:00
+        )
+
+    [59] => Array
+        (
+            [id_kromosom] => 59
+            [nama_kelas] => KIM-B-MKK2501
+            [id_timespace] => 158
+            [id_waktu] => 16
+            [period] => 3
+            [waktu_hari] => selasa
+            [id_ruang] => 4
+            [waktu_jam_mulai] => 11:30:00
+            [label_timespace] => S2.03, selasa 11:30:00-14:00:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 14:00:00
+        )
+
+    [60] => Array
+        (
+            [id_kromosom] => 60
+            [nama_kelas] => KIM-C-MKK2501
+            [id_timespace] => 14
+            [id_waktu] => 16
+            [period] => 3
+            [waktu_hari] => selasa
+            [id_ruang] => 1
+            [waktu_jam_mulai] => 11:30:00
+            [label_timespace] => S2.01, selasa 11:30:00-14:00:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 14:00:00
+        )
+
+    [61] => Array
+        (
+            [id_kromosom] => 61
+            [nama_kelas] => KIM-A-MKK3501
+            [id_timespace] => 525
+            [id_waktu] => 49
+            [period] => 2
+            [waktu_hari] => jumat
+            [id_ruang] => 11
+            [waktu_jam_mulai] => 14:30:00
+            [label_timespace] => M2.09, jumat 14:30:00-16:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 16:10:00
+        )
+
+    [62] => Array
+        (
+            [id_kromosom] => 62
+            [nama_kelas] => MAT-A-MMM1101
+            [id_timespace] => 82
+            [id_waktu] => 36
+            [period] => 3
+            [waktu_hari] => kamis
+            [id_ruang] => 2
+            [waktu_jam_mulai] => 11:30:00
+            [label_timespace] => S2.02, kamis 11:30:00-14:00:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 14:00:00
+        )
+
+    [63] => Array
+        (
+            [id_kromosom] => 63
+            [nama_kelas] => MAT-B-MMM1101
+            [id_timespace] => 706
+            [id_waktu] => 36
+            [period] => 3
+            [waktu_hari] => kamis
+            [id_ruang] => 15
+            [waktu_jam_mulai] => 11:30:00
+            [label_timespace] => U2.02, kamis 11:30:00-14:00:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 14:00:00
+        )
+
+    [64] => Array
+        (
+            [id_kromosom] => 64
+            [nama_kelas] => MAT-C-MMM1101
+            [id_timespace] => 34
+            [id_waktu] => 36
+            [period] => 3
+            [waktu_hari] => kamis
+            [id_ruang] => 1
+            [waktu_jam_mulai] => 11:30:00
+            [label_timespace] => S2.01, kamis 11:30:00-14:00:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 14:00:00
+        )
+
+    [65] => Array
+        (
+            [id_kromosom] => 65
+            [nama_kelas] => KIM-B-MKK3501
+            [id_timespace] => 237
+            [id_waktu] => 49
+            [period] => 2
+            [waktu_hari] => jumat
+            [id_ruang] => 5
+            [waktu_jam_mulai] => 14:30:00
+            [label_timespace] => K1, jumat 14:30:00-16:10:00
+            [kap_ruang] => 90
+            [waktu_jam_selesai_kls] => 16:10:00
+        )
+
+    [66] => Array
+        (
+            [id_kromosom] => 66
+            [nama_kelas] => ILKOM-MIK3401
+            [id_timespace] => 962
+            [id_waktu] => 3
+            [period] => 3
+            [waktu_hari] => senin
+            [id_ruang] => 21
+            [waktu_jam_mulai] => 09:30:00
+            [label_timespace] => U2.04, senin 09:30:00-12:00:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 12:00:00
+        )
+
+    [67] => Array
+        (
+            [id_kromosom] => 67
+            [nama_kelas] => KEMIPAAN-2
+            [id_timespace] => 662
+            [id_waktu] => 40
+            [period] => 2
+            [waktu_hari] => kamis
+            [id_ruang] => 14
+            [waktu_jam_mulai] => 15:30:00
+            [label_timespace] => M2.12, kamis 15:30:00-17:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 17:10:00
+        )
+
+    [68] => Array
+        (
+            [id_kromosom] => 68
+            [nama_kelas] => KEMIPAAN-3
+            [id_timespace] => 924
+            [id_waktu] => 14
+            [period] => 2
+            [waktu_hari] => selasa
+            [id_ruang] => 20
+            [waktu_jam_mulai] => 09:30:00
+            [label_timespace] => U2.03, selasa 09:30:00-11:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 11:10:00
+        )
+
+    [69] => Array
+        (
+            [id_kromosom] => 69
+            [nama_kelas] => KEMIPAAN-4
+            [id_timespace] => 156
+            [id_waktu] => 14
+            [period] => 2
+            [waktu_hari] => selasa
+            [id_ruang] => 4
+            [waktu_jam_mulai] => 09:30:00
+            [label_timespace] => S2.03, selasa 09:30:00-11:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 11:10:00
+        )
+
+    [70] => Array
+        (
+            [id_kromosom] => 70
+            [nama_kelas] => KEMIPAAN-5
+            [id_timespace] => 56
+            [id_waktu] => 9
+            [period] => 2
+            [waktu_hari] => senin
+            [id_ruang] => 2
+            [waktu_jam_mulai] => 15:30:00
+            [label_timespace] => S2.02, senin 15:30:00-17:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 17:10:00
+        )
+
+    [71] => Array
+        (
+            [id_kromosom] => 71
+            [nama_kelas] => KEMIPAAN-6
+            [id_timespace] => 152
+            [id_waktu] => 9
+            [period] => 2
+            [waktu_hari] => senin
+            [id_ruang] => 4
+            [waktu_jam_mulai] => 15:30:00
+            [label_timespace] => S2.03, senin 15:30:00-17:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 17:10:00
+        )
+
+    [72] => Array
+        (
+            [id_kromosom] => 72
+            [nama_kelas] => KEMIPAAN-7
+            [id_timespace] => 660
+            [id_waktu] => 38
+            [period] => 2
+            [waktu_hari] => kamis
+            [id_ruang] => 14
+            [waktu_jam_mulai] => 13:30:00
+            [label_timespace] => M2.12, kamis 13:30:00-15:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 15:10:00
+        )
+
+    [73] => Array
+        (
+            [id_kromosom] => 73
+            [nama_kelas] => KEMIPAAN-8
+            [id_timespace] => 756
+            [id_waktu] => 38
+            [period] => 2
+            [waktu_hari] => kamis
+            [id_ruang] => 16
+            [waktu_jam_mulai] => 13:30:00
+            [label_timespace] => T2.01, kamis 13:30:00-15:10:00
+            [kap_ruang] => 90
+            [waktu_jam_selesai_kls] => 15:10:00
+        )
+
+    [74] => Array
+        (
+            [id_kromosom] => 74
+            [nama_kelas] => KEMIPAAN-9
+            [id_timespace] => 234
+            [id_waktu] => 44
+            [period] => 2
+            [waktu_hari] => jumat
+            [id_ruang] => 5
+            [waktu_jam_mulai] => 09:30:00
+            [label_timespace] => K1, jumat 09:30:00-11:10:00
+            [kap_ruang] => 90
+            [waktu_jam_selesai_kls] => 11:10:00
+        )
+
+    [75] => Array
+        (
+            [id_kromosom] => 75
+            [nama_kelas] => STAT-MAT-ILKOM-A-MMS
+            [id_timespace] => 699
+            [id_waktu] => 29
+            [period] => 2
+            [waktu_hari] => rabu
+            [id_ruang] => 15
+            [waktu_jam_mulai] => 14:30:00
+            [label_timespace] => U2.02, rabu 14:30:00-16:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 16:10:00
+        )
+
+    [76] => Array
+        (
+            [id_kromosom] => 76
+            [nama_kelas] => KIM-A-MKK2303
+            [id_timespace] => 636
+            [id_waktu] => 14
+            [period] => 3
+            [waktu_hari] => selasa
+            [id_ruang] => 14
+            [waktu_jam_mulai] => 09:30:00
+            [label_timespace] => M2.12, selasa 09:30:00-12:00:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 12:00:00
+        )
+
+    [77] => Array
+        (
+            [id_kromosom] => 77
+            [nama_kelas] => KIM-MKK3819
+            [id_timespace] => 517
+            [id_waktu] => 39
+            [period] => 2
+            [waktu_hari] => kamis
+            [id_ruang] => 11
+            [waktu_jam_mulai] => 14:30:00
+            [label_timespace] => M2.09, kamis 14:30:00-16:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 16:10:00
+        )
+
+    [78] => Array
+        (
+            [id_kromosom] => 78
+            [nama_kelas] => STAT-MMS3415
+            [id_timespace] => 929
+            [id_waktu] => 19
+            [period] => 2
+            [waktu_hari] => selasa
+            [id_ruang] => 20
+            [waktu_jam_mulai] => 14:30:00
+            [label_timespace] => U2.03, selasa 14:30:00-16:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 16:10:00
+        )
+
+    [79] => Array
+        (
+            [id_kromosom] => 79
+            [nama_kelas] => GEOFIS-MFG4958
+            [id_timespace] => 971
+            [id_waktu] => 13
+            [period] => 2
+            [waktu_hari] => selasa
+            [id_ruang] => 21
+            [waktu_jam_mulai] => 08:30:00
+            [label_timespace] => U2.04, selasa 08:30:00-10:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 10:10:00
+        )
+
+    [80] => Array
+        (
+            [id_kromosom] => 80
+            [nama_kelas] => STAT-MAT-ILKOM-B-MMS
+            [id_timespace] => 651
+            [id_waktu] => 29
+            [period] => 2
+            [waktu_hari] => rabu
+            [id_ruang] => 14
+            [waktu_jam_mulai] => 14:30:00
+            [label_timespace] => M2.12, rabu 14:30:00-16:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 16:10:00
+        )
+
+    [81] => Array
+        (
+            [id_kromosom] => 81
+            [nama_kelas] => STAT-MAT-ILKOM-C-MMS
+            [id_timespace] => 1275
+            [id_waktu] => 29
+            [period] => 2
+            [waktu_hari] => rabu
+            [id_ruang] => 27
+            [waktu_jam_mulai] => 14:30:00
+            [label_timespace] => S2.507, rabu 14:30:00-16:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 16:10:00
+        )
+
+    [82] => Array
+        (
+            [id_kromosom] => 82
+            [nama_kelas] => STAT-MAT-ILKOM-D-MMS
+            [id_timespace] => 939
+            [id_waktu] => 29
+            [period] => 2
+            [waktu_hari] => rabu
+            [id_ruang] => 20
+            [waktu_jam_mulai] => 14:30:00
+            [label_timespace] => U2.03, rabu 14:30:00-16:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 16:10:00
+        )
+
+    [83] => Array
+        (
+            [id_kromosom] => 83
+            [nama_kelas] => STAT-MMS3422
+            [id_timespace] => 483
+            [id_waktu] => 4
+            [period] => 3
+            [waktu_hari] => senin
+            [id_ruang] => 11
+            [waktu_jam_mulai] => 10:30:00
+            [label_timespace] => M2.09, senin 10:30:00-13:00:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 13:00:00
+        )
+
+    [84] => Array
+        (
+            [id_kromosom] => 84
+            [nama_kelas] => KEMIPAAN-1
+            [id_timespace] => 762
+            [id_waktu] => 44
+            [period] => 2
+            [waktu_hari] => jumat
+            [id_ruang] => 16
+            [waktu_jam_mulai] => 09:30:00
+            [label_timespace] => T2.01, jumat 09:30:00-11:10:00
+            [kap_ruang] => 90
+            [waktu_jam_selesai_kls] => 11:10:00
+        )
+
+    [85] => Array
+        (
+            [id_kromosom] => 85
+            [nama_kelas] => KEMIPAAN-2
+            [id_timespace] => 1242
+            [id_waktu] => 44
+            [period] => 2
+            [waktu_hari] => jumat
+            [id_ruang] => 26
+            [waktu_jam_mulai] => 09:30:00
+            [label_timespace] => Lab.Das., jumat 09:30:00-11:10:00
+            [kap_ruang] => 90
+            [waktu_jam_selesai_kls] => 11:10:00
+        )
+
+    [86] => Array
+        (
+            [id_kromosom] => 86
+            [nama_kelas] => KEMIPAAN-3
+            [id_timespace] => 8
+            [id_waktu] => 9
+            [period] => 2
+            [waktu_hari] => senin
+            [id_ruang] => 1
+            [waktu_jam_mulai] => 15:30:00
+            [label_timespace] => S2.01, senin 15:30:00-17:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 17:10:00
+        )
+
+    [87] => Array
+        (
+            [id_kromosom] => 87
+            [nama_kelas] => KEMIPAAN-4
+            [id_timespace] => 248
+            [id_waktu] => 9
+            [period] => 2
+            [waktu_hari] => senin
+            [id_ruang] => 6
+            [waktu_jam_mulai] => 15:30:00
+            [label_timespace] => S2.505, senin 15:30:00-17:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 17:10:00
+        )
+
+    [88] => Array
+        (
+            [id_kromosom] => 88
+            [nama_kelas] => KEMIPAAN-5
+            [id_timespace] => 61
+            [id_waktu] => 15
+            [period] => 2
+            [waktu_hari] => selasa
+            [id_ruang] => 2
+            [waktu_jam_mulai] => 10:30:00
+            [label_timespace] => S2.02, selasa 10:30:00-12:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 12:10:00
+        )
+
+    [89] => Array
+        (
+            [id_kromosom] => 89
+            [nama_kelas] => KEMIPAAN-6
+            [id_timespace] => 685
+            [id_waktu] => 15
+            [period] => 2
+            [waktu_hari] => selasa
+            [id_ruang] => 15
+            [waktu_jam_mulai] => 10:30:00
+            [label_timespace] => U2.02, selasa 10:30:00-12:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 12:10:00
+        )
+
+    [90] => Array
+        (
+            [id_kromosom] => 90
+            [nama_kelas] => KEMIPAAN-7
+            [id_timespace] => 148
+            [id_waktu] => 5
+            [period] => 2
+            [waktu_hari] => senin
+            [id_ruang] => 4
+            [waktu_jam_mulai] => 11:30:00
+            [label_timespace] => S2.03, senin 11:30:00-13:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 13:10:00
+        )
+
+    [91] => Array
+        (
+            [id_kromosom] => 91
+            [nama_kelas] => KEMIPAAN-8
+            [id_timespace] => 1252
+            [id_waktu] => 5
+            [period] => 2
+            [waktu_hari] => senin
+            [id_ruang] => 27
+            [waktu_jam_mulai] => 11:30:00
+            [label_timespace] => S2.507, senin 11:30:00-13:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 13:10:00
+        )
+
+    [92] => Array
+        (
+            [id_kromosom] => 92
+            [nama_kelas] => KEMIPAAN-9
+            [id_timespace] => 10
+            [id_waktu] => 12
+            [period] => 2
+            [waktu_hari] => selasa
+            [id_ruang] => 1
+            [waktu_jam_mulai] => 07:30:00
+            [label_timespace] => S2.01, selasa 07:30:00-09:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 09:10:00
+        )
+
+    [93] => Array
+        (
+            [id_kromosom] => 93
+            [nama_kelas] => KIM-B-MKK2303
+            [id_timespace] => 300
+            [id_waktu] => 14
+            [period] => 3
+            [waktu_hari] => selasa
+            [id_ruang] => 7
+            [waktu_jam_mulai] => 09:30:00
+            [label_timespace] => S2.506, selasa 09:30:00-12:00:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 12:00:00
+        )
+
+    [94] => Array
+        (
+            [id_kromosom] => 94
+            [nama_kelas] => KIM-C-MKK2303
+            [id_timespace] => 1212
+            [id_waktu] => 14
+            [period] => 3
+            [waktu_hari] => selasa
+            [id_ruang] => 26
+            [waktu_jam_mulai] => 09:30:00
+            [label_timespace] => Lab.Das., selasa 09:30:00-12:00:00
+            [kap_ruang] => 90
+            [waktu_jam_selesai_kls] => 12:00:00
+        )
+
+    [95] => Array
+        (
+            [id_kromosom] => 95
+            [nama_kelas] => ILKOM-A-MIK1003
+            [id_timespace] => 764
+            [id_waktu] => 48
+            [period] => 3
+            [waktu_hari] => jumat
+            [id_ruang] => 16
+            [waktu_jam_mulai] => 13:30:00
+            [label_timespace] => T2.01, jumat 13:30:00-16:00:00
+            [kap_ruang] => 90
+            [waktu_jam_selesai_kls] => 16:00:00
+        )
+
+    [96] => Array
+        (
+            [id_kromosom] => 96
+            [nama_kelas] => ILKOM-B-MIK1003
+            [id_timespace] => 332
+            [id_waktu] => 48
+            [period] => 3
+            [waktu_hari] => jumat
+            [id_ruang] => 7
+            [waktu_jam_mulai] => 13:30:00
+            [label_timespace] => S2.506, jumat 13:30:00-16:00:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 16:00:00
+        )
+
+    [97] => Array
+        (
+            [id_kromosom] => 97
+            [nama_kelas] => KIM-A-MKK3811
+            [id_timespace] => 46
+            [id_waktu] => 50
+            [period] => 2
+            [waktu_hari] => jumat
+            [id_ruang] => 1
+            [waktu_jam_mulai] => 15:30:00
+            [label_timespace] => S2.01, jumat 15:30:00-17:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 17:10:00
+        )
+
+    [98] => Array
+        (
+            [id_kromosom] => 98
+            [nama_kelas] => KEMIPAAN-1
+            [id_timespace] => 296
+            [id_waktu] => 9
+            [period] => 2
+            [waktu_hari] => senin
+            [id_ruang] => 7
+            [waktu_jam_mulai] => 15:30:00
+            [label_timespace] => S2.506, senin 15:30:00-17:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 17:10:00
+        )
+
+    [99] => Array
+        (
+            [id_kromosom] => 99
+            [nama_kelas] => KEMIPAAN-2
+            [id_timespace] => 1256
+            [id_waktu] => 9
+            [period] => 2
+            [waktu_hari] => senin
+            [id_ruang] => 27
+            [waktu_jam_mulai] => 15:30:00
+            [label_timespace] => S2.507, senin 15:30:00-17:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 17:10:00
+        )
+
+    [100] => Array
+        (
+            [id_kromosom] => 100
+            [nama_kelas] => KEMIPAAN-3
+            [id_timespace] => 676
+            [id_waktu] => 5
+            [period] => 2
+            [waktu_hari] => senin
+            [id_ruang] => 15
+            [waktu_jam_mulai] => 11:30:00
+            [label_timespace] => U2.02, senin 11:30:00-13:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 13:10:00
+        )
+
+    [101] => Array
+        (
+            [id_kromosom] => 101
+            [nama_kelas] => KEMIPAAN-4
+            [id_timespace] => 292
+            [id_waktu] => 5
+            [period] => 2
+            [waktu_hari] => senin
+            [id_ruang] => 7
+            [waktu_jam_mulai] => 11:30:00
+            [label_timespace] => S2.506, senin 11:30:00-13:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 13:10:00
+        )
+
+    [102] => Array
+        (
+            [id_kromosom] => 102
+            [nama_kelas] => KEMIPAAN-5
+            [id_timespace] => 171
+            [id_waktu] => 29
+            [period] => 2
+            [waktu_hari] => rabu
+            [id_ruang] => 4
+            [waktu_jam_mulai] => 14:30:00
+            [label_timespace] => S2.03, rabu 14:30:00-16:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 16:10:00
+        )
+
+    [103] => Array
+        (
+            [id_kromosom] => 103
+            [nama_kelas] => KEMIPAAN-6
+            [id_timespace] => 267
+            [id_waktu] => 29
+            [period] => 2
+            [waktu_hari] => rabu
+            [id_ruang] => 6
+            [waktu_jam_mulai] => 14:30:00
+            [label_timespace] => S2.505, rabu 14:30:00-16:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 16:10:00
+        )
+
+    [104] => Array
+        (
+            [id_kromosom] => 104
+            [nama_kelas] => KEMIPAAN-7
+            [id_timespace] => 12
+            [id_waktu] => 14
+            [period] => 2
+            [waktu_hari] => selasa
+            [id_ruang] => 1
+            [waktu_jam_mulai] => 09:30:00
+            [label_timespace] => S2.01, selasa 09:30:00-11:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 11:10:00
+        )
+
+    [105] => Array
+        (
+            [id_kromosom] => 105
+            [nama_kelas] => KEMIPAAN-8
+            [id_timespace] => 732
+            [id_waktu] => 14
+            [period] => 2
+            [waktu_hari] => selasa
+            [id_ruang] => 16
+            [waktu_jam_mulai] => 09:30:00
+            [label_timespace] => T2.01, selasa 09:30:00-11:10:00
+            [kap_ruang] => 90
+            [waktu_jam_selesai_kls] => 11:10:00
+        )
+
+    [106] => Array
+        (
+            [id_kromosom] => 106
+            [nama_kelas] => KEMIPAAN-9
+            [id_timespace] => 72
+            [id_waktu] => 26
+            [period] => 2
+            [waktu_hari] => rabu
+            [id_ruang] => 2
+            [waktu_jam_mulai] => 11:30:00
+            [label_timespace] => S2.02, rabu 11:30:00-13:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 13:10:00
+        )
+
+    [107] => Array
+        (
+            [id_kromosom] => 107
+            [nama_kelas] => KIM-B-MKK3811
+            [id_timespace] => 718
+            [id_waktu] => 50
+            [period] => 2
+            [waktu_hari] => jumat
+            [id_ruang] => 15
+            [waktu_jam_mulai] => 15:30:00
+            [label_timespace] => U2.02, jumat 15:30:00-17:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 17:10:00
+        )
+
+    [108] => Array
+        (
+            [id_kromosom] => 108
+            [nama_kelas] => FIS-MFF2051
+            [id_timespace] => 1248
+            [id_waktu] => 1
+            [period] => 2
+            [waktu_hari] => senin
+            [id_ruang] => 27
+            [waktu_jam_mulai] => 07:30:00
+            [label_timespace] => S2.507, senin 07:30:00-09:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 09:10:00
+        )
+
+    [109] => Array
+        (
+            [id_kromosom] => 109
+            [nama_kelas] => KIM-A-MKK3301
+            [id_timespace] => 740
+            [id_waktu] => 22
+            [period] => 2
+            [waktu_hari] => rabu
+            [id_ruang] => 16
+            [waktu_jam_mulai] => 07:30:00
+            [label_timespace] => T2.01, rabu 07:30:00-09:10:00
+            [kap_ruang] => 90
+            [waktu_jam_selesai_kls] => 09:10:00
+        )
+
+    [110] => Array
+        (
+            [id_kromosom] => 110
+            [nama_kelas] => ELINS-A-MIE4823
+            [id_timespace] => 58
+            [id_waktu] => 12
+            [period] => 3
+            [waktu_hari] => selasa
+            [id_ruang] => 2
+            [waktu_jam_mulai] => 07:30:00
+            [label_timespace] => S2.02, selasa 07:30:00-10:00:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 10:00:00
+        )
+
+    [111] => Array
+        (
+            [id_kromosom] => 111
+            [nama_kelas] => ELINS-B-MIE4823
+            [id_timespace] => 250
+            [id_waktu] => 12
+            [period] => 3
+            [waktu_hari] => selasa
+            [id_ruang] => 6
+            [waktu_jam_mulai] => 07:30:00
+            [label_timespace] => S2.505, selasa 07:30:00-10:00:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 10:00:00
+        )
+
+    [112] => Array
+        (
+            [id_kromosom] => 112
+            [nama_kelas] => STAT-MMS3430
+            [id_timespace] => 721
+            [id_waktu] => 2
+            [period] => 2
+            [waktu_hari] => senin
+            [id_ruang] => 16
+            [waktu_jam_mulai] => 08:30:00
+            [label_timespace] => T2.01, senin 08:30:00-10:10:00
+            [kap_ruang] => 90
+            [waktu_jam_selesai_kls] => 10:10:00
+        )
+
+    [113] => Array
+        (
+            [id_kromosom] => 113
+            [nama_kelas] => KIM-B-MKK3301
+            [id_timespace] => 212
+            [id_waktu] => 22
+            [period] => 2
+            [waktu_hari] => rabu
+            [id_ruang] => 5
+            [waktu_jam_mulai] => 07:30:00
+            [label_timespace] => K1, rabu 07:30:00-09:10:00
+            [kap_ruang] => 90
+            [waktu_jam_selesai_kls] => 09:10:00
+        )
+
+    [114] => Array
+        (
+            [id_kromosom] => 114
+            [nama_kelas] => KIM-C-MKK3301
+            [id_timespace] => 644
+            [id_waktu] => 22
+            [period] => 2
+            [waktu_hari] => rabu
+            [id_ruang] => 14
+            [waktu_jam_mulai] => 07:30:00
+            [label_timespace] => M2.12, rabu 07:30:00-09:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 09:10:00
+        )
+
+    [115] => Array
+        (
+            [id_kromosom] => 115
+            [nama_kelas] => FIS-A-MFF1011
+            [id_timespace] => 980
+            [id_waktu] => 22
+            [period] => 3
+            [waktu_hari] => rabu
+            [id_ruang] => 21
+            [waktu_jam_mulai] => 07:30:00
+            [label_timespace] => U2.04, rabu 07:30:00-10:00:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 10:00:00
+        )
+
+    [116] => Array
+        (
+            [id_kromosom] => 116
+            [nama_kelas] => MAT-MMM2308
+            [id_timespace] => 957
+            [id_waktu] => 49
+            [period] => 3
+            [waktu_hari] => jumat
+            [id_ruang] => 20
+            [waktu_jam_mulai] => 14:30:00
+            [label_timespace] => U2.03, jumat 14:30:00-17:00:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 17:00:00
+        )
+
+    [117] => Array
+        (
+            [id_kromosom] => 117
+            [nama_kelas] => FIS-B-MFF1011
+            [id_timespace] => 932
+            [id_waktu] => 22
+            [period] => 3
+            [waktu_hari] => rabu
+            [id_ruang] => 20
+            [waktu_jam_mulai] => 07:30:00
+            [label_timespace] => U2.03, rabu 07:30:00-10:00:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 10:00:00
+        )
+
+    [118] => Array
+        (
+            [id_kromosom] => 118
+            [nama_kelas] => FIS-C-MFF1011
+            [id_timespace] => 1268
+            [id_waktu] => 22
+            [period] => 3
+            [waktu_hari] => rabu
+            [id_ruang] => 27
+            [waktu_jam_mulai] => 07:30:00
+            [label_timespace] => S2.507, rabu 07:30:00-10:00:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 10:00:00
+        )
+
+    [119] => Array
+        (
+            [id_kromosom] => 119
+            [nama_kelas] => FIS-MFF3701
+            [id_timespace] => 673
+            [id_waktu] => 2
+            [period] => 2
+            [waktu_hari] => senin
+            [id_ruang] => 15
+            [waktu_jam_mulai] => 08:30:00
+            [label_timespace] => U2.02, senin 08:30:00-10:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 10:10:00
+        )
+
+    [120] => Array
+        (
+            [id_kromosom] => 120
+            [nama_kelas] => UNU1000-1
+            [id_timespace] => 1210
+            [id_waktu] => 12
+            [period] => 2
+            [waktu_hari] => selasa
+            [id_ruang] => 26
+            [waktu_jam_mulai] => 07:30:00
+            [label_timespace] => Lab.Das., selasa 07:30:00-09:10:00
+            [kap_ruang] => 90
+            [waktu_jam_selesai_kls] => 09:10:00
+        )
+
+    [121] => Array
+        (
+            [id_kromosom] => 121
+            [nama_kelas] => KIM-A-MKK2401
+            [id_timespace] => 727
+            [id_waktu] => 8
+            [period] => 2
+            [waktu_hari] => senin
+            [id_ruang] => 16
+            [waktu_jam_mulai] => 14:30:00
+            [label_timespace] => T2.01, senin 14:30:00-16:10:00
+            [kap_ruang] => 90
+            [waktu_jam_selesai_kls] => 16:10:00
+        )
+
+    [122] => Array
+        (
+            [id_kromosom] => 122
+            [nama_kelas] => KIM-B-MKK2401
+            [id_timespace] => 967
+            [id_waktu] => 8
+            [period] => 2
+            [waktu_hari] => senin
+            [id_ruang] => 21
+            [waktu_jam_mulai] => 14:30:00
+            [label_timespace] => U2.04, senin 14:30:00-16:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 16:10:00
+        )
+
+    [123] => Array
+        (
+            [id_kromosom] => 123
+            [nama_kelas] => KIM-C-MKK2401
+            [id_timespace] => 919
+            [id_waktu] => 8
+            [period] => 2
+            [waktu_hari] => senin
+            [id_ruang] => 20
+            [waktu_jam_mulai] => 14:30:00
+            [label_timespace] => U2.03, senin 14:30:00-16:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 16:10:00
+        )
+
+    [124] => Array
+        (
+            [id_kromosom] => 124
+            [nama_kelas] => STAT-MMS3424
+            [id_timespace] => 308
+            [id_waktu] => 22
+            [period] => 3
+            [waktu_hari] => rabu
+            [id_ruang] => 7
+            [waktu_jam_mulai] => 07:30:00
+            [label_timespace] => S2.506, rabu 07:30:00-10:00:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 10:00:00
+        )
+
+    [125] => Array
+        (
+            [id_kromosom] => 125
+            [nama_kelas] => ELINS-MIE3818
+            [id_timespace] => 994
+            [id_waktu] => 36
+            [period] => 3
+            [waktu_hari] => kamis
+            [id_ruang] => 21
+            [waktu_jam_mulai] => 11:30:00
+            [label_timespace] => U2.04, kamis 11:30:00-14:00:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 14:00:00
+        )
+
+    [126] => Array
+        (
+            [id_kromosom] => 126
+            [nama_kelas] => KIM-A-MKK3403
+            [id_timespace] => 232
+            [id_waktu] => 42
+            [period] => 2
+            [waktu_hari] => jumat
+            [id_ruang] => 5
+            [waktu_jam_mulai] => 07:30:00
+            [label_timespace] => K1, jumat 07:30:00-09:10:00
+            [kap_ruang] => 90
+            [waktu_jam_selesai_kls] => 09:10:00
+        )
+
+    [127] => Array
+        (
+            [id_kromosom] => 127
+            [nama_kelas] => KIM-B-MKK3403
+            [id_timespace] => 520
+            [id_waktu] => 42
+            [period] => 2
+            [waktu_hari] => jumat
+            [id_ruang] => 11
+            [waktu_jam_mulai] => 07:30:00
+            [label_timespace] => M2.09, jumat 07:30:00-09:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 09:10:00
+        )
+
+    [128] => Array
+        (
+            [id_kromosom] => 128
+            [nama_kelas] => KIM-C-MKK3403
+            [id_timespace] => 1240
+            [id_waktu] => 42
+            [period] => 2
+            [waktu_hari] => jumat
+            [id_ruang] => 26
+            [waktu_jam_mulai] => 07:30:00
+            [label_timespace] => Lab.Das., jumat 07:30:00-09:10:00
+            [kap_ruang] => 90
+            [waktu_jam_selesai_kls] => 09:10:00
+        )
+
+    [129] => Array
+        (
+            [id_kromosom] => 129
+            [nama_kelas] => ILKOM-A-MIK3203
+            [id_timespace] => 926
+            [id_waktu] => 16
+            [period] => 3
+            [waktu_hari] => selasa
+            [id_ruang] => 20
+            [waktu_jam_mulai] => 11:30:00
+            [label_timespace] => U2.03, selasa 11:30:00-14:00:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 14:00:00
+        )
+
+    [130] => Array
+        (
+            [id_kromosom] => 130
+            [nama_kelas] => ILKOM-B-MIK3203
+            [id_timespace] => 974
+            [id_waktu] => 16
+            [period] => 3
+            [waktu_hari] => selasa
+            [id_ruang] => 21
+            [waktu_jam_mulai] => 11:30:00
+            [label_timespace] => U2.04, selasa 11:30:00-14:00:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 14:00:00
+        )
+
+    [131] => Array
+        (
+            [id_kromosom] => 131
+            [nama_kelas] => KIM-MKK2843
+            [id_timespace] => 754
+            [id_waktu] => 36
+            [period] => 2
+            [waktu_hari] => kamis
+            [id_ruang] => 16
+            [waktu_jam_mulai] => 11:30:00
+            [label_timespace] => T2.01, kamis 11:30:00-13:10:00
+            [kap_ruang] => 90
+            [waktu_jam_selesai_kls] => 13:10:00
+        )
+
+    [132] => Array
+        (
+            [id_kromosom] => 132
+            [nama_kelas] => ELINS-MIE3401
+            [id_timespace] => 1262
+            [id_waktu] => 16
+            [period] => 3
+            [waktu_hari] => selasa
+            [id_ruang] => 27
+            [waktu_jam_mulai] => 11:30:00
+            [label_timespace] => S2.507, selasa 11:30:00-14:00:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 14:00:00
+        )
+
+    [133] => Array
+        (
+            [id_kromosom] => 133
+            [nama_kelas] => ILKOM-A-MIK1201
+            [id_timespace] => 192
+            [id_waktu] => 1
+            [period] => 3
+            [waktu_hari] => senin
+            [id_ruang] => 5
+            [waktu_jam_mulai] => 07:30:00
+            [label_timespace] => K1, senin 07:30:00-10:00:00
+            [kap_ruang] => 90
+            [waktu_jam_selesai_kls] => 10:00:00
+        )
+
+    [134] => Array
+        (
+            [id_kromosom] => 134
+            [nama_kelas] => ILKOM-MIK4503
+            [id_timespace] => 510
+            [id_waktu] => 32
+            [period] => 3
+            [waktu_hari] => kamis
+            [id_ruang] => 11
+            [waktu_jam_mulai] => 07:30:00
+            [label_timespace] => M2.09, kamis 07:30:00-10:00:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 10:00:00
+        )
+
+    [135] => Array
+        (
+            [id_kromosom] => 135
+            [nama_kelas] => KIM-A-MKK3841
+            [id_timespace] => 1163
+            [id_waktu] => 13
+            [period] => 2
+            [waktu_hari] => selasa
+            [id_ruang] => 25
+            [waktu_jam_mulai] => 08:30:00
+            [label_timespace] => S2.08, selasa 08:30:00-10:10:00
+            [kap_ruang] => 60
+            [waktu_jam_selesai_kls] => 10:10:00
+        )
+
+    [136] => Array
+        (
+            [id_kromosom] => 136
+            [nama_kelas] => KIM-B-MKK3841
+            [id_timespace] => 779
+            [id_waktu] => 13
+            [period] => 2
+            [waktu_hari] => selasa
+            [id_ruang] => 17
+            [waktu_jam_mulai] => 08:30:00
+            [label_timespace] => U2.01, selasa 08:30:00-10:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 10:10:00
+        )
+
+    [137] => Array
+        (
+            [id_kromosom] => 137
+            [nama_kelas] => ILKOM-B-MIK1201
+            [id_timespace] => 528
+            [id_waktu] => 1
+            [period] => 3
+            [waktu_hari] => senin
+            [id_ruang] => 12
+            [waktu_jam_mulai] => 07:30:00
+            [label_timespace] => G3, senin 07:30:00-10:00:00
+            [kap_ruang] => 60
+            [waktu_jam_selesai_kls] => 10:00:00
+        )
+
+    [138] => Array
+        (
+            [id_kromosom] => 138
+            [nama_kelas] => UNU1000-2
+            [id_timespace] => 298
+            [id_waktu] => 12
+            [period] => 2
+            [waktu_hari] => selasa
+            [id_ruang] => 7
+            [waktu_jam_mulai] => 07:30:00
+            [label_timespace] => S2.506, selasa 07:30:00-09:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 09:10:00
+        )
+
+    [139] => Array
+        (
+            [id_kromosom] => 139
+            [nama_kelas] => UNU1000-3
+            [id_timespace] => 573
+            [id_waktu] => 49
+            [period] => 2
+            [waktu_hari] => jumat
+            [id_ruang] => 12
+            [waktu_jam_mulai] => 14:30:00
+            [label_timespace] => G3, jumat 14:30:00-16:10:00
+            [kap_ruang] => 60
+            [waktu_jam_selesai_kls] => 16:10:00
+        )
+
+    [140] => Array
+        (
+            [id_kromosom] => 140
+            [nama_kelas] => UNU1000-4
+            [id_timespace] => 285
+            [id_waktu] => 49
+            [period] => 2
+            [waktu_hari] => jumat
+            [id_ruang] => 6
+            [waktu_jam_mulai] => 14:30:00
+            [label_timespace] => S2.505, jumat 14:30:00-16:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 16:10:00
+        )
+
+    [141] => Array
+        (
+            [id_kromosom] => 141
+            [nama_kelas] => UNU1000-5
+            [id_timespace] => 560
+            [id_waktu] => 34
+            [period] => 2
+            [waktu_hari] => kamis
+            [id_ruang] => 12
+            [waktu_jam_mulai] => 09:30:00
+            [label_timespace] => G3, kamis 09:30:00-11:10:00
+            [kap_ruang] => 60
+            [waktu_jam_selesai_kls] => 11:10:00
+        )
+
+    [142] => Array
+        (
+            [id_kromosom] => 142
+            [nama_kelas] => UNU1000-6
+            [id_timespace] => 1184
+            [id_waktu] => 34
+            [period] => 2
+            [waktu_hari] => kamis
+            [id_ruang] => 25
+            [waktu_jam_mulai] => 09:30:00
+            [label_timespace] => S2.08, kamis 09:30:00-11:10:00
+            [kap_ruang] => 60
+            [waktu_jam_selesai_kls] => 11:10:00
+        )
+
+    [143] => Array
+        (
+            [id_kromosom] => 143
+            [nama_kelas] => UNU1000-7
+            [id_timespace] => 336
+            [id_waktu] => 1
+            [period] => 2
+            [waktu_hari] => senin
+            [id_ruang] => 8
+            [waktu_jam_mulai] => 07:30:00
+            [label_timespace] => M2.10, senin 07:30:00-09:10:00
+            [kap_ruang] => 60
+            [waktu_jam_selesai_kls] => 09:10:00
+        )
+
+    [144] => Array
+        (
+            [id_kromosom] => 144
+            [nama_kelas] => UNU1000-8
+            [id_timespace] => 1152
+            [id_waktu] => 1
+            [period] => 2
+            [waktu_hari] => senin
+            [id_ruang] => 25
+            [waktu_jam_mulai] => 07:30:00
+            [label_timespace] => S2.08, senin 07:30:00-09:10:00
+            [kap_ruang] => 60
+            [waktu_jam_selesai_kls] => 09:10:00
+        )
+
+    [145] => Array
+        (
+            [id_kromosom] => 145
+            [nama_kelas] => UNU1000-9
+            [id_timespace] => 689
+            [id_waktu] => 19
+            [period] => 2
+            [waktu_hari] => selasa
+            [id_ruang] => 15
+            [waktu_jam_mulai] => 14:30:00
+            [label_timespace] => U2.02, selasa 14:30:00-16:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 16:10:00
+        )
+
+    [146] => Array
+        (
+            [id_kromosom] => 146
+            [nama_kelas] => KIM-A-MKK2201
+            [id_timespace] => 1169
+            [id_waktu] => 19
+            [period] => 2
+            [waktu_hari] => selasa
+            [id_ruang] => 25
+            [waktu_jam_mulai] => 14:30:00
+            [label_timespace] => S2.08, selasa 14:30:00-16:10:00
+            [kap_ruang] => 60
+            [waktu_jam_selesai_kls] => 16:10:00
+        )
+
+    [147] => Array
+        (
+            [id_kromosom] => 147
+            [nama_kelas] => KIM-A-MKK3201
+            [id_timespace] => 505
+            [id_waktu] => 27
+            [period] => 2
+            [waktu_hari] => rabu
+            [id_ruang] => 11
+            [waktu_jam_mulai] => 12:30:00
+            [label_timespace] => M2.09, rabu 12:30:00-14:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 14:10:00
+        )
+
+    [148] => Array
+        (
+            [id_kromosom] => 148
+            [nama_kelas] => ILKOM-A-MIK2201
+            [id_timespace] => 207
+            [id_waktu] => 17
+            [period] => 3
+            [waktu_hari] => selasa
+            [id_ruang] => 5
+            [waktu_jam_mulai] => 12:30:00
+            [label_timespace] => K1, selasa 12:30:00-15:00:00
+            [kap_ruang] => 90
+            [waktu_jam_selesai_kls] => 15:00:00
+        )
+
+    [149] => Array
+        (
+            [id_kromosom] => 149
+            [nama_kelas] => ILKOM-B-MIK2201
+            [id_timespace] => 351
+            [id_waktu] => 17
+            [period] => 3
+            [waktu_hari] => selasa
+            [id_ruang] => 8
+            [waktu_jam_mulai] => 12:30:00
+            [label_timespace] => M2.10, selasa 12:30:00-15:00:00
+            [kap_ruang] => 60
+            [waktu_jam_selesai_kls] => 15:00:00
+        )
+
+    [150] => Array
+        (
+            [id_kromosom] => 150
+            [nama_kelas] => KIM-B-MKK3201
+            [id_timespace] => 361
+            [id_waktu] => 27
+            [period] => 2
+            [waktu_hari] => rabu
+            [id_ruang] => 8
+            [waktu_jam_mulai] => 12:30:00
+            [label_timespace] => M2.10, rabu 12:30:00-14:10:00
+            [kap_ruang] => 60
+            [waktu_jam_selesai_kls] => 14:10:00
+        )
+
+    [151] => Array
+        (
+            [id_kromosom] => 151
+            [nama_kelas] => KIM-C-MKK3201
+            [id_timespace] => 217
+            [id_waktu] => 27
+            [period] => 2
+            [waktu_hari] => rabu
+            [id_ruang] => 5
+            [waktu_jam_mulai] => 12:30:00
+            [label_timespace] => K1, rabu 12:30:00-14:10:00
+            [kap_ruang] => 90
+            [waktu_jam_selesai_kls] => 14:10:00
+        )
+
+    [152] => Array
+        (
+            [id_kromosom] => 152
+            [nama_kelas] => ELINS-A-MIE2806
+            [id_timespace] => 831
+            [id_waktu] => 17
+            [period] => 2
+            [waktu_hari] => selasa
+            [id_ruang] => 18
+            [waktu_jam_mulai] => 12:30:00
+            [label_timespace] => U2.06, selasa 12:30:00-14:10:00
+            [kap_ruang] => 60
+            [waktu_jam_selesai_kls] => 14:10:00
+        )
+
+    [153] => Array
+        (
+            [id_kromosom] => 153
+            [nama_kelas] => ILKOM-A-MIK3501
+            [id_timespace] => 843
+            [id_waktu] => 29
+            [period] => 3
+            [waktu_hari] => rabu
+            [id_ruang] => 18
+            [waktu_jam_mulai] => 14:30:00
+            [label_timespace] => U2.06, rabu 14:30:00-17:00:00
+            [kap_ruang] => 60
+            [waktu_jam_selesai_kls] => 17:00:00
+        )
+
+    [154] => Array
+        (
+            [id_kromosom] => 154
+            [nama_kelas] => ILKOM-B-MIK3501
+            [id_timespace] => 1179
+            [id_waktu] => 29
+            [period] => 3
+            [waktu_hari] => rabu
+            [id_ruang] => 25
+            [waktu_jam_mulai] => 14:30:00
+            [label_timespace] => S2.08, rabu 14:30:00-17:00:00
+            [kap_ruang] => 60
+            [waktu_jam_selesai_kls] => 17:00:00
+        )
+
+    [155] => Array
+        (
+            [id_kromosom] => 155
+            [nama_kelas] => MAT-MMM3303
+            [id_timespace] => 1188
+            [id_waktu] => 38
+            [period] => 3
+            [waktu_hari] => kamis
+            [id_ruang] => 25
+            [waktu_jam_mulai] => 13:30:00
+            [label_timespace] => S2.08, kamis 13:30:00-16:00:00
+            [kap_ruang] => 60
+            [waktu_jam_selesai_kls] => 16:00:00
+        )
+
+    [156] => Array
+        (
+            [id_kromosom] => 156
+            [nama_kelas] => KIM-B-MKK2201
+            [id_timespace] => 833
+            [id_waktu] => 19
+            [period] => 2
+            [waktu_hari] => selasa
+            [id_ruang] => 18
+            [waktu_jam_mulai] => 14:30:00
+            [label_timespace] => U2.06, selasa 14:30:00-16:10:00
+            [kap_ruang] => 60
+            [waktu_jam_selesai_kls] => 16:10:00
+        )
+
+    [157] => Array
+        (
+            [id_kromosom] => 157
+            [nama_kelas] => KIM-C-MKK2201
+            [id_timespace] => 257
+            [id_waktu] => 19
+            [period] => 2
+            [waktu_hari] => selasa
+            [id_ruang] => 6
+            [waktu_jam_mulai] => 14:30:00
+            [label_timespace] => S2.505, selasa 14:30:00-16:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 16:10:00
+        )
+
+    [158] => Array
+        (
+            [id_kromosom] => 158
+            [nama_kelas] => ELINS-B-MIE2806
+            [id_timespace] => 543
+            [id_waktu] => 17
+            [period] => 2
+            [waktu_hari] => selasa
+            [id_ruang] => 12
+            [waktu_jam_mulai] => 12:30:00
+            [label_timespace] => G3, selasa 12:30:00-14:10:00
+            [kap_ruang] => 60
+            [waktu_jam_selesai_kls] => 14:10:00
+        )
+
+    [159] => Array
+        (
+            [id_kromosom] => 159
+            [nama_kelas] => GEOFIS-A-MFG2909
+            [id_timespace] => 164
+            [id_waktu] => 22
+            [period] => 2
+            [waktu_hari] => rabu
+            [id_ruang] => 4
+            [waktu_jam_mulai] => 07:30:00
+            [label_timespace] => S2.03, rabu 07:30:00-09:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 09:10:00
+        )
+
+    [160] => Array
+        (
+            [id_kromosom] => 160
+            [nama_kelas] => GEOFIS-B-MFG2909
+            [id_timespace] => 356
+            [id_waktu] => 22
+            [period] => 2
+            [waktu_hari] => rabu
+            [id_ruang] => 8
+            [waktu_jam_mulai] => 07:30:00
+            [label_timespace] => M2.10, rabu 07:30:00-09:10:00
+            [kap_ruang] => 60
+            [waktu_jam_selesai_kls] => 09:10:00
+        )
+
+    [161] => Array
+        (
+            [id_kromosom] => 161
+            [nama_kelas] => MAT-MMM3204
+            [id_timespace] => 522
+            [id_waktu] => 44
+            [period] => 2
+            [waktu_hari] => jumat
+            [id_ruang] => 11
+            [waktu_jam_mulai] => 09:30:00
+            [label_timespace] => M2.09, jumat 09:30:00-11:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 11:10:00
+        )
+
+    [162] => Array
+        (
+            [id_kromosom] => 162
+            [nama_kelas] => KIM-A-MKK2831
+            [id_timespace] => 798
+            [id_waktu] => 32
+            [period] => 2
+            [waktu_hari] => kamis
+            [id_ruang] => 17
+            [waktu_jam_mulai] => 07:30:00
+            [label_timespace] => U2.01, kamis 07:30:00-09:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 09:10:00
+        )
+
+    [163] => Array
+        (
+            [id_kromosom] => 163
+            [nama_kelas] => KIM-A-MKK2841
+            [id_timespace] => 856
+            [id_waktu] => 42
+            [period] => 2
+            [waktu_hari] => jumat
+            [id_ruang] => 18
+            [waktu_jam_mulai] => 07:30:00
+            [label_timespace] => U2.06, jumat 07:30:00-09:10:00
+            [kap_ruang] => 60
+            [waktu_jam_selesai_kls] => 09:10:00
+        )
+
+    [164] => Array
+        (
+            [id_kromosom] => 164
+            [nama_kelas] => ELINS-A-MIE3819
+            [id_timespace] => 1203
+            [id_waktu] => 4
+            [period] => 3
+            [waktu_hari] => senin
+            [id_ruang] => 26
+            [waktu_jam_mulai] => 10:30:00
+            [label_timespace] => Lab.Das., senin 10:30:00-13:00:00
+            [kap_ruang] => 90
+            [waktu_jam_selesai_kls] => 13:00:00
+        )
+
+    [165] => Array
+        (
+            [id_kromosom] => 165
+            [nama_kelas] => ELINS-B-MIE3819
+            [id_timespace] => 819
+            [id_waktu] => 4
+            [period] => 3
+            [waktu_hari] => senin
+            [id_ruang] => 18
+            [waktu_jam_mulai] => 10:30:00
+            [label_timespace] => U2.06, senin 10:30:00-13:00:00
+            [kap_ruang] => 60
+            [waktu_jam_selesai_kls] => 13:00:00
+        )
+
+    [166] => Array
+        (
+            [id_kromosom] => 166
+            [nama_kelas] => ILKOM-MIK4501
+            [id_timespace] => 548
+            [id_waktu] => 22
+            [period] => 3
+            [waktu_hari] => rabu
+            [id_ruang] => 12
+            [waktu_jam_mulai] => 07:30:00
+            [label_timespace] => G3, rabu 07:30:00-10:00:00
+            [kap_ruang] => 60
+            [waktu_jam_selesai_kls] => 10:00:00
+        )
+
+    [167] => Array
+        (
+            [id_kromosom] => 167
+            [nama_kelas] => FIS-MFF3415
+            [id_timespace] => 214
+            [id_waktu] => 24
+            [period] => 3
+            [waktu_hari] => rabu
+            [id_ruang] => 5
+            [waktu_jam_mulai] => 09:30:00
+            [label_timespace] => K1, rabu 09:30:00-12:00:00
+            [kap_ruang] => 90
+            [waktu_jam_selesai_kls] => 12:00:00
+        )
+
+    [168] => Array
+        (
+            [id_kromosom] => 168
+            [nama_kelas] => GEOFIS-MFG4933
+            [id_timespace] => 758
+            [id_waktu] => 40
+            [period] => 2
+            [waktu_hari] => kamis
+            [id_ruang] => 16
+            [waktu_jam_mulai] => 15:30:00
+            [label_timespace] => T2.01, kamis 15:30:00-17:10:00
+            [kap_ruang] => 90
+            [waktu_jam_selesai_kls] => 17:10:00
+        )
+
+    [169] => Array
+        (
+            [id_kromosom] => 169
+            [nama_kelas] => FIS-MFF3601
+            [id_timespace] => 1289
+            [id_waktu] => 43
+            [period] => 3
+            [waktu_hari] => jumat
+            [id_ruang] => 27
+            [waktu_jam_mulai] => 08:30:00
+            [label_timespace] => S2.507, jumat 08:30:00-11:00:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 11:00:00
+        )
+
+    [170] => Array
+        (
+            [id_kromosom] => 170
+            [nama_kelas] => FIS-MFF3063
+            [id_timespace] => 852
+            [id_waktu] => 38
+            [period] => 2
+            [waktu_hari] => kamis
+            [id_ruang] => 18
+            [waktu_jam_mulai] => 13:30:00
+            [label_timespace] => U2.06, kamis 13:30:00-15:10:00
+            [kap_ruang] => 60
+            [waktu_jam_selesai_kls] => 15:10:00
+        )
+
+    [171] => Array
+        (
+            [id_kromosom] => 171
+            [nama_kelas] => KIM-B-MKK2831
+            [id_timespace] => 1278
+            [id_waktu] => 32
+            [period] => 2
+            [waktu_hari] => kamis
+            [id_ruang] => 27
+            [waktu_jam_mulai] => 07:30:00
+            [label_timespace] => S2.507, kamis 07:30:00-09:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 09:10:00
+        )
+
+    [172] => Array
+        (
+            [id_kromosom] => 172
+            [nama_kelas] => KIM-B-MKK2841
+            [id_timespace] => 376
+            [id_waktu] => 42
+            [period] => 2
+            [waktu_hari] => jumat
+            [id_ruang] => 8
+            [waktu_jam_mulai] => 07:30:00
+            [label_timespace] => M2.10, jumat 07:30:00-09:10:00
+            [kap_ruang] => 60
+            [waktu_jam_selesai_kls] => 09:10:00
+        )
+
+    [173] => Array
+        (
+            [id_kromosom] => 173
+            [nama_kelas] => FIS-MFF2951
+            [id_timespace] => 984
+            [id_waktu] => 26
+            [period] => 3
+            [waktu_hari] => rabu
+            [id_ruang] => 21
+            [waktu_jam_mulai] => 11:30:00
+            [label_timespace] => U2.04, rabu 11:30:00-14:00:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 14:00:00
+        )
+
+    [174] => Array
+        (
+            [id_kromosom] => 174
+            [nama_kelas] => ILKOM-A-MIK2203
+            [id_timespace] => 372
+            [id_waktu] => 38
+            [period] => 3
+            [waktu_hari] => kamis
+            [id_ruang] => 8
+            [waktu_jam_mulai] => 13:30:00
+            [label_timespace] => M2.10, kamis 13:30:00-16:00:00
+            [kap_ruang] => 60
+            [waktu_jam_selesai_kls] => 16:00:00
+        )
+
+    [175] => Array
+        (
+            [id_kromosom] => 175
+            [nama_kelas] => ELINS-MIE3607
+            [id_timespace] => 495
+            [id_waktu] => 17
+            [period] => 3
+            [waktu_hari] => selasa
+            [id_ruang] => 11
+            [waktu_jam_mulai] => 12:30:00
+            [label_timespace] => M2.09, selasa 12:30:00-15:00:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 15:00:00
+        )
+
+    [176] => Array
+        (
+            [id_kromosom] => 176
+            [nama_kelas] => ILKOM-MIK2601
+            [id_timespace] => 202
+            [id_waktu] => 12
+            [period] => 3
+            [waktu_hari] => selasa
+            [id_ruang] => 5
+            [waktu_jam_mulai] => 07:30:00
+            [label_timespace] => K1, selasa 07:30:00-10:00:00
+            [kap_ruang] => 90
+            [waktu_jam_selesai_kls] => 10:00:00
+        )
+
+    [177] => Array
+        (
+            [id_kromosom] => 177
+            [nama_kelas] => ILKOM-B-MIK2203
+            [id_timespace] => 564
+            [id_waktu] => 38
+            [period] => 3
+            [waktu_hari] => kamis
+            [id_ruang] => 12
+            [waktu_jam_mulai] => 13:30:00
+            [label_timespace] => G3, kamis 13:30:00-16:00:00
+            [kap_ruang] => 60
+            [waktu_jam_selesai_kls] => 16:00:00
+        )
+
+    [178] => Array
+        (
+            [id_kromosom] => 178
+            [nama_kelas] => STAT-A-MMS3402
+            [id_timespace] => 167
+            [id_waktu] => 25
+            [period] => 2
+            [waktu_hari] => rabu
+            [id_ruang] => 4
+            [waktu_jam_mulai] => 10:30:00
+            [label_timespace] => S2.03, rabu 10:30:00-12:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 12:10:00
+        )
+
+    [179] => Array
+        (
+            [id_kromosom] => 179
+            [nama_kelas] => STAT-A-MMS3469
+            [id_timespace] => 358
+            [id_waktu] => 24
+            [period] => 3
+            [waktu_hari] => rabu
+            [id_ruang] => 8
+            [waktu_jam_mulai] => 09:30:00
+            [label_timespace] => M2.10, rabu 09:30:00-12:00:00
+            [kap_ruang] => 60
+            [waktu_jam_selesai_kls] => 12:00:00
+        )
+
+    [180] => Array
+        (
+            [id_kromosom] => 180
+            [nama_kelas] => STAT-B-MMS3469
+            [id_timespace] => 262
+            [id_waktu] => 24
+            [period] => 3
+            [waktu_hari] => rabu
+            [id_ruang] => 6
+            [waktu_jam_mulai] => 09:30:00
+            [label_timespace] => S2.505, rabu 09:30:00-12:00:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 12:00:00
+        )
+
+    [181] => Array
+        (
+            [id_kromosom] => 181
+            [nama_kelas] => GEOFIS-A-MFG1901
+            [id_timespace] => 646
+            [id_waktu] => 24
+            [period] => 2
+            [waktu_hari] => rabu
+            [id_ruang] => 14
+            [waktu_jam_mulai] => 09:30:00
+            [label_timespace] => M2.12, rabu 09:30:00-11:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 11:10:00
+        )
+
+    [182] => Array
+        (
+            [id_kromosom] => 182
+            [nama_kelas] => GEOFIS-B-MFG1901
+            [id_timespace] => 838
+            [id_waktu] => 24
+            [period] => 2
+            [waktu_hari] => rabu
+            [id_ruang] => 18
+            [waktu_jam_mulai] => 09:30:00
+            [label_timespace] => U2.06, rabu 09:30:00-11:10:00
+            [kap_ruang] => 60
+            [waktu_jam_selesai_kls] => 11:10:00
+        )
+
+    [183] => Array
+        (
+            [id_kromosom] => 183
+            [nama_kelas] => KIM-MKK2851
+            [id_timespace] => 936
+            [id_waktu] => 26
+            [period] => 2
+            [waktu_hari] => rabu
+            [id_ruang] => 20
+            [waktu_jam_mulai] => 11:30:00
+            [label_timespace] => U2.03, rabu 11:30:00-13:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 13:10:00
+        )
+
+    [184] => Array
+        (
+            [id_kromosom] => 184
+            [nama_kelas] => FIS-A-MFF2023
+            [id_timespace] => 695
+            [id_waktu] => 25
+            [period] => 3
+            [waktu_hari] => rabu
+            [id_ruang] => 15
+            [waktu_jam_mulai] => 10:30:00
+            [label_timespace] => U2.02, rabu 10:30:00-13:00:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 13:00:00
+        )
+
+    [185] => Array
+        (
+            [id_kromosom] => 185
+            [nama_kelas] => KIM-A-MKK3701
+            [id_timespace] => 1196
+            [id_waktu] => 48
+            [period] => 2
+            [waktu_hari] => jumat
+            [id_ruang] => 25
+            [waktu_jam_mulai] => 13:30:00
+            [label_timespace] => S2.08, jumat 13:30:00-15:10:00
+            [kap_ruang] => 60
+            [waktu_jam_selesai_kls] => 15:10:00
+        )
+
+    [186] => Array
+        (
+            [id_kromosom] => 186
+            [nama_kelas] => MAT-A-MMM1202
+            [id_timespace] => 315
+            [id_waktu] => 29
+            [period] => 3
+            [waktu_hari] => rabu
+            [id_ruang] => 7
+            [waktu_jam_mulai] => 14:30:00
+            [label_timespace] => S2.506, rabu 14:30:00-17:00:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 17:00:00
+        )
+
+    [187] => Array
+        (
+            [id_kromosom] => 187
+            [nama_kelas] => MAT-B-MMM1202
+            [id_timespace] => 555
+            [id_waktu] => 29
+            [period] => 3
+            [waktu_hari] => rabu
+            [id_ruang] => 12
+            [waktu_jam_mulai] => 14:30:00
+            [label_timespace] => G3, rabu 14:30:00-17:00:00
+            [kap_ruang] => 60
+            [waktu_jam_selesai_kls] => 17:00:00
+        )
+
+    [188] => Array
+        (
+            [id_kromosom] => 188
+            [nama_kelas] => STAT-B-MMS3402
+            [id_timespace] => 23
+            [id_waktu] => 25
+            [period] => 2
+            [waktu_hari] => rabu
+            [id_ruang] => 1
+            [waktu_jam_mulai] => 10:30:00
+            [label_timespace] => S2.01, rabu 10:30:00-12:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 12:10:00
+        )
+
+    [189] => Array
+        (
+            [id_kromosom] => 189
+            [nama_kelas] => ELINS-A-MIE2808
+            [id_timespace] => 665
+            [id_waktu] => 43
+            [period] => 3
+            [waktu_hari] => jumat
+            [id_ruang] => 14
+            [waktu_jam_mulai] => 08:30:00
+            [label_timespace] => M2.12, jumat 08:30:00-11:00:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 11:00:00
+        )
+
+    [190] => Array
+        (
+            [id_kromosom] => 190
+            [nama_kelas] => ELINS-B-MIE2808
+            [id_timespace] => 953
+            [id_waktu] => 43
+            [period] => 3
+            [waktu_hari] => jumat
+            [id_ruang] => 20
+            [waktu_jam_mulai] => 08:30:00
+            [label_timespace] => U2.03, jumat 08:30:00-11:00:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 11:00:00
+        )
+
+    [191] => Array
+        (
+            [id_kromosom] => 191
+            [nama_kelas] => GEOFIS-A-MFG2906
+            [id_timespace] => 861
+            [id_waktu] => 49
+            [period] => 2
+            [waktu_hari] => jumat
+            [id_ruang] => 18
+            [waktu_jam_mulai] => 14:30:00
+            [label_timespace] => U2.06, jumat 14:30:00-16:10:00
+            [kap_ruang] => 60
+            [waktu_jam_selesai_kls] => 16:10:00
+        )
+
+    [192] => Array
+        (
+            [id_kromosom] => 192
+            [nama_kelas] => ILKOM-MIK4601
+            [id_timespace] => 1216
+            [id_waktu] => 18
+            [period] => 3
+            [waktu_hari] => selasa
+            [id_ruang] => 26
+            [waktu_jam_mulai] => 13:30:00
+            [label_timespace] => Lab.Das., selasa 13:30:00-16:00:00
+            [kap_ruang] => 90
+            [waktu_jam_selesai_kls] => 16:00:00
+        )
+
+    [193] => Array
+        (
+            [id_kromosom] => 193
+            [nama_kelas] => ELINS-A-MIE1001
+            [id_timespace] => 805
+            [id_waktu] => 39
+            [period] => 3
+            [waktu_hari] => kamis
+            [id_ruang] => 17
+            [waktu_jam_mulai] => 14:30:00
+            [label_timespace] => U2.01, kamis 14:30:00-17:00:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 17:00:00
+        )
+
+    [194] => Array
+        (
+            [id_kromosom] => 194
+            [nama_kelas] => ELINS-B-MIE1001
+            [id_timespace] => 1285
+            [id_waktu] => 39
+            [period] => 3
+            [waktu_hari] => kamis
+            [id_ruang] => 27
+            [waktu_jam_mulai] => 14:30:00
+            [label_timespace] => S2.507, kamis 14:30:00-17:00:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 17:00:00
+        )
+
+    [195] => Array
+        (
+            [id_kromosom] => 195
+            [nama_kelas] => STAT-A-MMS1000
+            [id_timespace] => 817
+            [id_waktu] => 2
+            [period] => 2
+            [waktu_hari] => senin
+            [id_ruang] => 18
+            [waktu_jam_mulai] => 08:30:00
+            [label_timespace] => U2.06, senin 08:30:00-10:10:00
+            [kap_ruang] => 60
+            [waktu_jam_selesai_kls] => 10:10:00
+        )
+
+    [196] => Array
+        (
+            [id_kromosom] => 196
+            [nama_kelas] => GEOFIS-B-MFG2906
+            [id_timespace] => 1005
+            [id_waktu] => 49
+            [period] => 2
+            [waktu_hari] => jumat
+            [id_ruang] => 21
+            [waktu_jam_mulai] => 14:30:00
+            [label_timespace] => U2.04, jumat 14:30:00-16:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 16:10:00
+        )
+
+    [197] => Array
+        (
+            [id_kromosom] => 197
+            [nama_kelas] => STAT-A-MMS2418
+            [id_timespace] => 916
+            [id_waktu] => 5
+            [period] => 3
+            [waktu_hari] => senin
+            [id_ruang] => 20
+            [waktu_jam_mulai] => 11:30:00
+            [label_timespace] => U2.03, senin 11:30:00-14:00:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 14:00:00
+        )
+
+    [198] => Array
+        (
+            [id_kromosom] => 198
+            [nama_kelas] => STAT-B-MMS2418
+            [id_timespace] => 532
+            [id_waktu] => 5
+            [period] => 3
+            [waktu_hari] => senin
+            [id_ruang] => 12
+            [waktu_jam_mulai] => 11:30:00
+            [label_timespace] => G3, senin 11:30:00-14:00:00
+            [kap_ruang] => 60
+            [waktu_jam_selesai_kls] => 14:00:00
+        )
+
+    [199] => Array
+        (
+            [id_kromosom] => 199
+            [nama_kelas] => MAT-A-MMM2201
+            [id_timespace] => 713
+            [id_waktu] => 43
+            [period] => 3
+            [waktu_hari] => jumat
+            [id_ruang] => 15
+            [waktu_jam_mulai] => 08:30:00
+            [label_timespace] => U2.02, jumat 08:30:00-11:00:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 11:00:00
+        )
+
+    [200] => Array
+        (
+            [id_kromosom] => 200
+            [nama_kelas] => ELINS-A-MIE1801
+            [id_timespace] => 1244
+            [id_waktu] => 48
+            [period] => 2
+            [waktu_hari] => jumat
+            [id_ruang] => 26
+            [waktu_jam_mulai] => 13:30:00
+            [label_timespace] => Lab.Das., jumat 13:30:00-15:10:00
+            [kap_ruang] => 90
+            [waktu_jam_selesai_kls] => 15:10:00
+        )
+
+    [201] => Array
+        (
+            [id_kromosom] => 201
+            [nama_kelas] => GEOFIS-MFG4963
+            [id_timespace] => 341
+            [id_waktu] => 6
+            [period] => 3
+            [waktu_hari] => senin
+            [id_ruang] => 8
+            [waktu_jam_mulai] => 12:30:00
+            [label_timespace] => M2.10, senin 12:30:00-15:00:00
+            [kap_ruang] => 60
+            [waktu_jam_selesai_kls] => 15:00:00
+        )
+
+    [202] => Array
+        (
+            [id_kromosom] => 202
+            [nama_kelas] => FIS-MFF3201
+            [id_timespace] => 363
+            [id_waktu] => 29
+            [period] => 3
+            [waktu_hari] => rabu
+            [id_ruang] => 8
+            [waktu_jam_mulai] => 14:30:00
+            [label_timespace] => M2.10, rabu 14:30:00-17:00:00
+            [kap_ruang] => 60
+            [waktu_jam_selesai_kls] => 17:00:00
+        )
+
+    [203] => Array
+        (
+            [id_kromosom] => 203
+            [nama_kelas] => KIM-B-MKK3701
+            [id_timespace] => 908
+            [id_waktu] => 48
+            [period] => 2
+            [waktu_hari] => jumat
+            [id_ruang] => 19
+            [waktu_jam_mulai] => 13:30:00
+            [label_timespace] => S2.04, jumat 13:30:00-15:10:00
+            [kap_ruang] => 50
+            [waktu_jam_selesai_kls] => 15:10:00
+        )
+
+    [204] => Array
+        (
+            [id_kromosom] => 204
+            [nama_kelas] => KIM-C-MKK3701
+            [id_timespace] => 44
+            [id_waktu] => 48
+            [period] => 2
+            [waktu_hari] => jumat
+            [id_ruang] => 1
+            [waktu_jam_mulai] => 13:30:00
+            [label_timespace] => S2.01, jumat 13:30:00-15:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 15:10:00
+        )
+
+    [205] => Array
+        (
+            [id_kromosom] => 205
+            [nama_kelas] => STAT-B-MMS1000
+            [id_timespace] => 769
+            [id_waktu] => 2
+            [period] => 2
+            [waktu_hari] => senin
+            [id_ruang] => 17
+            [waktu_jam_mulai] => 08:30:00
+            [label_timespace] => U2.01, senin 08:30:00-10:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 10:10:00
+        )
+
+    [206] => Array
+        (
+            [id_kromosom] => 206
+            [nama_kelas] => STAT-A-MMS2403
+            [id_timespace] => 871
+            [id_waktu] => 8
+            [period] => 3
+            [waktu_hari] => senin
+            [id_ruang] => 19
+            [waktu_jam_mulai] => 14:30:00
+            [label_timespace] => S2.04, senin 14:30:00-17:00:00
+            [kap_ruang] => 50
+            [waktu_jam_selesai_kls] => 17:00:00
+        )
+
+    [207] => Array
+        (
+            [id_kromosom] => 207
+            [nama_kelas] => STAT-B-MMS2403
+            [id_timespace] => 103
+            [id_waktu] => 8
+            [period] => 3
+            [waktu_hari] => senin
+            [id_ruang] => 3
+            [waktu_jam_mulai] => 14:30:00
+            [label_timespace] => M2.13, senin 14:30:00-17:00:00
+            [kap_ruang] => 50
+            [waktu_jam_selesai_kls] => 17:00:00
+        )
+
+    [208] => Array
+        (
+            [id_kromosom] => 208
+            [nama_kelas] => MAT-B-MMM2201
+            [id_timespace] => 137
+            [id_waktu] => 43
+            [period] => 3
+            [waktu_hari] => jumat
+            [id_ruang] => 3
+            [waktu_jam_mulai] => 08:30:00
+            [label_timespace] => M2.13, jumat 08:30:00-11:00:00
+            [kap_ruang] => 50
+            [waktu_jam_selesai_kls] => 11:00:00
+        )
+
+    [209] => Array
+        (
+            [id_kromosom] => 209
+            [nama_kelas] => ELINS-B-MIE1801
+            [id_timespace] => 620
+            [id_waktu] => 48
+            [period] => 2
+            [waktu_hari] => jumat
+            [id_ruang] => 13
+            [waktu_jam_mulai] => 13:30:00
+            [label_timespace] => S2.05, jumat 13:30:00-15:10:00
+            [kap_ruang] => 50
+            [waktu_jam_selesai_kls] => 15:10:00
+        )
+
+    [210] => Array
+        (
+            [id_kromosom] => 210
+            [nama_kelas] => FIS-MFF3603
+            [id_timespace] => 1165
+            [id_waktu] => 15
+            [period] => 3
+            [waktu_hari] => selasa
+            [id_ruang] => 25
+            [waktu_jam_mulai] => 10:30:00
+            [label_timespace] => S2.08, selasa 10:30:00-13:00:00
+            [kap_ruang] => 60
+            [waktu_jam_selesai_kls] => 13:00:00
+        )
+
+    [211] => Array
+        (
+            [id_kromosom] => 211
+            [nama_kelas] => FIS-B-MFF2023
+            [id_timespace] => 1175
+            [id_waktu] => 25
+            [period] => 3
+            [waktu_hari] => rabu
+            [id_ruang] => 25
+            [waktu_jam_mulai] => 10:30:00
+            [label_timespace] => S2.08, rabu 10:30:00-13:00:00
+            [kap_ruang] => 60
+            [waktu_jam_selesai_kls] => 13:00:00
+        )
+
+    [212] => Array
+        (
+            [id_kromosom] => 212
+            [nama_kelas] => FIS-C-MFF2023
+            [id_timespace] => 887
+            [id_waktu] => 25
+            [period] => 3
+            [waktu_hari] => rabu
+            [id_ruang] => 19
+            [waktu_jam_mulai] => 10:30:00
+            [label_timespace] => S2.04, rabu 10:30:00-13:00:00
+            [kap_ruang] => 50
+            [waktu_jam_selesai_kls] => 13:00:00
+        )
+
+    [213] => Array
+        (
+            [id_kromosom] => 213
+            [nama_kelas] => FIS-D-MFF2023
+            [id_timespace] => 1223
+            [id_waktu] => 25
+            [period] => 3
+            [waktu_hari] => rabu
+            [id_ruang] => 26
+            [waktu_jam_mulai] => 10:30:00
+            [label_timespace] => Lab.Das., rabu 10:30:00-13:00:00
+            [kap_ruang] => 90
+            [waktu_jam_selesai_kls] => 13:00:00
+        )
+
+    [214] => Array
+        (
+            [id_kromosom] => 214
+            [nama_kelas] => GEOFIS-A-MFG3948
+            [id_timespace] => 1250
+            [id_waktu] => 3
+            [period] => 2
+            [waktu_hari] => senin
+            [id_ruang] => 27
+            [waktu_jam_mulai] => 09:30:00
+            [label_timespace] => S2.507, senin 09:30:00-11:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 11:10:00
+        )
+
+    [215] => Array
+        (
+            [id_kromosom] => 215
+            [nama_kelas] => GEOFIS-B-MFG3948
+            [id_timespace] => 2
+            [id_waktu] => 3
+            [period] => 2
+            [waktu_hari] => senin
+            [id_ruang] => 1
+            [waktu_jam_mulai] => 09:30:00
+            [label_timespace] => S2.01, senin 09:30:00-11:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 11:10:00
+        )
+
+    [216] => Array
+        (
+            [id_kromosom] => 216
+            [nama_kelas] => ELINS-A-MIE1002
+            [id_timespace] => 570
+            [id_waktu] => 44
+            [period] => 2
+            [waktu_hari] => jumat
+            [id_ruang] => 12
+            [waktu_jam_mulai] => 09:30:00
+            [label_timespace] => G3, jumat 09:30:00-11:10:00
+            [kap_ruang] => 60
+            [waktu_jam_selesai_kls] => 11:10:00
+        )
+
+    [217] => Array
+        (
+            [id_kromosom] => 217
+            [nama_kelas] => ILKOM-MIK4507
+            [id_timespace] => 131
+            [id_waktu] => 37
+            [period] => 3
+            [waktu_hari] => kamis
+            [id_ruang] => 3
+            [waktu_jam_mulai] => 12:30:00
+            [label_timespace] => M2.13, kamis 12:30:00-15:00:00
+            [kap_ruang] => 50
+            [waktu_jam_selesai_kls] => 15:00:00
+        )
+
+    [218] => Array
+        (
+            [id_kromosom] => 218
+            [nama_kelas] => GEOFIS-MFG3951
+            [id_timespace] => 750
+            [id_waktu] => 32
+            [period] => 2
+            [waktu_hari] => kamis
+            [id_ruang] => 16
+            [waktu_jam_mulai] => 07:30:00
+            [label_timespace] => T2.01, kamis 07:30:00-09:10:00
+            [kap_ruang] => 90
+            [waktu_jam_selesai_kls] => 09:10:00
+        )
+
+    [219] => Array
+        (
+            [id_kromosom] => 219
+            [nama_kelas] => ELINS-B-MIE1002
+            [id_timespace] => 1194
+            [id_waktu] => 44
+            [period] => 2
+            [waktu_hari] => jumat
+            [id_ruang] => 25
+            [waktu_jam_mulai] => 09:30:00
+            [label_timespace] => S2.08, jumat 09:30:00-11:10:00
+            [kap_ruang] => 60
+            [waktu_jam_selesai_kls] => 11:10:00
+        )
+
+    [220] => Array
+        (
+            [id_kromosom] => 220
+            [nama_kelas] => MAT-A-MMM2114
+            [id_timespace] => 828
+            [id_waktu] => 14
+            [period] => 2
+            [waktu_hari] => selasa
+            [id_ruang] => 18
+            [waktu_jam_mulai] => 09:30:00
+            [label_timespace] => U2.06, selasa 09:30:00-11:10:00
+            [kap_ruang] => 60
+            [waktu_jam_selesai_kls] => 11:10:00
+        )
+
+    [221] => Array
+        (
+            [id_kromosom] => 221
+            [nama_kelas] => MAT-B-MMM2114
+            [id_timespace] => 876
+            [id_waktu] => 14
+            [period] => 2
+            [waktu_hari] => selasa
+            [id_ruang] => 19
+            [waktu_jam_mulai] => 09:30:00
+            [label_timespace] => S2.04, selasa 09:30:00-11:10:00
+            [kap_ruang] => 50
+            [waktu_jam_selesai_kls] => 11:10:00
+        )
+
+    [222] => Array
+        (
+            [id_kromosom] => 222
+            [nama_kelas] => FIS-A-MFF1061
+            [id_timespace] => 1157
+            [id_waktu] => 6
+            [period] => 2
+            [waktu_hari] => senin
+            [id_ruang] => 25
+            [waktu_jam_mulai] => 12:30:00
+            [label_timespace] => S2.08, senin 12:30:00-14:10:00
+            [kap_ruang] => 60
+            [waktu_jam_selesai_kls] => 14:10:00
+        )
+
+    [223] => Array
+        (
+            [id_kromosom] => 223
+            [nama_kelas] => FIS-B-MFF1061
+            [id_timespace] => 5
+            [id_waktu] => 6
+            [period] => 2
+            [waktu_hari] => senin
+            [id_ruang] => 1
+            [waktu_jam_mulai] => 12:30:00
+            [label_timespace] => S2.01, senin 12:30:00-14:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 14:10:00
+        )
+
+    [224] => Array
+        (
+            [id_kromosom] => 224
+            [nama_kelas] => KIM-MKK3851
+            [id_timespace] => 1173
+            [id_waktu] => 23
+            [period] => 2
+            [waktu_hari] => rabu
+            [id_ruang] => 25
+            [waktu_jam_mulai] => 08:30:00
+            [label_timespace] => S2.08, rabu 08:30:00-10:10:00
+            [kap_ruang] => 60
+            [waktu_jam_selesai_kls] => 10:10:00
+        )
+
+    [225] => Array
+        (
+            [id_kromosom] => 225
+            [nama_kelas] => FIS-A-MFF2411
+            [id_timespace] => 465
+            [id_waktu] => 35
+            [period] => 3
+            [waktu_hari] => kamis
+            [id_ruang] => 10
+            [waktu_jam_mulai] => 10:30:00
+            [label_timespace] => K6, kamis 10:30:00-13:00:00
+            [kap_ruang] => 50
+            [waktu_jam_selesai_kls] => 13:00:00
+        )
+
+    [226] => Array
+        (
+            [id_kromosom] => 226
+            [nama_kelas] => FIS-A-MFF2403
+            [id_timespace] => 476
+            [id_waktu] => 48
+            [period] => 3
+            [waktu_hari] => jumat
+            [id_ruang] => 10
+            [waktu_jam_mulai] => 13:30:00
+            [label_timespace] => K6, jumat 13:30:00-16:00:00
+            [kap_ruang] => 50
+            [waktu_jam_selesai_kls] => 16:00:00
+        )
+
+    [227] => Array
+        (
+            [id_kromosom] => 227
+            [nama_kelas] => FIS-B-MFF2403
+            [id_timespace] => 812
+            [id_waktu] => 48
+            [period] => 3
+            [waktu_hari] => jumat
+            [id_ruang] => 17
+            [waktu_jam_mulai] => 13:30:00
+            [label_timespace] => U2.01, jumat 13:30:00-16:00:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 16:00:00
+        )
+
+    [228] => Array
+        (
+            [id_kromosom] => 228
+            [nama_kelas] => FIS-A-MFF2413
+            [id_timespace] => 590
+            [id_waktu] => 16
+            [period] => 2
+            [waktu_hari] => selasa
+            [id_ruang] => 13
+            [waktu_jam_mulai] => 11:30:00
+            [label_timespace] => S2.05, selasa 11:30:00-13:10:00
+            [kap_ruang] => 50
+            [waktu_jam_selesai_kls] => 13:10:00
+        )
+
+    [229] => Array
+        (
+            [id_kromosom] => 229
+            [nama_kelas] => FIS-B-MFF2413
+            [id_timespace] => 446
+            [id_waktu] => 16
+            [period] => 2
+            [waktu_hari] => selasa
+            [id_ruang] => 10
+            [waktu_jam_mulai] => 11:30:00
+            [label_timespace] => K6, selasa 11:30:00-13:10:00
+            [kap_ruang] => 50
+            [waktu_jam_selesai_kls] => 13:10:00
+        )
+
+    [230] => Array
+        (
+            [id_kromosom] => 230
+            [nama_kelas] => MAT-A-MMM2304
+            [id_timespace] => 648
+            [id_waktu] => 26
+            [period] => 3
+            [waktu_hari] => rabu
+            [id_ruang] => 14
+            [waktu_jam_mulai] => 11:30:00
+            [label_timespace] => M2.12, rabu 11:30:00-14:00:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 14:00:00
+        )
+
+    [231] => Array
+        (
+            [id_kromosom] => 231
+            [nama_kelas] => MAT-B-MMM2304
+            [id_timespace] => 120
+            [id_waktu] => 26
+            [period] => 3
+            [waktu_hari] => rabu
+            [id_ruang] => 3
+            [waktu_jam_mulai] => 11:30:00
+            [label_timespace] => M2.13, rabu 11:30:00-14:00:00
+            [kap_ruang] => 50
+            [waktu_jam_selesai_kls] => 14:00:00
+        )
+
+    [232] => Array
+        (
+            [id_kromosom] => 232
+            [nama_kelas] => ILKOM-MIK4609
+            [id_timespace] => 578
+            [id_waktu] => 3
+            [period] => 3
+            [waktu_hari] => senin
+            [id_ruang] => 13
+            [waktu_jam_mulai] => 09:30:00
+            [label_timespace] => S2.05, senin 09:30:00-12:00:00
+            [kap_ruang] => 50
+            [waktu_jam_selesai_kls] => 12:00:00
+        )
+
+    [233] => Array
+        (
+            [id_kromosom] => 233
+            [nama_kelas] => FIS-B-MFF2411
+            [id_timespace] => 321
+            [id_waktu] => 35
+            [period] => 3
+            [waktu_hari] => kamis
+            [id_ruang] => 7
+            [waktu_jam_mulai] => 10:30:00
+            [label_timespace] => S2.506, kamis 10:30:00-13:00:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 13:00:00
+        )
+
+    [234] => Array
+        (
+            [id_kromosom] => 234
+            [nama_kelas] => ELINS-A-MIE2601
+            [id_timespace] => 502
+            [id_waktu] => 24
+            [period] => 3
+            [waktu_hari] => rabu
+            [id_ruang] => 11
+            [waktu_jam_mulai] => 09:30:00
+            [label_timespace] => M2.09, rabu 09:30:00-12:00:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 12:00:00
+        )
+
+    [235] => Array
+        (
+            [id_kromosom] => 235
+            [nama_kelas] => ELINS-A-MIE2809
+            [id_timespace] => 724
+            [id_waktu] => 5
+            [period] => 3
+            [waktu_hari] => senin
+            [id_ruang] => 16
+            [waktu_jam_mulai] => 11:30:00
+            [label_timespace] => T2.01, senin 11:30:00-14:00:00
+            [kap_ruang] => 90
+            [waktu_jam_selesai_kls] => 14:00:00
+        )
+
+    [236] => Array
+        (
+            [id_kromosom] => 236
+            [nama_kelas] => ELINS-B-MIE2809
+            [id_timespace] => 100
+            [id_waktu] => 5
+            [period] => 3
+            [waktu_hari] => senin
+            [id_ruang] => 3
+            [waktu_jam_mulai] => 11:30:00
+            [label_timespace] => M2.13, senin 11:30:00-14:00:00
+            [kap_ruang] => 50
+            [waktu_jam_selesai_kls] => 14:00:00
+        )
+
+    [237] => Array
+        (
+            [id_kromosom] => 237
+            [nama_kelas] => MAT-A-MMM2302
+            [id_timespace] => 98
+            [id_waktu] => 3
+            [period] => 2
+            [waktu_hari] => senin
+            [id_ruang] => 3
+            [waktu_jam_mulai] => 09:30:00
+            [label_timespace] => M2.13, senin 09:30:00-11:10:00
+            [kap_ruang] => 50
+            [waktu_jam_selesai_kls] => 11:10:00
+        )
+
+    [238] => Array
+        (
+            [id_kromosom] => 238
+            [nama_kelas] => MAT-B-MMM2302
+            [id_timespace] => 386
+            [id_waktu] => 3
+            [period] => 2
+            [waktu_hari] => senin
+            [id_ruang] => 9
+            [waktu_jam_mulai] => 09:30:00
+            [label_timespace] => M2.14, senin 09:30:00-11:10:00
+            [kap_ruang] => 50
+            [waktu_jam_selesai_kls] => 11:10:00
+        )
+
+    [239] => Array
+        (
+            [id_kromosom] => 239
+            [nama_kelas] => KIM-MKK3821
+            [id_timespace] => 1260
+            [id_waktu] => 14
+            [period] => 2
+            [waktu_hari] => selasa
+            [id_ruang] => 27
+            [waktu_jam_mulai] => 09:30:00
+            [label_timespace] => S2.507, selasa 09:30:00-11:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 11:10:00
+        )
+
+    [240] => Array
+        (
+            [id_kromosom] => 240
+            [id_timespace] => 92
+        )
+
+    [241] => Array
+        (
+            [id_kromosom] => 241
+            [nama_kelas] => KIM-MKK3813
+            [id_timespace] => 592
+            [id_waktu] => 18
+            [period] => 2
+            [waktu_hari] => selasa
+            [id_ruang] => 13
+            [waktu_jam_mulai] => 13:30:00
+            [label_timespace] => S2.05, selasa 13:30:00-15:10:00
+            [kap_ruang] => 50
+            [waktu_jam_selesai_kls] => 15:10:00
+        )
+
+    [242] => Array
+        (
+            [id_kromosom] => 242
+            [nama_kelas] => ELINS-MIE4824
+            [id_timespace] => 347
+            [id_waktu] => 13
+            [period] => 3
+            [waktu_hari] => selasa
+            [id_ruang] => 8
+            [waktu_jam_mulai] => 08:30:00
+            [label_timespace] => M2.10, selasa 08:30:00-11:00:00
+            [kap_ruang] => 60
+            [waktu_jam_selesai_kls] => 11:00:00
+        )
+
+    [243] => Array
+        (
+            [id_kromosom] => 243
+            [nama_kelas] => STAT-A-MMS2423
+            [id_timespace] => 26
+            [id_waktu] => 28
+            [period] => 2
+            [waktu_hari] => rabu
+            [id_ruang] => 1
+            [waktu_jam_mulai] => 13:30:00
+            [label_timespace] => S2.01, rabu 13:30:00-15:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 15:10:00
+        )
+
+    [244] => Array
+        (
+            [id_kromosom] => 244
+            [nama_kelas] => GEOFIS-A-MFG3916
+            [id_timespace] => 609
+            [id_waktu] => 35
+            [period] => 2
+            [waktu_hari] => kamis
+            [id_ruang] => 13
+            [waktu_jam_mulai] => 10:30:00
+            [label_timespace] => S2.05, kamis 10:30:00-12:10:00
+            [kap_ruang] => 50
+            [waktu_jam_selesai_kls] => 12:10:00
+        )
+
+    [245] => Array
+        (
+            [id_kromosom] => 245
+            [nama_kelas] => GEOFIS-B-MFG3916
+            [id_timespace] => 849
+            [id_waktu] => 35
+            [period] => 2
+            [waktu_hari] => kamis
+            [id_ruang] => 18
+            [waktu_jam_mulai] => 10:30:00
+            [label_timespace] => U2.06, kamis 10:30:00-12:10:00
+            [kap_ruang] => 60
+            [waktu_jam_selesai_kls] => 12:10:00
+        )
+
+    [246] => Array
+        (
+            [id_kromosom] => 246
+            [nama_kelas] => MAT-A-MMM2109
+            [id_timespace] => 670
+            [id_waktu] => 50
+            [period] => 2
+            [waktu_hari] => jumat
+            [id_ruang] => 14
+            [waktu_jam_mulai] => 15:30:00
+            [label_timespace] => M2.12, jumat 15:30:00-17:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 17:10:00
+        )
+
+    [247] => Array
+        (
+            [id_kromosom] => 247
+            [nama_kelas] => ILKOM-A-MIK3001
+            [id_timespace] => 444
+            [id_waktu] => 14
+            [period] => 2
+            [waktu_hari] => selasa
+            [id_ruang] => 10
+            [waktu_jam_mulai] => 09:30:00
+            [label_timespace] => K6, selasa 09:30:00-11:10:00
+            [kap_ruang] => 50
+            [waktu_jam_selesai_kls] => 11:10:00
+        )
+
+    [248] => Array
+        (
+            [id_kromosom] => 248
+            [nama_kelas] => ILKOM-B-MIK3001
+            [id_timespace] => 396
+            [id_waktu] => 14
+            [period] => 2
+            [waktu_hari] => selasa
+            [id_ruang] => 9
+            [waktu_jam_mulai] => 09:30:00
+            [label_timespace] => M2.14, selasa 09:30:00-11:10:00
+            [kap_ruang] => 50
+            [waktu_jam_selesai_kls] => 11:10:00
+        )
+
+    [249] => Array
+        (
+            [id_kromosom] => 249
+            [nama_kelas] => MAT-A-MMM3101
+            [id_timespace] => 31
+            [id_waktu] => 33
+            [period] => 3
+            [waktu_hari] => kamis
+            [id_ruang] => 1
+            [waktu_jam_mulai] => 08:30:00
+            [label_timespace] => S2.01, kamis 08:30:00-11:00:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 11:00:00
+        )
+
+    [250] => Array
+        (
+            [id_kromosom] => 250
+            [nama_kelas] => STAT-B-MMS2423
+            [id_timespace] => 410
+            [id_waktu] => 28
+            [period] => 2
+            [waktu_hari] => rabu
+            [id_ruang] => 9
+            [waktu_jam_mulai] => 13:30:00
+            [label_timespace] => M2.14, rabu 13:30:00-15:10:00
+            [kap_ruang] => 50
+            [waktu_jam_selesai_kls] => 15:10:00
+        )
+
+    [251] => Array
+        (
+            [id_kromosom] => 251
+            [nama_kelas] => ELINS-MIE4822
+            [id_timespace] => 879
+            [id_waktu] => 17
+            [period] => 3
+            [waktu_hari] => selasa
+            [id_ruang] => 19
+            [waktu_jam_mulai] => 12:30:00
+            [label_timespace] => S2.04, selasa 12:30:00-15:00:00
+            [kap_ruang] => 50
+            [waktu_jam_selesai_kls] => 15:00:00
+        )
+
+    [252] => Array
+        (
+            [id_kromosom] => 252
+            [nama_kelas] => MAT-B-MMM2109
+            [id_timespace] => 1246
+            [id_waktu] => 50
+            [period] => 2
+            [waktu_hari] => jumat
+            [id_ruang] => 26
+            [waktu_jam_mulai] => 15:30:00
+            [label_timespace] => Lab.Das., jumat 15:30:00-17:10:00
+            [kap_ruang] => 90
+            [waktu_jam_selesai_kls] => 17:10:00
+        )
+
+    [253] => Array
+        (
+            [id_kromosom] => 253
+            [nama_kelas] => MAT-C-MMM2109
+            [id_timespace] => 94
+            [id_waktu] => 50
+            [period] => 2
+            [waktu_hari] => jumat
+            [id_ruang] => 2
+            [waktu_jam_mulai] => 15:30:00
+            [label_timespace] => S2.02, jumat 15:30:00-17:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 17:10:00
+        )
+
+    [254] => Array
+        (
+            [id_kromosom] => 254
+            [nama_kelas] => MAT-D-MMM2109
+            [id_timespace] => 1198
+            [id_waktu] => 50
+            [period] => 2
+            [waktu_hari] => jumat
+            [id_ruang] => 25
+            [waktu_jam_mulai] => 15:30:00
+            [label_timespace] => S2.08, jumat 15:30:00-17:10:00
+            [kap_ruang] => 60
+            [waktu_jam_selesai_kls] => 17:10:00
+        )
+
+    [255] => Array
+        (
+            [id_kromosom] => 255
+            [nama_kelas] => MAT-B-MMM3101
+            [id_timespace] => 895
+            [id_waktu] => 33
+            [period] => 3
+            [waktu_hari] => kamis
+            [id_ruang] => 19
+            [waktu_jam_mulai] => 08:30:00
+            [label_timespace] => S2.04, kamis 08:30:00-11:00:00
+            [kap_ruang] => 50
+            [waktu_jam_selesai_kls] => 11:00:00
+        )
+
+    [256] => Array
+        (
+            [id_kromosom] => 256
+            [nama_kelas] => GEOFIS-MFG4964
+            [id_timespace] => 992
+            [id_waktu] => 34
+            [period] => 2
+            [waktu_hari] => kamis
+            [id_ruang] => 21
+            [waktu_jam_mulai] => 09:30:00
+            [label_timespace] => U2.04, kamis 09:30:00-11:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 11:10:00
+        )
+
+    [257] => Array
+        (
+            [id_kromosom] => 257
+            [nama_kelas] => KIM-MKK3865
+            [id_timespace] => 583
+            [id_waktu] => 8
+            [period] => 2
+            [waktu_hari] => senin
+            [id_ruang] => 13
+            [waktu_jam_mulai] => 14:30:00
+            [label_timespace] => S2.05, senin 14:30:00-16:10:00
+            [kap_ruang] => 50
+            [waktu_jam_selesai_kls] => 16:10:00
+        )
+
+    [258] => Array
+        (
+            [id_kromosom] => 258
+            [nama_kelas] => GEOFIS-MFG4935
+            [id_timespace] => 899
+            [id_waktu] => 37
+            [period] => 2
+            [waktu_hari] => kamis
+            [id_ruang] => 19
+            [waktu_jam_mulai] => 12:30:00
+            [label_timespace] => S2.04, kamis 12:30:00-14:10:00
+            [kap_ruang] => 50
+            [waktu_jam_selesai_kls] => 14:10:00
+        )
+
+    [259] => Array
+        (
+            [id_kromosom] => 259
+            [nama_kelas] => KIM-MKK3861
+            [id_timespace] => 38
+            [id_waktu] => 40
+            [period] => 2
+            [waktu_hari] => kamis
+            [id_ruang] => 1
+            [waktu_jam_mulai] => 15:30:00
+            [label_timespace] => S2.01, kamis 15:30:00-17:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 17:10:00
+        )
+
+    [260] => Array
+        (
+            [id_kromosom] => 260
+            [nama_kelas] => STAT-MMS3474
+            [id_timespace] => 1294
+            [id_waktu] => 50
+            [period] => 2
+            [waktu_hari] => jumat
+            [id_ruang] => 27
+            [waktu_jam_mulai] => 15:30:00
+            [label_timespace] => S2.507, jumat 15:30:00-17:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 17:10:00
+        )
+
+    [261] => Array
+        (
+            [id_kromosom] => 261
+            [nama_kelas] => MAT-MMM2113
+            [id_timespace] => 404
+            [id_waktu] => 22
+            [period] => 3
+            [waktu_hari] => rabu
+            [id_ruang] => 9
+            [waktu_jam_mulai] => 07:30:00
+            [label_timespace] => M2.14, rabu 07:30:00-10:00:00
+            [kap_ruang] => 50
+            [waktu_jam_selesai_kls] => 10:00:00
+        )
+
+    [262] => Array
+        (
+            [id_kromosom] => 262
+            [nama_kelas] => KIM-MKK2823
+            [id_timespace] => 450
+            [id_waktu] => 20
+            [period] => 2
+            [waktu_hari] => selasa
+            [id_ruang] => 10
+            [waktu_jam_mulai] => 15:30:00
+            [label_timespace] => K6, selasa 15:30:00-17:10:00
+            [kap_ruang] => 50
+            [waktu_jam_selesai_kls] => 17:10:00
+        )
+
+    [263] => Array
+        (
+            [id_kromosom] => 263
+            [nama_kelas] => STAT-A-MMS3427
+            [id_timespace] => 453
+            [id_waktu] => 23
+            [period] => 3
+            [waktu_hari] => rabu
+            [id_ruang] => 10
+            [waktu_jam_mulai] => 08:30:00
+            [label_timespace] => K6, rabu 08:30:00-11:00:00
+            [kap_ruang] => 50
+            [waktu_jam_selesai_kls] => 11:00:00
+        )
+
+    [264] => Array
+        (
+            [id_kromosom] => 264
+            [nama_kelas] => STAT-B-MMS3427
+            [id_timespace] => 789
+            [id_waktu] => 23
+            [period] => 3
+            [waktu_hari] => rabu
+            [id_ruang] => 17
+            [waktu_jam_mulai] => 08:30:00
+            [label_timespace] => U2.01, rabu 08:30:00-11:00:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 11:00:00
+        )
+
+    [265] => Array
+        (
+            [id_kromosom] => 265
+            [nama_kelas] => ELINS-A-MIE3816
+            [id_timespace] => 884
+            [id_waktu] => 22
+            [period] => 3
+            [waktu_hari] => rabu
+            [id_ruang] => 19
+            [waktu_jam_mulai] => 07:30:00
+            [label_timespace] => S2.04, rabu 07:30:00-10:00:00
+            [kap_ruang] => 50
+            [waktu_jam_selesai_kls] => 10:00:00
+        )
+
+    [266] => Array
+        (
+            [id_kromosom] => 266
+            [nama_kelas] => MAT-A-MMM3106
+            [id_timespace] => 190
+            [id_waktu] => 50
+            [period] => 2
+            [waktu_hari] => jumat
+            [id_ruang] => 4
+            [waktu_jam_mulai] => 15:30:00
+            [label_timespace] => S2.03, jumat 15:30:00-17:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 17:10:00
+        )
+
+    [267] => Array
+        (
+            [id_kromosom] => 267
+            [nama_kelas] => KIM-MKK2821
+            [id_timespace] => 110
+            [id_waktu] => 16
+            [period] => 2
+            [waktu_hari] => selasa
+            [id_ruang] => 3
+            [waktu_jam_mulai] => 11:30:00
+            [label_timespace] => M2.13, selasa 11:30:00-13:10:00
+            [kap_ruang] => 50
+            [waktu_jam_selesai_kls] => 13:10:00
+        )
+
+    [268] => Array
+        (
+            [id_kromosom] => 268
+            [nama_kelas] => ILKOM-MIK4401
+            [id_timespace] => 942
+            [id_waktu] => 32
+            [period] => 3
+            [waktu_hari] => kamis
+            [id_ruang] => 20
+            [waktu_jam_mulai] => 07:30:00
+            [label_timespace] => U2.03, kamis 07:30:00-10:00:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 10:00:00
+        )
+
+    [269] => Array
+        (
+            [id_kromosom] => 269
+            [nama_kelas] => ELINS-B-MIE3816
+            [id_timespace] => 692
+            [id_waktu] => 22
+            [period] => 3
+            [waktu_hari] => rabu
+            [id_ruang] => 15
+            [waktu_jam_mulai] => 07:30:00
+            [label_timespace] => U2.02, rabu 07:30:00-10:00:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 10:00:00
+        )
+
+    [270] => Array
+        (
+            [id_kromosom] => 270
+            [nama_kelas] => MAT-B-MMM3106
+            [id_timespace] => 430
+            [id_waktu] => 50
+            [period] => 2
+            [waktu_hari] => jumat
+            [id_ruang] => 9
+            [waktu_jam_mulai] => 15:30:00
+            [label_timespace] => M2.14, jumat 15:30:00-17:10:00
+            [kap_ruang] => 50
+            [waktu_jam_selesai_kls] => 17:10:00
+        )
+
+    [271] => Array
+        (
+            [id_kromosom] => 271
+            [nama_kelas] => ELINS-MIE4608
+            [id_timespace] => 420
+            [id_waktu] => 38
+            [period] => 3
+            [waktu_hari] => kamis
+            [id_ruang] => 9
+            [waktu_jam_mulai] => 13:30:00
+            [label_timespace] => M2.14, kamis 13:30:00-16:00:00
+            [kap_ruang] => 50
+            [waktu_jam_selesai_kls] => 16:00:00
+        )
+
+    [272] => Array
+        (
+            [id_kromosom] => 272
+            [nama_kelas] => ILKOM-MIK4605
+            [id_timespace] => 381
+            [id_waktu] => 49
+            [period] => 3
+            [waktu_hari] => jumat
+            [id_ruang] => 8
+            [waktu_jam_mulai] => 14:30:00
+            [label_timespace] => M2.10, jumat 14:30:00-17:00:00
+            [kap_ruang] => 60
+            [waktu_jam_selesai_kls] => 17:00:00
+        )
+
+    [273] => Array
+        (
+            [id_kromosom] => 273
+            [nama_kelas] => STAT-A-MMS1407
+            [id_timespace] => 402
+            [id_waktu] => 20
+            [period] => 2
+            [waktu_hari] => selasa
+            [id_ruang] => 9
+            [waktu_jam_mulai] => 15:30:00
+            [label_timespace] => M2.14, selasa 15:30:00-17:10:00
+            [kap_ruang] => 50
+            [waktu_jam_selesai_kls] => 17:10:00
+        )
+
+    [274] => Array
+        (
+            [id_kromosom] => 274
+            [nama_kelas] => STAT-B-MMS1407
+            [id_timespace] => 594
+            [id_waktu] => 20
+            [period] => 2
+            [waktu_hari] => selasa
+            [id_ruang] => 13
+            [waktu_jam_mulai] => 15:30:00
+            [label_timespace] => S2.05, selasa 15:30:00-17:10:00
+            [kap_ruang] => 50
+            [waktu_jam_selesai_kls] => 17:10:00
+        )
+
+    [275] => Array
+        (
+            [id_kromosom] => 275
+            [nama_kelas] => MAT-A-MMM3302
+            [id_timespace] => 312
+            [id_waktu] => 26
+            [period] => 3
+            [waktu_hari] => rabu
+            [id_ruang] => 7
+            [waktu_jam_mulai] => 11:30:00
+            [label_timespace] => S2.506, rabu 11:30:00-14:00:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 14:00:00
+        )
+
+    [276] => Array
+        (
+            [id_kromosom] => 276
+            [nama_kelas] => FIS-MFF2871
+            [id_timespace] => 458
+            [id_waktu] => 28
+            [period] => 3
+            [waktu_hari] => rabu
+            [id_ruang] => 10
+            [waktu_jam_mulai] => 13:30:00
+            [label_timespace] => K6, rabu 13:30:00-16:00:00
+            [kap_ruang] => 50
+            [waktu_jam_selesai_kls] => 16:00:00
+        )
+
+    [277] => Array
+        (
+            [id_kromosom] => 277
+            [nama_kelas] => ILKOM-MIK4608
+            [id_timespace] => 864
+            [id_waktu] => 1
+            [period] => 3
+            [waktu_hari] => senin
+            [id_ruang] => 19
+            [waktu_jam_mulai] => 07:30:00
+            [label_timespace] => S2.04, senin 07:30:00-10:00:00
+            [kap_ruang] => 50
+            [waktu_jam_selesai_kls] => 10:00:00
+        )
+
+    [278] => Array
+        (
+            [id_kromosom] => 278
+            [nama_kelas] => STAT-MMS3476
+            [id_timespace] => 703
+            [id_waktu] => 33
+            [period] => 3
+            [waktu_hari] => kamis
+            [id_ruang] => 15
+            [waktu_jam_mulai] => 08:30:00
+            [label_timespace] => U2.02, kamis 08:30:00-11:00:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 11:00:00
+        )
+
+    [279] => Array
+        (
+            [id_kromosom] => 279
+            [nama_kelas] => MAT-B-MMM3302
+            [id_timespace] => 1272
+            [id_waktu] => 26
+            [period] => 3
+            [waktu_hari] => rabu
+            [id_ruang] => 27
+            [waktu_jam_mulai] => 11:30:00
+            [label_timespace] => S2.507, rabu 11:30:00-14:00:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 14:00:00
+        )
+
+    [280] => Array
+        (
+            [id_kromosom] => 280
+            [nama_kelas] => KIM-MKK3831
+            [id_timespace] => 434
+            [id_waktu] => 3
+            [period] => 2
+            [waktu_hari] => senin
+            [id_ruang] => 10
+            [waktu_jam_mulai] => 09:30:00
+            [label_timespace] => K6, senin 09:30:00-11:10:00
+            [kap_ruang] => 50
+            [waktu_jam_selesai_kls] => 11:10:00
+        )
+
+    [281] => Array
+        (
+            [id_kromosom] => 281
+            [nama_kelas] => FIS-MFF2011
+            [id_timespace] => 448
+            [id_waktu] => 18
+            [period] => 2
+            [waktu_hari] => selasa
+            [id_ruang] => 10
+            [waktu_jam_mulai] => 13:30:00
+            [label_timespace] => K6, selasa 13:30:00-15:10:00
+            [kap_ruang] => 50
+            [waktu_jam_selesai_kls] => 15:10:00
+        )
+
+    [282] => Array
+        (
+            [id_kromosom] => 282
+            [nama_kelas] => FIS-MFF4061
+            [id_timespace] => 902
+            [id_waktu] => 40
+            [period] => 2
+            [waktu_hari] => kamis
+            [id_ruang] => 19
+            [waktu_jam_mulai] => 15:30:00
+            [label_timespace] => S2.04, kamis 15:30:00-17:10:00
+            [kap_ruang] => 50
+            [waktu_jam_selesai_kls] => 17:10:00
+        )
+
+    [283] => Array
+        (
+            [id_kromosom] => 283
+            [nama_kelas] => MAT-MMM3301
+            [id_timespace] => 480
+            [id_waktu] => 1
+            [period] => 3
+            [waktu_hari] => senin
+            [id_ruang] => 11
+            [waktu_jam_mulai] => 07:30:00
+            [label_timespace] => M2.09, senin 07:30:00-10:00:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 10:00:00
+        )
+
+    [284] => Array
+        (
+            [id_kromosom] => 284
+            [nama_kelas] => MAT-A-MMM1201
+            [id_timespace] => 338
+            [id_waktu] => 3
+            [period] => 3
+            [waktu_hari] => senin
+            [id_ruang] => 8
+            [waktu_jam_mulai] => 09:30:00
+            [label_timespace] => M2.10, senin 09:30:00-12:00:00
+            [kap_ruang] => 60
+            [waktu_jam_selesai_kls] => 12:00:00
+        )
+
+    [285] => Array
+        (
+            [id_kromosom] => 285
+            [nama_kelas] => MAT-B-MMM1201
+            [id_timespace] => 242
+            [id_waktu] => 3
+            [period] => 3
+            [waktu_hari] => senin
+            [id_ruang] => 6
+            [waktu_jam_mulai] => 09:30:00
+            [label_timespace] => S2.505, senin 09:30:00-12:00:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 12:00:00
+        )
+
+    [286] => Array
+        (
+            [id_kromosom] => 286
+            [nama_kelas] => MAT-C-MMM1201
+            [id_timespace] => 1154
+            [id_waktu] => 3
+            [period] => 3
+            [waktu_hari] => senin
+            [id_ruang] => 25
+            [waktu_jam_mulai] => 09:30:00
+            [label_timespace] => S2.08, senin 09:30:00-12:00:00
+            [kap_ruang] => 60
+            [waktu_jam_selesai_kls] => 12:00:00
+        )
+
+    [287] => Array
+        (
+            [id_kromosom] => 287
+            [nama_kelas] => FIS-MFF3891
+            [id_timespace] => 1266
+            [id_waktu] => 20
+            [period] => 2
+            [waktu_hari] => selasa
+            [id_ruang] => 27
+            [waktu_jam_mulai] => 15:30:00
+            [label_timespace] => S2.507, selasa 15:30:00-17:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 17:10:00
+        )
+
+    [288] => Array
+        (
+            [id_kromosom] => 288
+            [nama_kelas] => ILKOM-MIK4603
+            [id_timespace] => 599
+            [id_waktu] => 25
+            [period] => 3
+            [waktu_hari] => rabu
+            [id_ruang] => 13
+            [waktu_jam_mulai] => 10:30:00
+            [label_timespace] => S2.05, rabu 10:30:00-13:00:00
+            [kap_ruang] => 50
+            [waktu_jam_selesai_kls] => 13:00:00
+        )
+
+    [289] => Array
+        (
+            [id_kromosom] => 289
+            [nama_kelas] => FIS-MFF3291
+            [id_timespace] => 1231
+            [id_waktu] => 33
+            [period] => 2
+            [waktu_hari] => kamis
+            [id_ruang] => 26
+            [waktu_jam_mulai] => 08:30:00
+            [label_timespace] => Lab.Das., kamis 08:30:00-10:10:00
+            [kap_ruang] => 90
+            [waktu_jam_selesai_kls] => 10:10:00
+        )
+
+    [290] => Array
+        (
+            [id_kromosom] => 290
+            [nama_kelas] => STAT-MMS3472
+            [id_timespace] => 474
+            [id_waktu] => 44
+            [period] => 2
+            [waktu_hari] => jumat
+            [id_ruang] => 10
+            [waktu_jam_mulai] => 09:30:00
+            [label_timespace] => K6, jumat 09:30:00-11:10:00
+            [kap_ruang] => 50
+            [waktu_jam_selesai_kls] => 11:10:00
+        )
+
+    [291] => Array
+        (
+            [id_kromosom] => 291
+            [nama_kelas] => ILKOM-MIK4201
+            [id_timespace] => 587
+            [id_waktu] => 13
+            [period] => 3
+            [waktu_hari] => selasa
+            [id_ruang] => 13
+            [waktu_jam_mulai] => 08:30:00
+            [label_timespace] => S2.05, selasa 08:30:00-11:00:00
+            [kap_ruang] => 50
+            [waktu_jam_selesai_kls] => 11:00:00
+        )
+
+    [292] => Array
+        (
+            [id_kromosom] => 292
+            [nama_kelas] => ILKOM-MIK4403
+            [id_timespace] => 1130
+            [id_waktu] => 28
+            [period] => 3
+            [waktu_hari] => rabu
+            [id_ruang] => 24
+            [waktu_jam_mulai] => 13:30:00
+            [label_timespace] => S2.07, rabu 13:30:00-16:00:00
+            [kap_ruang] => 30
+            [waktu_jam_selesai_kls] => 16:00:00
+        )
+
+    [293] => Array
+        (
+            [id_kromosom] => 293
+            [nama_kelas] => MAT-A-MMM3305
+            [id_timespace] => 1019
+            [id_waktu] => 13
+            [period] => 3
+            [waktu_hari] => selasa
+            [id_ruang] => 22
+            [waktu_jam_mulai] => 08:30:00
+            [label_timespace] => U2.05, selasa 08:30:00-11:00:00
+            [kap_ruang] => 30
+            [waktu_jam_selesai_kls] => 11:00:00
+        )
+
+    [294] => Array
+        (
+            [id_kromosom] => 294
+            [nama_kelas] => MAT-B-MMM3305
+            [id_timespace] => 1307
+            [id_waktu] => 13
+            [period] => 3
+            [waktu_hari] => selasa
+            [id_ruang] => 28
+            [waktu_jam_mulai] => 08:30:00
+            [label_timespace] => Lab.AI, selasa 08:30:00-11:00:00
+            [kap_ruang] => 30
+            [waktu_jam_selesai_kls] => 11:00:00
+        )
+
+    [295] => Array
+        (
+            [id_kromosom] => 295
+            [nama_kelas] => KIM-MKK3245
+            [id_timespace] => 1334
+            [id_waktu] => 40
+            [period] => 2
+            [waktu_hari] => kamis
+            [id_ruang] => 28
+            [waktu_jam_mulai] => 15:30:00
+            [label_timespace] => Lab.AI, kamis 15:30:00-17:10:00
+            [kap_ruang] => 30
+            [waktu_jam_selesai_kls] => 17:10:00
+        )
+
+    [296] => Array
+        (
+            [id_kromosom] => 296
+            [nama_kelas] => ELINS-MIE4010
+            [id_timespace] => 462
+            [id_waktu] => 32
+            [period] => 2
+            [waktu_hari] => kamis
+            [id_ruang] => 10
+            [waktu_jam_mulai] => 07:30:00
+            [label_timespace] => K6, kamis 07:30:00-09:10:00
+            [kap_ruang] => 50
+            [waktu_jam_selesai_kls] => 09:10:00
+        )
+
+    [297] => Array
+        (
+            [id_kromosom] => 297
+            [nama_kelas] => KIM-MKK3853
+            [id_timespace] => 1109
+            [id_waktu] => 6
+            [period] => 2
+            [waktu_hari] => senin
+            [id_ruang] => 24
+            [waktu_jam_mulai] => 12:30:00
+            [label_timespace] => S2.07, senin 12:30:00-14:10:00
+            [kap_ruang] => 30
+            [waktu_jam_selesai_kls] => 14:10:00
+        )
+
+    [298] => Array
+        (
+            [id_kromosom] => 298
+            [nama_kelas] => STAT-MMS3416
+            [id_timespace] => 1064
+            [id_waktu] => 9
+            [period] => 2
+            [waktu_hari] => senin
+            [id_ruang] => 23
+            [waktu_jam_mulai] => 15:30:00
+            [label_timespace] => S2.06, senin 15:30:00-17:10:00
+            [kap_ruang] => 30
+            [waktu_jam_selesai_kls] => 17:10:00
+        )
+
+    [299] => Array
+        (
+            [id_kromosom] => 299
+            [nama_kelas] => FIS-MFF3311
+            [id_timespace] => 490
+            [id_waktu] => 12
+            [period] => 3
+            [waktu_hari] => selasa
+            [id_ruang] => 11
+            [waktu_jam_mulai] => 07:30:00
+            [label_timespace] => M2.09, selasa 07:30:00-10:00:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 10:00:00
+        )
+
+    [300] => Array
+        (
+            [id_kromosom] => 300
+            [nama_kelas] => FIS-MFF3841
+            [id_timespace] => 390
+            [id_waktu] => 7
+            [period] => 3
+            [waktu_hari] => senin
+            [id_ruang] => 9
+            [waktu_jam_mulai] => 13:30:00
+            [label_timespace] => M2.14, senin 13:30:00-16:00:00
+            [kap_ruang] => 50
+            [waktu_jam_selesai_kls] => 16:00:00
+        )
+
+    [301] => Array
+        (
+            [id_kromosom] => 301
+            [nama_kelas] => ELINS-MIE4004
+            [id_timespace] => 1014
+            [id_waktu] => 7
+            [period] => 3
+            [waktu_hari] => senin
+            [id_ruang] => 22
+            [waktu_jam_mulai] => 13:30:00
+            [label_timespace] => U2.05, senin 13:30:00-16:00:00
+            [kap_ruang] => 30
+            [waktu_jam_selesai_kls] => 16:00:00
+        )
+
+    [302] => Array
+        (
+            [id_kromosom] => 302
+            [nama_kelas] => FIS-MFF4031
+            [id_timespace] => 141
+            [id_waktu] => 49
+            [period] => 3
+            [waktu_hari] => jumat
+            [id_ruang] => 3
+            [waktu_jam_mulai] => 14:30:00
+            [label_timespace] => M2.13, jumat 14:30:00-17:00:00
+            [kap_ruang] => 50
+            [waktu_jam_selesai_kls] => 17:00:00
+        )
+
+    [303] => Array
+        (
+            [id_kromosom] => 303
+            [nama_kelas] => MAT-MMM4349
+            [id_timespace] => 1300
+            [id_waktu] => 5
+            [period] => 3
+            [waktu_hari] => senin
+            [id_ruang] => 28
+            [waktu_jam_mulai] => 11:30:00
+            [label_timespace] => Lab.AI, senin 11:30:00-14:00:00
+            [kap_ruang] => 30
+            [waktu_jam_selesai_kls] => 14:00:00
+        )
+
+    [304] => Array
+        (
+            [id_kromosom] => 304
+            [nama_kelas] => ELINS-MIE4610
+            [id_timespace] => 1149
+            [id_waktu] => 49
+            [period] => 3
+            [waktu_hari] => jumat
+            [id_ruang] => 24
+            [waktu_jam_mulai] => 14:30:00
+            [label_timespace] => S2.07, jumat 14:30:00-17:00:00
+            [kap_ruang] => 30
+            [waktu_jam_selesai_kls] => 17:00:00
+        )
+
+    [305] => Array
+        (
+            [id_kromosom] => 305
+            [nama_kelas] => FIS-MFF4893
+            [id_timespace] => 1159
+            [id_waktu] => 8
+            [period] => 3
+            [waktu_hari] => senin
+            [id_ruang] => 25
+            [waktu_jam_mulai] => 14:30:00
+            [label_timespace] => S2.08, senin 14:30:00-17:00:00
+            [kap_ruang] => 60
+            [waktu_jam_selesai_kls] => 17:00:00
+        )
+
+    [306] => Array
+        (
+            [id_kromosom] => 306
+            [nama_kelas] => ILKOM-MIK4207
+            [id_timespace] => 368
+            [id_waktu] => 34
+            [period] => 3
+            [waktu_hari] => kamis
+            [id_ruang] => 8
+            [waktu_jam_mulai] => 09:30:00
+            [label_timespace] => M2.10, kamis 09:30:00-12:00:00
+            [kap_ruang] => 60
+            [waktu_jam_selesai_kls] => 12:00:00
+        )
+
+    [307] => Array
+        (
+            [id_kromosom] => 307
+            [nama_kelas] => MAT-MMM3203
+            [id_timespace] => 1028
+            [id_waktu] => 22
+            [period] => 2
+            [waktu_hari] => rabu
+            [id_ruang] => 22
+            [waktu_jam_mulai] => 07:30:00
+            [label_timespace] => U2.05, rabu 07:30:00-09:10:00
+            [kap_ruang] => 30
+            [waktu_jam_selesai_kls] => 09:10:00
+        )
+
+    [308] => Array
+        (
+            [id_kromosom] => 308
+            [nama_kelas] => KIM-MKK3863
+            [id_timespace] => 1036
+            [id_waktu] => 30
+            [period] => 2
+            [waktu_hari] => rabu
+            [id_ruang] => 22
+            [waktu_jam_mulai] => 15:30:00
+            [label_timespace] => U2.05, rabu 15:30:00-17:10:00
+            [kap_ruang] => 30
+            [waktu_jam_selesai_kls] => 17:10:00
+        )
+
+    [309] => Array
+        (
+            [id_kromosom] => 309
+            [nama_kelas] => MAT-MMM4204
+            [id_timespace] => 949
+            [id_waktu] => 39
+            [period] => 3
+            [waktu_hari] => kamis
+            [id_ruang] => 20
+            [waktu_jam_mulai] => 14:30:00
+            [label_timespace] => U2.03, kamis 14:30:00-17:00:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 17:00:00
+        )
+
+    [310] => Array
+        (
+            [id_kromosom] => 310
+            [nama_kelas] => ILKOM-MIK4209
+            [id_timespace] => 1145
+            [id_waktu] => 43
+            [period] => 3
+            [waktu_hari] => jumat
+            [id_ruang] => 24
+            [waktu_jam_mulai] => 08:30:00
+            [label_timespace] => S2.07, jumat 08:30:00-11:00:00
+            [kap_ruang] => 30
+            [waktu_jam_selesai_kls] => 11:00:00
+        )
+
+    [311] => Array
+        (
+            [id_kromosom] => 311
+            [nama_kelas] => FIS-MFF3421
+            [id_timespace] => 1048
+            [id_waktu] => 42
+            [period] => 3
+            [waktu_hari] => jumat
+            [id_ruang] => 22
+            [waktu_jam_mulai] => 07:30:00
+            [label_timespace] => U2.05, jumat 07:30:00-10:00:00
+            [kap_ruang] => 30
+            [waktu_jam_selesai_kls] => 10:00:00
+        )
+
+    [312] => Array
+        (
+            [id_kromosom] => 312
+            [nama_kelas] => ILKOM-MIK4405
+            [id_timespace] => 1060
+            [id_waktu] => 5
+            [period] => 3
+            [waktu_hari] => senin
+            [id_ruang] => 23
+            [waktu_jam_mulai] => 11:30:00
+            [label_timespace] => S2.06, senin 11:30:00-14:00:00
+            [kap_ruang] => 30
+            [waktu_jam_selesai_kls] => 14:00:00
+        )
+
+    [313] => Array
+        (
+            [id_kromosom] => 313
+            [nama_kelas] => ILKOM-MIK4203
+            [id_timespace] => 1311
+            [id_waktu] => 17
+            [period] => 3
+            [waktu_hari] => selasa
+            [id_ruang] => 28
+            [waktu_jam_mulai] => 12:30:00
+            [label_timespace] => Lab.AI, selasa 12:30:00-15:00:00
+            [kap_ruang] => 30
+            [waktu_jam_selesai_kls] => 15:00:00
+        )
+
+    [314] => Array
+        (
+            [id_kromosom] => 314
+            [nama_kelas] => STAT-MMS4417
+            [id_timespace] => 65
+            [id_waktu] => 19
+            [period] => 3
+            [waktu_hari] => selasa
+            [id_ruang] => 2
+            [waktu_jam_mulai] => 14:30:00
+            [label_timespace] => S2.02, selasa 14:30:00-17:00:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 17:00:00
+        )
+
+    [315] => Array
+        (
+            [id_kromosom] => 315
+            [nama_kelas] => ILKOM-MIK4509
+            [id_timespace] => 1039
+            [id_waktu] => 33
+            [period] => 3
+            [waktu_hari] => kamis
+            [id_ruang] => 22
+            [waktu_jam_mulai] => 08:30:00
+            [label_timespace] => U2.05, kamis 08:30:00-11:00:00
+            [kap_ruang] => 30
+            [waktu_jam_selesai_kls] => 11:00:00
+        )
+
+    [316] => Array
+        (
+            [id_kromosom] => 316
+            [nama_kelas] => FIS-MFF4811
+            [id_timespace] => 128
+            [id_waktu] => 34
+            [period] => 3
+            [waktu_hari] => kamis
+            [id_ruang] => 3
+            [waktu_jam_mulai] => 09:30:00
+            [label_timespace] => M2.13, kamis 09:30:00-12:00:00
+            [kap_ruang] => 50
+            [waktu_jam_selesai_kls] => 12:00:00
+        )
+
+    [317] => Array
+        (
+            [id_kromosom] => 317
+            [nama_kelas] => ELINS-MIE4403
+            [id_timespace] => 1318
+            [id_waktu] => 24
+            [period] => 3
+            [waktu_hari] => rabu
+            [id_ruang] => 28
+            [waktu_jam_mulai] => 09:30:00
+            [label_timespace] => Lab.AI, rabu 09:30:00-12:00:00
+            [kap_ruang] => 30
+            [waktu_jam_selesai_kls] => 12:00:00
+        )
+
+    [318] => Array
+        (
+            [id_kromosom] => 318
+            [nama_kelas] => FIS-MFF4813
+            [id_timespace] => 1087
+            [id_waktu] => 33
+            [period] => 3
+            [waktu_hari] => kamis
+            [id_ruang] => 23
+            [waktu_jam_mulai] => 08:30:00
+            [label_timespace] => S2.06, kamis 08:30:00-11:00:00
+            [kap_ruang] => 30
+            [waktu_jam_selesai_kls] => 11:00:00
+        )
+
+    [319] => Array
+        (
+            [id_kromosom] => 319
+            [nama_kelas] => STAT-MMS4449
+            [id_timespace] => 1100
+            [id_waktu] => 48
+            [period] => 3
+            [waktu_hari] => jumat
+            [id_ruang] => 23
+            [waktu_jam_mulai] => 13:30:00
+            [label_timespace] => S2.06, jumat 13:30:00-16:00:00
+            [kap_ruang] => 30
+            [waktu_jam_selesai_kls] => 16:00:00
+        )
+
+    [320] => Array
+        (
+            [id_kromosom] => 320
+            [nama_kelas] => ELINS-MIE3008
+            [id_timespace] => 910
+            [id_waktu] => 50
+            [period] => 2
+            [waktu_hari] => jumat
+            [id_ruang] => 19
+            [waktu_jam_mulai] => 15:30:00
+            [label_timespace] => S2.04, jumat 15:30:00-17:10:00
+            [kap_ruang] => 50
+            [waktu_jam_selesai_kls] => 17:10:00
+        )
+
+    [321] => Array
+        (
+            [id_kromosom] => 321
+            [nama_kelas] => GEOFIS-MFG3946
+            [id_timespace] => 240
+            [id_waktu] => 1
+            [period] => 2
+            [waktu_hari] => senin
+            [id_ruang] => 6
+            [waktu_jam_mulai] => 07:30:00
+            [label_timespace] => S2.505, senin 07:30:00-09:10:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 09:10:00
+        )
+
+    [322] => Array
+        (
+            [id_kromosom] => 322
+            [nama_kelas] => FIS-MFF3871
+            [id_timespace] => 624
+            [id_waktu] => 1
+            [period] => 3
+            [waktu_hari] => senin
+            [id_ruang] => 14
+            [waktu_jam_mulai] => 07:30:00
+            [label_timespace] => M2.12, senin 07:30:00-10:00:00
+            [kap_ruang] => 100
+            [waktu_jam_selesai_kls] => 10:00:00
+        )
+
+    [323] => Array
+        (
+            [id_kromosom] => 323
+            [nama_kelas] => MAT-MMM4102
+            [id_timespace] => 116
+            [id_waktu] => 22
+            [period] => 3
+            [waktu_hari] => rabu
+            [id_ruang] => 3
+            [waktu_jam_mulai] => 07:30:00
+            [label_timespace] => M2.13, rabu 07:30:00-10:00:00
+            [kap_ruang] => 50
+            [waktu_jam_selesai_kls] => 10:00:00
+        )
+
+)

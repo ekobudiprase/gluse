@@ -36,7 +36,7 @@
 	<div class="control-group">
 	  <label for="typeahead" class="control-label">Jumlah individu dalam populasi</label>
 	  <div class="controls">
-		<input name="jml_individu" type="text" value="20" data-items="1" data-provide="typeahead" id="typeahead " class="span2 typeahead layer_formation" >
+		<input name="jml_individu" type="text" value="5" data-items="1" data-provide="typeahead" id="typeahead " class="span2 typeahead layer_formation" >
 		<!-- <p class="help-block">Angka pertama dan terakhir merupakan layer input dan output</p> -->
 	  </div>
 	</div>
@@ -60,7 +60,7 @@
 	<div class="control-group">
 	  <label for="typeahead" class="control-label">Jumlah Generasi</label>
 	  <div class="controls">
-		<input name="generation" type="text" value="15" data-items="4" data-provide="typeahead" id="typeahead" class="span1 typeahead">
+		<input name="generation" type="text" value="2" data-items="4" data-provide="typeahead" id="typeahead" class="span1 typeahead">
 		<!-- <p class="help-block">Start typing to activate auto complete!</p> -->
 	  </div>
 	</div>
