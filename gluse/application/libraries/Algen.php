@@ -113,7 +113,11 @@ class Algen {
         $this->classinfo = array();
         $this->populasi = array(); // empty population each generation
         for ($i=0; $i < $this->post['jml_individu']; $i++) { 
-            $this->populasi[] = $this->create_individu(); // buat individu
+            $individu = $this->create_individu(); // buat individu
+            
+            // $individu = $this->repair_kelas_on_hardrule($individu);
+
+            $this->populasi[] = $individu; 
             // break;
         }
 
@@ -1050,7 +1054,6 @@ class Algen {
     }
 
     public function repair_kelas_on_hardrule($individu){
-        echo '<pre>'; print_r($individu); exit();
         $individu_temp = array(); // untuk menampung sejumlah individu yang mewakili jadwal
         $makul_grup = array(); // untuk mengelompokan kelas berdasar matakuliahnya.
         $waktudistinct_grup = array(); // untuk menampung waktu_id hasil pengelompokan kelas berdasar makulnya.
@@ -1071,7 +1074,6 @@ class Algen {
             $kode_kemipaan = $id_mkkur.'-'.$period_waktu.'-'.$kls_jadwal_merata.'-'.$kls_id_grup_jadwal;
             $status_kemipaan = !in_array($kode_kemipaan, $grup_kemipaan) && ($kls_jadwal_merata == '1');
 
-            
             if ($kls_jadwal_merata == '1') {
                 if ( $status_kemipaan) {
                     $id_timespace = $this->getRandomTimespace($individu_classprodi, $individu_temp, $value, $timespace, $period_waktu, 0, null, $individu[$value['id_individu']]['id_timespace']);
@@ -1079,7 +1081,7 @@ class Algen {
                     $waktudistinct_grup_kemipaan[] = $timespace[$id_timespace]['id_waktu'];
                     $grup_kemipaan[] = $kode_kemipaan;
                 }else{
-                    $id_timespace = $this->get_random_local($individu_classprodi, $individu_temp, $value, $timespace, $grup_kemipaan, $waktudistinct_grup_kemipaan, $period_waktu);
+                    $id_timespace = $this->get_random_local($individu_classprodi, $individu_temp, $value, $timespace, $grup_kemipaan, $waktudistinct_grup_kemipaan, $period_waktu, $individu[$value['id_individu']]['id_timespace']);
                 }
                 
             }else{                
@@ -1089,7 +1091,7 @@ class Algen {
                     $waktudistinct_grup[] = $timespace[$id_timespace]['id_waktu'];
                     $makul_grup[] = $value['id_mkkur'].'-'.$period_waktu;
                 }else{
-                    $id_timespace = $this->get_random_local($individu_classprodi, $individu_temp, $value, $timespace, $makul_grup, $waktudistinct_grup, $period_waktu);
+                    $id_timespace = $this->get_random_local($individu_classprodi, $individu_temp, $value, $timespace, $makul_grup, $waktudistinct_grup, $period_waktu, $individu[$value['id_individu']]['id_timespace']);
                 }
             }
 
@@ -1105,6 +1107,7 @@ class Algen {
                 unset($timespace);
 
                 $individu_temp = $this->create_individu();
+                break;
             }else{
                 /*
                 menyimpan hasil ruang & waktu untuk kelas, beserta periodenya
