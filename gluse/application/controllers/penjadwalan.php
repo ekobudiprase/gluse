@@ -27,6 +27,9 @@ class Penjadwalan extends CI_Controller {
 	 */
 	public function index(){
 		/**********processRequest**********/
+		$logproses_algen = $this->bantu->getDataLogproses('algen_penjadwalan');
+		echo '<pre>'; print_r($logproses_algen); echo '</pre>'; exit();
+		
 		// $param['judul_halaman'] = "Halaman home";
 		$jml_kelas = $this->penjadwalan_model->cek_kelas_ada();
 		$param['display_warning_nokelas'] = $jml_kelas==0?'':'style="display:none"';

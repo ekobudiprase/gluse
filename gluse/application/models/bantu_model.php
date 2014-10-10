@@ -27,6 +27,20 @@ class Bantu_model extends CI_Model {
         ";
 
         return $this->db->query($sql, array($data, $kode)); 
+    }    
+
+    function get_data_logproses($kode){
+        $query = "
+            SELECT 
+			lp.logproses_data
+			FROM log_proses lp
+			WHERE lp.logproses_kode = '$kode'
+        ";
+
+        $ret = $this->db->query($query);
+        $ret = $ret->result_array();
+
+        return $ret[0]['logproses_data'];
     }
 
 }

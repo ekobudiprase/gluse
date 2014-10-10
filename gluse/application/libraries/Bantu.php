@@ -264,6 +264,16 @@ class Bantu {
 		return $this->CI->db->trans_status();
     }
 
+    /**
+    * @since     Oct 10, 2014
+    */
+    function getDataLogproses($kode){
+    	$this->CI->load->model('bantu_model');
+        $val = $this->CI->bantu_model->get_data_logproses($kode);
+
+        return unserialize($val);
+    }
+
 }
 
 /* End of file Someclass.php */
