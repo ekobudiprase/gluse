@@ -124,8 +124,6 @@ class Algen {
             // break;
         }
 
-        $this->log_proses['populasi_awal'] = $this->populasi;
-
         // echo '<pre>jumlah kromosom: '; print_r(count($this->kromosom)); echo ', </pre>';
         // foreach ($this->populasi as $key => $value) {
         // 	echo '<pre>'; print_r(count($value)); echo '</pre>';
@@ -938,6 +936,7 @@ class Algen {
             $this->populasi_breeding[$i]['fitness'] = $populasi[$i]['fitness'];
             $this->total_fitness += $populasi[$i]['fitness'];
         }
+        $this->log_proses['populasi_awal'] = $this->populasi_breeding;
         
         unset($populasi);
 
@@ -1148,14 +1147,6 @@ class Algen {
         // $individu = $this->repair_duplikasi_kelas_timespace($individu);
 
         $individu = $this->repair_kelas_on_hardrule($individu);
-        
-        if (false) {
-            echo '<pre>'; print_r($str);
-            echo '<pre>'; print_r($str2);
-            echo '<pre>'; print_r($str3);
-            echo '<pre>'; print_r($individu);
-            echo '<pre>'; print_r($this->timespace); 
-        }
 
         // unset($str);
         // unset($str2);
@@ -1226,6 +1217,13 @@ class Algen {
 
         $this->individu_breed[] = $offspring;
 
+        $this->log_proses['crossover'] = array(
+        	'parent_1' => $parent_1,
+        	'parent_1' => $parent_2,
+        	'point_random' => $point_random,
+        	'offspring' => $offspring
+        );
+
         // unset($offspring);
         // unset($off_1);
         // unset($off_2);
@@ -1276,6 +1274,13 @@ class Algen {
             // 'waktu_jam_mulai' => $timespace[$id_timespace]['waktu_jam_mulai'],
             // 'waktu_jam_selesai_kls' => $waktu_jam_selesai_kls
         );
+
+    	$this->log_proses['mutasi'] = array(
+    		'individu' => $individu,
+    		'pos_mutasi' => $pos_mutasi,
+    		'gen_mutatasi' => $gen,
+    		'gen_hasil_mutasi' => $individu[$pos_mutasi]
+    	);
 
         $individu = $this->repairing_individu($individu);
         // $individu = $this->cek_kelas_on_hardrule($individu);
@@ -1447,6 +1452,8 @@ class Algen {
                 $idx = $key;
             }
         }
+
+        $this->log_proses['populasi_akhir_generasi'] = $this->populasi_breeding_selected;
 
         foreach ($this->populasi_breeding_selected[$idx]['arr_gen'] as $key => $value) {
         	$this->populasi_breeding_selected[$idx]['arr_gen'][$key]['id_kelas'] = $this->kromosom[$value['id_kromosom']]['id_kelas'];
