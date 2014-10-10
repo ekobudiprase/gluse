@@ -245,6 +245,25 @@ class Bantu {
 
     }
 
+    /**
+     * @since oct 10, 2014
+     */
+    function simpan_log_proses($kode, $data){
+    	$this->CI->load->model('bantu_model');
+    	
+		$sts = true;
+		$this->CI->db->trans_start();
+
+		$param = array(
+			'kode' => $kode,
+			'data' => $data
+		);
+		$sts = $sts && $this->CI->bantu_model->up_logproses($param);
+		$this->CI->db->trans_complete();
+
+		return $this->CI->db->trans_status();
+    }
+
 }
 
 /* End of file Someclass.php */

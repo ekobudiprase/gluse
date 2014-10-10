@@ -709,6 +709,15 @@ class Penjadwalan_model extends CI_Model {
         return $ret->result_array();
     }
 
+    function getDataSessions(){
+		$this->db->select('t1.*');
+		$this->db->from('ci_sessions AS t1');
+		$query = $this->db->get();
+		$ret = $query->result();
+
+		return $ret;
+	}
+
     
 }
 

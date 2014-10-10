@@ -26,8 +26,7 @@ class Penjadwalan extends CI_Controller {
 	 * @usedfor		-
 	 */
 	public function index(){
-		/**********processRequest**********/	
-		
+		/**********processRequest**********/
 		// $param['judul_halaman'] = "Halaman home";
 		$jml_kelas = $this->penjadwalan_model->cek_kelas_ada();
 		$param['display_warning_nokelas'] = $jml_kelas==0?'':'style="display:none"';

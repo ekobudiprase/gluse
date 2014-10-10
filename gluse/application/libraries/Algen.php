@@ -32,6 +32,7 @@ class Algen {
     var $kromosom = array();
     var $err_msg = '';
     var $status_rule = '';
+    var $log_proses = array();
     /**
     * @author   Eko Budi Prasetyo
     * @version    0.0.0
@@ -42,6 +43,7 @@ class Algen {
         $this->CI =& get_instance(); // for accessing the model of CI later
         $this->CI->load->library('bantu');
         $this->CI->load->library('aturan_jadwal');
+        $this->CI->load->library('session');
     }
 
     /*
@@ -101,6 +103,7 @@ class Algen {
     */
     public function generate_population(){
         $this->kromosom = $this->create_information_class(); // buat individu
+        $this->log_proses['kromosom'] = $this->kromosom;
         // $jml = 0;
         // foreach ($this->kromosom as $i => $item) {
         //     $jml = $jml + $item['period'];
@@ -120,6 +123,8 @@ class Algen {
             $this->populasi[] = $individu; 
             // break;
         }
+
+        $this->log_proses['populasi_awal'] = $this->populasi;
 
         // echo '<pre>jumlah kromosom: '; print_r(count($this->kromosom)); echo ', </pre>';
         // foreach ($this->populasi as $key => $value) {
@@ -1455,8 +1460,17 @@ class Algen {
         }
 
         // exit();
+        $sts = $this->set_log_proses();
 
         return $this->populasi_breeding_selected[$idx];
+    }
+
+    function set_log_proses(){    	
+        $data = serialize($this->log_proses);
+        $sts = $this->CI->bantu->simpan_log_proses('algen_penjadwalan', $data);
+        // echo '<pre>'; print_r($this->log_proses); echo '</pre>'; exit();
+        // $this->CI->session->set_userdata('log_proses', $this->log_proses);
+        return $sts;
     }
 
     
