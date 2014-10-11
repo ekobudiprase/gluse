@@ -1473,7 +1473,7 @@ class Algen {
     }
 
     function set_log_proses(){    	
-        $data = serialize($this->log_proses);
+        $data = base64_encode(serialize($this->log_proses));
         $sts = $this->CI->bantu->simpan_log_proses('algen_penjadwalan', $data);
         // echo '<pre>'; print_r($this->log_proses); echo '</pre>'; exit();
         // $this->CI->session->set_userdata('log_proses', $this->log_proses);

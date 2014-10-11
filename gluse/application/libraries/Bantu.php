@@ -271,7 +271,7 @@ class Bantu {
     	$this->CI->load->model('bantu_model');
         $val = $this->CI->bantu_model->get_data_logproses($kode);
 
-        return unserialize($val);
+        return unserialize(base64_decode($val));
     }
 
 }
