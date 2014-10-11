@@ -5,7 +5,7 @@
 	<div class="row-fluid">
 		<div class="papan well ">
 			<div style="text-align:center;">
-				<h1>Gluse</h1>
+				<h1>&gscr;&Lscr;us&escr;</h1>
 				<p><b>G</b>enetics a<b>L</b>gorithm on lect<b>U</b>re <b>S</b>ch<b>E</b>duling</p>
 			</div>
 
@@ -23,6 +23,9 @@
 	</div>
 
  </div>
+
+
+
 
 <style type="text/css">
 .papan {

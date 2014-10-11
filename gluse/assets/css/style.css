@@ -41,6 +41,7 @@ body.custom-background {
 		list-style: none outside none;
 	    margin-bottom: 18px;
 	    margin-left: 0;
+	    min-height: 500px;
 	}
 	#sidebar #nav li a:hover{
 		text-decoration: none;
@@ -125,7 +126,7 @@ body.custom-background {
 
 	#content #page {
 		/*border: 1px blue solid;*/
-		min-height: 500px;
+		min-height: 550px;
 		margin: 0 0 10px 0;
 	}
 
@@ -178,3 +179,10 @@ body.custom-background {
 		-webkit-border-radius:14px;
 		-moz-border-radius:14px;
 	}
+
+#footer {
+	color: #666666;
+	font-size: 11px;
+	text-align: center;
+	margin-top: -12px;
+}

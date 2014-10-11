@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<title>Gluse</title>
+		<link rel="shortcut icon" type="image/x-icon" href="<?=$parse_uri_root?>assets/img/favicon5.ico">
 		<link rel="stylesheet" type="text/css" href="<?=$parse_uri_root?>assets/css/bootstrap-classic.min.css" />
 		<link rel="stylesheet" type="text/css" href="<?=$parse_uri_root?>assets/css/uniform.default.css" />
 		<link rel="stylesheet" type="text/css" href="<?=$parse_uri_root?>assets/css/style.css" />
@@ -102,6 +103,11 @@
 					Penjadwalan Mata Kuliah</a></li>
 
 			</ul>
+
+			<div id="footer">
+				ekobudiprase&commat;gmail.com <br />
+				Copyright &copy; 2014
+			</div>
 		</div>
 		<div id="content">
 			<ul id="breadcrumb">
