@@ -216,20 +216,23 @@ class Proses_prediksi extends CI_Controller {
 
 				$this->backpropagation->set($numLayers,$layer_formation, $_POST['beta'], $_POST['alpha'],$maxmin[0]['mins'],$maxmin[0]['maks'], $_POST['epoch'],$_POST['treshold']);
 				$this->backpropagation->createWeight();
-				$ret[] = $this->backpropagation->run($value);
-
-				// if ($key == 5) {
-				// 	break;
-				// }
+				$result = $this->backpropagation->run($value);
+				$log_proses[] = $result['log_proses'];
+				$ret[] = $result;
+				/*if ($key == 5) {
+					break;
+				}*/
 			}
 		}
-		$_SESSION['hasil_prediksi'] = $ret;
-		// echo '<pre>'; print_r($_SESSION); 
+
+		$sts_save_log = $this->set_log_proses($log_proses);
+		// $_SESSION['hasil_prediksi'] = $ret;
+		// echo '<pre>'; print_r($log_proses); 
 		// exit();
 
 
 		$this->db->trans_start();
-		$sts = true;
+		$sts = true && $sts_save_log;
 		if (!empty($ret)) {
 			foreach ($ret as $key => $value) {
 				$param = array(
@@ -266,6 +269,13 @@ class Proses_prediksi extends CI_Controller {
 		exit();
 
 	}
+
+	function set_log_proses($log_proses){
+        $data = base64_encode(serialize($log_proses));
+        $sts = $this->bantu->simpan_log_proses('jst_prediksi', $data);
+
+        return $sts;
+    }
 
 	function unInterpolasi($x2){
 		$this->load->model('Prediksi_model');

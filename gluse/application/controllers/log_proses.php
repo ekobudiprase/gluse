@@ -33,10 +33,18 @@ class Log_proses extends CI_Controller {
 
 	}
 
+	public function jst_prediksi(){
+		$this->gotoMenu('jst_prediksi');
+	}
+
 	public function algen_penjadwalan(){
+		$this->gotoMenu('algen_penjadwalan');
+	}
+
+	public function gotoMenu($kode){
 		/**********processRequest**********/
-		$logproses_algen = $this->bantu->getDataLogproses('algen_penjadwalan');
-		$param['data'] = $logproses_algen;
+		$result = $this->bantu->getDataLogproses($kode);
+		$param['data'] = $result;
 
 		$template_konten = 'log_proses/data_view';
 

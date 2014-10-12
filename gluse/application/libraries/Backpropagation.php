@@ -24,6 +24,12 @@ class Backpropagation{
     public $normalizeMax = null; // Stores ann scale calculated parameters 
     public $normalizeMin = null;
     public $output_vector = null; // Holds all output data in one array 
+    public $log_proses = array();
+
+    public function __construct(){
+        $this->CI =& get_instance(); // for accessing the model of CI later
+        $this->CI->load->library('bantu');
+    }
 
     public function set($jmlLayer,$layersSize,$beta,$alpha,$minX,$maxX,$epoch,$treshold){
 		$this->alpha = $alpha;
@@ -48,6 +54,8 @@ class Backpropagation{
                 $this->weight[$i][$j][$this->layersSize[$i-1]] = -1; 
             }
         }
+
+        // $this->log_proses['weight'] = $this->weight;
 
         for($i=1; $i<$this->jmlLayer; $i++){
             for($j=0; $j<$this->layersSize[$i]; $j++){
@@ -207,7 +215,9 @@ class Backpropagation{
         $this->numInput = count($dataX[0]);	
 
         $data = $this->scale($dataX, $param['min_lokal'], $param['max_lokal']);
-        $_SESSION['data_prediksi_scaled'][] = $data;
+
+        $this->log_proses['data_train'] = $dataX;
+        $this->log_proses['data_train_scaled'] = $data;
         // echo '<pre>'; print_r($data); echo '</pre>';
 
         // echo $param['kode'].' ';
@@ -250,6 +260,7 @@ class Backpropagation{
             }
         }
 
+        $this->log_proses['data_train_out'] = $param['dataTestUji'][0];
         
 
         for ($i = 0 ; $i < $this->numPattern; $i++ ){
@@ -257,8 +268,9 @@ class Backpropagation{
             $this->vectorOutput[$i] = (double)$this->Out(0);
 
             $out[$i] = $this->unscaleOutput($this->vectorOutput[$i], $param['min_lokal'], $param['max_lokal']);
+            $this->log_proses['uji_data_train_predicted'][$i] = round($out[$i],0);
         }
-        // echo '<pre>'; print_r($this->out); 
+        // echo '<pre>'; print_r($out); exit(); 
         
         
 
@@ -268,6 +280,15 @@ class Backpropagation{
         $this->feedForward($ujiData);
         $hasil = (double)$this->Out(0);
         $outHasil = $this->unscaleOutput($hasil, $param['min_lokal'], $param['max_lokal']);
+
+        $this->log_proses['mse'] = $MSE;
+
+        for($j=0; $j<$this->numInput-1; $j++){          
+            $this->log_proses['uji_data_uji'][$j] = $param['dataTestUji'][0][$j];
+        }   
+        $this->log_proses['uji_data_uji'][$this->numInput] = abs($outHasil);
+        $this->log_proses['hasil_prediksi'] = (round($outHasil,0));
+
 
         if ($debug) {
         	echo "\n MSE last epoch : $MSE";
@@ -280,7 +301,7 @@ class Backpropagation{
 	        for ($i = 0 ; $i < $this->numPattern; $i++ ){
 	            for($j=0; $j<$this->numInput-1; $j++){          
 	                echo "  ".$testDataX[$i][$j]."  \t\t";
-	            }	
+	            }
 	            echo "  " .abs($out[$i])."\n";echo "<br>";
 	        }
 	        echo "<br>";
@@ -294,6 +315,7 @@ class Backpropagation{
 	    }
 
         $param['hasil_prediksi'] = (round($outHasil,0));
+        $param['log_proses'] = $this->log_proses;
 
         return $param;
     }
