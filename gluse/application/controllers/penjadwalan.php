@@ -377,8 +377,7 @@ class Penjadwalan extends CI_Controller {
 			$worksheet->setCellValue('L'.$idx, $value['rabu']);
 			$worksheet->setCellValue('M'.$idx, $value['kamis']);
 			$worksheet->setCellValue('N'.$idx, $value['jumat']);
-
-			$worksheet->setCellValue('C'.$idx, $value['paket_sem']);
+			
 			$worksheet->getStyle('A'.$idx)->applyFromArray($styleThinBlackBorderOutline);
 			$worksheet->getStyle('B'.$idx)->applyFromArray($styleThinBlackBorderOutline);
 			$worksheet->getStyle('C'.$idx)->applyFromArray($styleThinBlackBorderOutline);

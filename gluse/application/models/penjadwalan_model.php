@@ -702,6 +702,8 @@ class Penjadwalan_model extends CI_Model {
             LEFT JOIN waktu w ON jk.`jk_wkt_id` = w.`waktu_id`
             LEFT JOIN kelas k ON jk.`jk_kls_id` = k.`kls_id`
             LEFT JOIN mata_kuliah_kurikulum mkk ON k.`kls_mkkur_id` = mkk.`mkkur_id`
+            ORDER BY mkk.`mkkur_id` ASC
+            
         ";
 
         $ret = $this->db->query($query);
