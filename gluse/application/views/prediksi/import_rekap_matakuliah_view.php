@@ -6,10 +6,8 @@
 	<div class="control-group">
 		<label for="fileInput" class="control-label">File input</label>
 		<div class="controls">
-		<div class="uploader" id="uniform-fileInput">
-			<input type="file" name="file" id="fileInput" class="input-file uniform_on" size="19" style="opacity: 0;">
-		<span class="filename" style="-moz-user-select: none;">No file selected</span><span class="action" style="-moz-user-select: none;">Choose File</span>
-		</div>
+		<input type="file" value="" name="file" id="file" multiple /> 
+
 		&nbsp; 
 
 		
