@@ -40,18 +40,21 @@ class Proses_prediksi extends CI_Controller {
 		$this->load->library('session');
 
 		// bug : dir upload didn't change for the first upload, fix later
+		// bug : upload file only can read from current work directory
 		$objPHPExcel = Iofactory::load($_FILES['file']['name']);
 		$sheetData = $objPHPExcel->getActiveSheet()->toArray(null,true,true,true);
 
 		// echo '<pre>'; print_r($sheetData); exit();
 		$periode_tahun_prediksi = $this->bantu->getConfig('periode_tahun_prediksi');
 		// echo '<pre>'; print_r($periode_tahun_prediksi); 
-		$matakuliah = $this->Prediksi_model->get_all_matakuliah();
+		$semester_aktif = $this->bantu->getConfig('semester_aktif');
+		$matakuliah = $this->Prediksi_model->get_all_matakuliah($semester_aktif);
 		$jumlah_matakuliah = count($matakuliah);
-
+		
 		// data excel transformation for ready to ins
 		for ($i=0; $i < $jumlah_matakuliah; $i++) { 
 			$dataxls[$i]['kode'] = $sheetData[($i+5)]['A'];
+			echo '<pre>'; print_r($dataxls[$i]); 
 			$dataxls[$i]['id_mk'] = $this->Prediksi_model->get_idmakul_by_kodemakul($dataxls[$i]['kode']);
 			for ($j=0; $j < $periode_tahun_prediksi; $j++) { 
 				$columnStr[$j] = PHPExcel_Cell::stringFromColumnIndex($j+3);
