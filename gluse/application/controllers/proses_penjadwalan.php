@@ -433,6 +433,11 @@ class Proses_penjadwalan extends CI_Controller {
 			$solusi = $solusi['arr_gen'];
 			// $total_waktu = microtime(true) - $waktu_start;
 			$total_waktu = microtime(true) - $_SERVER["REQUEST_TIME_FLOAT"];
+
+			$result = $this->bantu->getDataLogproses('algen_penjadwalan');
+			echo 'max_fitness: <pre>'; print_r($result['max_fitness']); echo '</pre>';
+			echo 'total_waktu: <pre>'; print_r($total_waktu); echo '</pre>';
+			exit();
 			// echo '<pre>'; print_r($solusi); echo '</pre>';
 		}
 

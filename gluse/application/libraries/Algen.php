@@ -103,7 +103,7 @@ class Algen {
     */
     public function generate_population(){
         $this->kromosom = $this->create_information_class(); // buat individu
-        $this->log_proses['kromosom'] = $this->kromosom;
+        // $this->log_proses['kromosom'] = $this->kromosom;
         // $jml = 0;
         // foreach ($this->kromosom as $i => $item) {
         //     $jml = $jml + $item['period'];
@@ -936,7 +936,7 @@ class Algen {
             $this->populasi_breeding[$i]['fitness'] = $populasi[$i]['fitness'];
             $this->total_fitness += $populasi[$i]['fitness'];
         }
-        $this->log_proses['populasi_awal'] = $this->populasi_breeding;
+        // $this->log_proses['populasi_awal'] = $this->populasi_breeding;
         
         unset($populasi);
 
@@ -1217,12 +1217,12 @@ class Algen {
 
         $this->individu_breed[] = $offspring;
 
-        $this->log_proses['crossover'] = array(
+        /*$this->log_proses['crossover'] = array(
         	'parent_1' => $parent_1,
         	'parent_1' => $parent_2,
         	'point_random' => $point_random,
         	'offspring' => $offspring
-        );
+        );*/
 
         // unset($offspring);
         // unset($off_1);
@@ -1238,6 +1238,10 @@ class Algen {
             if ($value['val_random'] <= $this->pc) {
                 $populasi_breeding_crossover_selected[] = $value;
             }
+        }
+
+        if (empty($populasi_breeding_crossover_selected)) {
+        	echo "tidak ada nilai lebih kecil dari Pc"; exit();
         }
 
         $n_gen = count($populasi_breeding_crossover_selected[0]['arr_gen']);
@@ -1275,12 +1279,12 @@ class Algen {
             // 'waktu_jam_selesai_kls' => $waktu_jam_selesai_kls
         );
 
-    	$this->log_proses['mutasi'] = array(
+    	/*$this->log_proses['mutasi'] = array(
     		'individu' => $individu,
     		'pos_mutasi' => $pos_mutasi,
     		'gen_mutatasi' => $gen,
     		'gen_hasil_mutasi' => $individu[$pos_mutasi]
-    	);
+    	);*/
 
         $individu = $this->repairing_individu($individu);
         // $individu = $this->cek_kelas_on_hardrule($individu);
@@ -1330,8 +1334,8 @@ class Algen {
 
             }else{
                 // break;
-                echo 'par<pre>'; print_r($individu_temp); 
-                echo '<pre>'; print_r($value); 
+            	echo 'par<pre>'; print_r($individu_temp); echo "</pre>";
+            	echo '<pre>'; print_r($value); echo "</pre>";
 
                 exit();
                 $id_timespace = $this->get_random_local($individu_classprodi, $individu_temp, $this->kromosom[$value['id_kromosom']], $timespace, $makul_grup, $waktudistinct_grup, $this->kromosom[$value['id_kromosom']]['period']);
@@ -1450,10 +1454,11 @@ class Algen {
             if ($value['fitness'] > $max_fitness) {
                 $max_fitness = $value['fitness'];
                 $idx = $key;
+                $this->log_proses['max_fitness'] = $max_fitness;
             }
         }
 
-        $this->log_proses['populasi_akhir_generasi'] = $this->populasi_breeding_selected;
+        // $this->log_proses['populasi_akhir_generasi'] = $this->populasi_breeding_selected;
 
         foreach ($this->populasi_breeding_selected[$idx]['arr_gen'] as $key => $value) {
         	$this->populasi_breeding_selected[$idx]['arr_gen'][$key]['id_kelas'] = $this->kromosom[$value['id_kromosom']]['id_kelas'];

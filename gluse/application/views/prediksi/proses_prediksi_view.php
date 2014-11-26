@@ -15,7 +15,7 @@
 	<div class="control-group">
 	  <label for="typeahead" class="control-label">Learning rate</label>
 	  <div class="controls">
-		<input name="beta" type="text" value="0.3" data-items="4" data-provide="typeahead" id="typeahead" class="span1 typeahead">
+		<input name="beta" type="text" value="0.7" data-items="4" data-provide="typeahead" id="typeahead" class="span1 typeahead">
 		<!-- <p class="help-block">Start typing to activate auto complete!</p> -->
 	  </div>
 	</div>
@@ -30,7 +30,7 @@
 	<div class="control-group">
 	  <label for="typeahead" class="control-label">Epoch</label>
 	  <div class="controls">
-		<input name="epoch" type="text" value="200000" data-items="4" data-provide="typeahead" id="typeahead" class="span1 typeahead">
+		<input name="epoch" type="text" value="1000000" data-items="7" data-provide="typeahead" id="typeahead" class="span2 typeahead">
 		<!-- <p class="help-block">Start typing to activate auto complete!</p> -->
 	  </div>
 	</div>
@@ -38,7 +38,7 @@
 	<div class="control-group">
 	  <label for="typeahead" class="control-label">Treshold</label>
 	  <div class="controls">
-		<input name="treshold" type="text" value="0.00001" data-items="4" data-provide="typeahead" id="typeahead" class="span1 typeahead">
+		<input name="treshold" type="text" value="0.0000001" data-items="4" data-provide="typeahead" id="typeahead" class="span2 typeahead">
 		<!-- <p class="help-block">Start typing to activate auto complete!</p> -->
 	  </div>
 	</div>

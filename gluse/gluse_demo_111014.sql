@@ -2,7 +2,8 @@
 SQLyog Ultimate v8.8 
 MySQL - 5.6.17 : Database - gluse_demo
 *********************************************************************
-*/
+*/
+
 
 /*!40101 SET NAMES utf8 */;
 
@@ -12,9 +13,6 @@ MySQL - 5.6.17 : Database - gluse_demo
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-CREATE DATABASE /*!32312 IF NOT EXISTS*/`gluse_demo` /*!40100 DEFAULT CHARACTER SET latin1 */;
-
-USE `gluse_demo`;
 
 /*Table structure for table `config` */
 
@@ -314,22 +312,38 @@ insert  into `waktu`(`waktu_id`,`waktu_hari`,`waktu_jam_mulai`,`waktu_jam_selesa
 DELIMITER $$
 
 /*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `get_prodi_by_makulid`(input_id INT UNSIGNED)
-BEGIN
-	DECLARE x INT;
-	DECLARE str VARCHAR(255);
-	SET x = -5;
-	SET str = '';
-
-	loop_label: LOOP
-	IF x > 0 THEN
-	LEAVE loop_label;
-	END IF;
-	SET str = CONCAT(str,x,',');
-	SET x = x + 1;
-	ITERATE loop_label;
-	END LOOP;
-
-	SELECT str;
+BEGIN
+
+	DECLARE x INT;
+
+	DECLARE str VARCHAR(255);
+
+	SET x = -5;
+
+	SET str = '';
+
+
+
+	loop_label: LOOP
+
+	IF x > 0 THEN
+
+	LEAVE loop_label;
+
+	END IF;
+
+	SET str = CONCAT(str,x,',');
+
+	SET x = x + 1;
+
+	ITERATE loop_label;
+
+	END LOOP;
+
+
+
+	SELECT str;
+
     END */$$
 DELIMITER ;
 

@@ -1,1 +1,1 @@
-<?php echo '<pre>'; print_r($data); ?>
+<?php echo '<pre>'; print_r($data['max_fitness']); ?>
