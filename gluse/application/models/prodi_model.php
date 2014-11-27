@@ -33,7 +33,7 @@ class Prodi_model extends CI_Model {
                 SELECT SUM(mpv.mkkprod_porsi_kelas)
                 FROM mkkur_prodi mpv
                 WHERE mpv.mkkprod_mkkur_id = mp.`mkkprod_mkkur_id`
-                AND mpv.`mkkprod_related_id` IS NULL
+                AND (mpv.`mkkprod_related_id` IS NULL or mpv.`mkkprod_related_id`="0")
                 GROUP BY mkkprod_mkkur_id
                 ) AS t,
                 mkkprod_porsi_kelas * (mkk.`mkkur_pred_jml_peminat` DIV
@@ -41,7 +41,7 @@ class Prodi_model extends CI_Model {
                     SELECT SUM(mpv.mkkprod_porsi_kelas)
                     FROM mkkur_prodi mpv
                     WHERE mpv.mkkprod_mkkur_id = mp.`mkkprod_mkkur_id`
-                    AND mpv.`mkkprod_related_id` IS NULL
+                    AND (mpv.`mkkprod_related_id` IS NULL or mpv.`mkkprod_related_id`="0")
                     GROUP BY mkkprod_mkkur_id
                 )) AS jml_porsi,    
                 mkk.`mkkur_pred_jml_peminat` MOD
@@ -49,14 +49,14 @@ class Prodi_model extends CI_Model {
                     SELECT SUM(mpv.mkkprod_porsi_kelas)
                     FROM mkkur_prodi mpv
                     WHERE mpv.mkkprod_mkkur_id = mp.`mkkprod_mkkur_id`
-                    AND mpv.`mkkprod_related_id` IS NULL
+                    AND (mpv.`mkkprod_related_id` IS NULL or mpv.`mkkprod_related_id`="0")
                     GROUP BY mkkprod_mkkur_id
                 ) AS sisa
             FROM program_studi ps
             LEFT JOIN mkkur_prodi mp ON ps.prodi_id = mp.mkkprod_prodi_id
             LEFT JOIN mata_kuliah_kurikulum mkk ON mp.`mkkprod_mkkur_id` = mkk.`mkkur_id`
             WHERE mp.mkkprod_mkkur_id = "'.$mkid.'"
-            AND mp.`mkkprod_related_id` IS NULL
+            AND (mp.`mkkprod_related_id` IS NULL or mp.`mkkprod_related_id`="0")
         ';
 
         $ret = $this->db->query($query);
@@ -330,7 +330,7 @@ class Prodi_model extends CI_Model {
             FROM mkkur_prodi mp
             LEFT JOIN program_studi ps ON mp.`mkkprod_prodi_id` = ps.`prodi_id`
             WHERE mp.mkkprod_mkkur_id = "'.$id.'"
-            AND mp.`mkkprod_related_id` IS NULL
+            AND (mp.`mkkprod_related_id` IS NULL or mp.`mkkprod_related_id`="0")
         ';
 
         $ret = $this->db->query($query);
@@ -393,7 +393,7 @@ class Prodi_model extends CI_Model {
             FROM mkkur_prodi mp
             LEFT JOIN program_studi ps ON mp.`mkkprod_prodi_id` = ps.`prodi_id`
             WHERE mp.mkkprod_mkkur_id = "'.$id.'"
-            AND mp.`mkkprod_related_id` IS NULL
+            AND (mp.`mkkprod_related_id` IS NULL or mp.`mkkprod_related_id`="0")
         ';
 
         $ret = $this->db->query($query);

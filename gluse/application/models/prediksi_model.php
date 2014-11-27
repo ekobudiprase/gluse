@@ -30,7 +30,7 @@ class Prediksi_model extends CI_Model {
             FROM program_studi ps
             LEFT JOIN mkkur_prodi mp ON ps.prodi_id = mp.mkkprod_prodi_id
             WHERE mp.mkkprod_mkkur_id = "'.$mkid.'"
-            AND mp.`mkkprod_related_id` IS NULL
+            AND (mp.`mkkprod_related_id` IS NULL or mp.`mkkprod_related_id`="0")
         ';
 
         $ret = $this->db->query($query);
