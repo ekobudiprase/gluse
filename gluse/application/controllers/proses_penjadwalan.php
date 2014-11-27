@@ -282,6 +282,8 @@ class Proses_penjadwalan extends CI_Controller {
 		$semester_aktif = $this->bantu->getConfig('semester_aktif');
 		
 		$data_makul = $this->Penjadwalan_model->get_data_makul($semester_aktif);
+		// echo '<pre>'; print_r($_POST); echo '</pre>';
+		// echo '<pre>'; print_r($data_makul); echo '</pre>'; exit();
 		if (!empty($data_makul)) {
 			foreach ($data_makul as $key => $value) {
 				$maks_kelas = ($value['maks_kelas']!=null)?$value['maks_kelas']:$_POST['batas_jml_kelas'];
