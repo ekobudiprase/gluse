@@ -137,7 +137,7 @@ class Algen {
         $id_individu = 0;
         foreach ($this->kelas as $key => $value) {
             // echo '<pre>'; print_r($slot); echo '</pre>';
-            if (!empty($value['format_jadwal'])) {
+            if (!empty($value['format_jadwal']) ) {
                 $period = explode('-', $value['format_jadwal']);
                 foreach ($period as $i => $item) {
                     $period_waktu = $item;

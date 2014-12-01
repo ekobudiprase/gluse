@@ -505,7 +505,7 @@ class Penjadwalan_model extends CI_Model {
                 )
                 ,"<span class=\"label label-important\">belum ditentukan</span>") AS dosen_kelas,
                 mkk.mkkur_sks AS sks,
-                mkkur_format_jadwal AS format_jadwal,
+                IFNULL("",mkkur_format_jadwal) AS format_jadwal,
                 mkkur_paket_semester AS paket_smt,
                 mkkur_semester AS smt_makul,
                 mkkur_sifat AS sifat_makul,                
