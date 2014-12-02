@@ -11,6 +11,11 @@ ini_set('max_execution_time', 0);
  * @since       May 30, 2014
  */
 
+/*
+for debugging you can go to check_on_hardrule() because when process fail
+it can be caused by that hardrule has not been passed especially room capacity.
+*/
+
 class Algen {
     var $CI;
     var $populasi = array();
@@ -103,6 +108,7 @@ class Algen {
     */
     public function generate_population(){
         $this->kromosom = $this->create_information_class(); // buat individu
+        echo '<pre>'; print_r($this->kromosom); echo '</pre>'; exit();
         // $this->log_proses['kromosom'] = $this->kromosom;
         // $jml = 0;
         // foreach ($this->kromosom as $i => $item) {

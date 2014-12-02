@@ -271,7 +271,9 @@ class Proses_penjadwalan extends CI_Controller {
 	 */
 	public function generating_kelas(){
 		/**********processRequest**********/
-		
+
+		/* PENTING!!! dalam pembangkitan kelas, jumlah peserta per kelas tidak boleh melebihi rata2 kapasitas kelas*/
+
 		$url_makul = $this->bantu->getRootAddress().'index.php/penjadwalan/';
 		if (isset($_POST['back'])) {
 			redirect($url_makul, 'refresh');
