@@ -676,24 +676,26 @@ class Penjadwalan_model extends CI_Model {
                 jk.`jk_ru_id` AS ru_id,
                 r.`ru_nama` AS ru_nama,
                 k.`kls_jml_peserta_prediksi` AS jml_peserta,
+                w.waktu_jam_mulai AS jam_mulai,
+                jk.`jk_period`*50 AS durasi_menit,
                 IF(w.`waktu_hari` = 'senin',
-                    CONCAT(DATE_FORMAT(w.`waktu_jam_mulai`,'%H:%i'),'-',(DATE_FORMAT(DATE_ADD(w.waktu_jam_mulai,INTERVAL (jk.`jk_period`*50) MINUTE),'%H:%i'))),
+                    1,
                     ''
                 ) AS senin,
                 IF(w.`waktu_hari` = 'selasa',
-                    CONCAT(DATE_FORMAT(w.`waktu_jam_mulai`,'%H:%i'),'-',(DATE_FORMAT(DATE_ADD(w.waktu_jam_mulai,INTERVAL (jk.`jk_period`*50) MINUTE),'%H:%i'))),
+                    1,
                     ''
                 ) AS selasa,
                 IF(w.`waktu_hari` = 'rabu',
-                    CONCAT(DATE_FORMAT(w.`waktu_jam_mulai`,'%H:%i'),'-',(DATE_FORMAT(DATE_ADD(w.waktu_jam_mulai,INTERVAL (jk.`jk_period`*50) MINUTE),'%H:%i'))),
+                    1,
                     ''
                 ) AS rabu,
                 IF(w.`waktu_hari` = 'kamis',
-                    CONCAT(DATE_FORMAT(w.`waktu_jam_mulai`,'%H:%i'),'-',(DATE_FORMAT(DATE_ADD(w.waktu_jam_mulai,INTERVAL (jk.`jk_period`*50) MINUTE),'%H:%i'))),
+                    1,
                     ''
                 ) AS kamis,
                 IF(w.`waktu_hari` = 'jumat',
-                    CONCAT(DATE_FORMAT(w.`waktu_jam_mulai`,'%H:%i'),'-',(DATE_FORMAT(DATE_ADD(w.waktu_jam_mulai,INTERVAL (jk.`jk_period`*50) MINUTE),'%H:%i'))),
+                    1,
                     ''
                 ) AS jumat,
                 jk.`jk_label`

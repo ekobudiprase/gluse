@@ -360,6 +360,10 @@ class Penjadwalan extends CI_Controller {
 
 		$idx = 5;		
 		foreach ($data as $key => $value) {
+			
+			$jam_selesai = date("H:i:s", strtotime('+'.$value['durasi_menit'].' minutes', strtotime($value['jam_mulai'])));
+			$label_jadwal_jam = $value['jam_mulai'].'-'.$jam_selesai;
+			
 			$worksheet->getStyle('G'.$idx)->getAlignment()->setWrapText(true); 
 
 			$worksheet->setCellValue('A'.$idx, ++$key);
@@ -372,11 +376,11 @@ class Penjadwalan extends CI_Controller {
 			$worksheet->setCellValue('H'.$idx, $value['ru_nama']);
 			$worksheet->setCellValue('I'.$idx, $value['jml_peserta']);
 
-			$worksheet->setCellValue('J'.$idx, $value['senin']);
-			$worksheet->setCellValue('K'.$idx, $value['selasa']);
-			$worksheet->setCellValue('L'.$idx, $value['rabu']);
-			$worksheet->setCellValue('M'.$idx, $value['kamis']);
-			$worksheet->setCellValue('N'.$idx, $value['jumat']);
+			$worksheet->setCellValue('J'.$idx, ($value['senin']=='1'?$label_jadwal_jam:'') );
+			$worksheet->setCellValue('K'.$idx, ($value['selasa']=='1'?$label_jadwal_jam:'') );
+			$worksheet->setCellValue('L'.$idx, ($value['rabu']=='1'?$label_jadwal_jam:'') );
+			$worksheet->setCellValue('M'.$idx, ($value['kamis']=='1'?$label_jadwal_jam:'') );
+			$worksheet->setCellValue('N'.$idx, ($value['jumat']=='1'?$label_jadwal_jam:'') );
 			
 			$worksheet->getStyle('A'.$idx)->applyFromArray($styleThinBlackBorderOutline);
 			$worksheet->getStyle('B'.$idx)->applyFromArray($styleThinBlackBorderOutline);

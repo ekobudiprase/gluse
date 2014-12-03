@@ -108,7 +108,7 @@ class Algen {
     */
     public function generate_population(){
         $this->kromosom = $this->create_information_class(); // buat individu
-        echo '<pre>'; print_r($this->kromosom); echo '</pre>'; exit();
+        // echo '<pre>'; print_r($this->kromosom); echo '</pre>'; exit();
         // $this->log_proses['kromosom'] = $this->kromosom;
         // $jml = 0;
         // foreach ($this->kromosom as $i => $item) {
@@ -718,10 +718,13 @@ class Algen {
 			foreach ($arr_kromosom as $k => $kr_pr) {
 				$data_perprod[$i][] = $kr_pr;
 			}
-			foreach ($ind_classprodi['uni'] as $j => $kr_un) {
-				$data_perprod[$i][] = $kr_un;
-				
+			if (!empty($ind_classprodi['uni'])) {
+				foreach ($ind_classprodi['uni'] as $j => $kr_un) {
+					$data_perprod[$i][] = $kr_un;
+					
+				}
 			}
+			
 		}
 
 		$jumlah_perprod = 0;
