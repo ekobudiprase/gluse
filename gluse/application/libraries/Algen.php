@@ -108,7 +108,6 @@ class Algen {
     */
     public function generate_population(){
         $this->kromosom = $this->create_information_class(); // buat individu
-        // echo '<pre>'; print_r($this->kromosom); echo '</pre>'; exit();
         // $this->log_proses['kromosom'] = $this->kromosom;
         // $jml = 0;
         // foreach ($this->kromosom as $i => $item) {
