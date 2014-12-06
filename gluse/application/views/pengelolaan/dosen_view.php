@@ -18,7 +18,7 @@
 	<thead>
 		<tr>
 			<th class="span1">No</th>
-			<th class="span2">NIP</th>
+			<th class="span3">NIP</th>
 			<th>Nama</th>                               
 			<th class="span2">Aksi</th>                                       
 		</tr>
@@ -42,6 +42,7 @@
 				<?php 
 			}
 		}else{
+			$filter['start'] = $filter['start'] - 1;
 			?>
 			<tr>
 				<td colspan="5" style="text-align:center;font-style:oblique"> -- Data tidak ada --</td>                                     

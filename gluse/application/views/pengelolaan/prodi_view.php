@@ -44,6 +44,7 @@
 				<?php 
 			}
 		}else{
+			$filter['start'] = $filter['start'] - 1;
 			?>
 			<tr>
 				<td colspan="5" style="text-align:center;font-style:oblique"> -- Data tidak ada --</td>                                     

@@ -55,7 +55,7 @@
 							<td class="center"><?=$value[$i]['porsi']?></td>
 							<td class="center">
 								<a href="<?=$url_edit.'&idjoin='.$value[$i]['id']?>" class="btn btn-warning"><i class="icon-pencil icon-white"></i> </a>
-								<a <?=$display_sub?> href="<?=$url_del?>" id="<?=$value[$i]['id']?>" class="btn btn-danger konfirmdel"><i class="icon-trash icon-white"></i> </a>
+								<a <?=$display_sub?> href="<?=$url_del.'&idjoin='.$value[$i]['id']?>" id="<?=$value[$i]['id']?>" class="btn btn-danger konfirmdel"><i class="icon-trash icon-white"></i> </a>
 
 							</td>                                       
 						</tr>

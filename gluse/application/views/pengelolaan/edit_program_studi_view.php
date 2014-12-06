@@ -1,5 +1,5 @@
 <div class="page-header">
-	<h3><?=$judul?> Mata Kuliah</h3>
+	<h3><?=$judul?> Program Studi</h3>
 </div>
 
 <div class="alert alert-<?=$notif_style?>" <?=$display?>>

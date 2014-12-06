@@ -262,7 +262,10 @@ class Pengelolaan_model extends CI_Model {
             VALUES (?,?,?,?,?,?,?,?,?,?)
         ";
 
-        return $this->db->query($sql, array($kode, $nama, $sks, $smt, $sifat, $paket, $jml_pert, $is_univr, $format));
+        $return = $this->db->query($sql, array($kode, $nama, $sks, $smt, $sifat, $paket, $jml_pert, $is_univr, $format, $maks_kelas));
+        // echo $this->db->last_query(); exit();
+
+        return $return;
     }
 
     function del_konfigurasi($param){
