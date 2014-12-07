@@ -310,7 +310,10 @@ class Penjadwalan_model extends CI_Model {
         $ret = $this->db->query($query);
         $ret = $ret->result_array();
 
-        return $ret[0]['kelas_dosen_lengkap'];
+        $jml_kelas = $this->cek_kelas_ada();
+        $sts_kelas = $jml_kelas>0?true:false;
+        
+        return ($sts_kelas && $ret[0]['kelas_dosen_lengkap']);
     }
 
     /**

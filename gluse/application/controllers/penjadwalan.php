@@ -365,6 +365,11 @@ class Penjadwalan extends CI_Controller {
 			$label_jadwal_jam = $value['jam_mulai'].'-'.$jam_selesai;
 			
 			$worksheet->getStyle('G'.$idx)->getAlignment()->setWrapText(true); 
+			$worksheet->getStyle('J'.$idx)->getAlignment()->setWrapText(true); 
+			$worksheet->getStyle('K'.$idx)->getAlignment()->setWrapText(true); 
+			$worksheet->getStyle('L'.$idx)->getAlignment()->setWrapText(true); 
+			$worksheet->getStyle('M'.$idx)->getAlignment()->setWrapText(true); 
+			$worksheet->getStyle('N'.$idx)->getAlignment()->setWrapText(true); 
 
 			$worksheet->setCellValue('A'.$idx, ++$key);
 			$worksheet->setCellValue('B'.$idx, $value['makul_kode']);

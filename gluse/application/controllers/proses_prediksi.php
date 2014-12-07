@@ -54,7 +54,6 @@ class Proses_prediksi extends CI_Controller {
 		// data excel transformation for ready to ins
 		for ($i=0; $i < $jumlah_matakuliah; $i++) { 
 			$dataxls[$i]['kode'] = $sheetData[($i+5)]['A'];
-			echo '<pre>'; print_r($dataxls[$i]); 
 			$dataxls[$i]['id_mk'] = $this->Prediksi_model->get_idmakul_by_kodemakul($dataxls[$i]['kode']);
 			for ($j=0; $j < $periode_tahun_prediksi; $j++) { 
 				$columnStr[$j] = PHPExcel_Cell::stringFromColumnIndex($j+3);
